@@ -1,0 +1,532 @@
+/***
+
+====================================================================
+    Process Section
+====================================================================
+
+***/
+
+.process-section{
+    position: relative;
+    padding: 120px 0 60px;
+    &.pull-up{.bg{top: -80px;}}
+    &.pull-down{.bg{bottom: -200px;height: auto;}}
+}
+
+//Process Block
+.process-block{
+    position: relative;
+    margin-bottom: 60px;
+    .inner-box{
+        text-align: center;
+        max-width: 240px;
+        margin: 0 auto;
+        &:hover{
+            .icon{
+                transform: scaleX(-1);
+            }
+        }
+        .icon-box{
+            position: relative;
+            text-align: center;
+            border-radius: 10px;
+            padding: 30px 20px 50px;
+            background: var(--theme-color-gray);
+            min-height: 170px;
+            margin-bottom: 50px;
+            .icon{
+                position: relative;
+                display: inline-block;
+                font-size: 84px;
+                line-height: 1em;
+                color: var(--theme-color1);
+                transition: all 300ms ease;
+            }
+            .count{
+                position: absolute;
+                left: 50%;
+                bottom: -30px;
+                margin-left: -30px;
+                width: 60px;
+                height: 60px;
+                line-height: 60px;
+                text-align: center;
+                font-size: 27px;
+                background-color: var(--theme-color-light);
+                border: 1px solid #ccc;
+                border-radius: 50%;
+                font-weight: 700;
+                display: inline-block;
+                color: var(--theme-color1);
+                opacity: .5;
+            }
+        }
+        .title {
+            margin-bottom: 10px;
+            color: var(--theme-color2);
+        }
+        .text {
+            color: var(--theme-color2);
+        }
+    }
+}
+
+/***
+
+====================================================================
+    Process Section Two
+====================================================================
+
+***/
+
+.process-section-two{
+    position: relative;
+    padding: 120px 0 90px;
+}
+
+//Process Block Two
+.process-block-two{
+    position: relative;
+    margin-bottom: 30px;
+    .inner-box{
+        position: relative;
+        border: 1px solid #E3E3E3;
+        padding: 40px 40px;
+        border-radius: 10px;
+        background-color: var(--theme-color-light);
+        transition: all 300ms ease;
+        @include media-breakpoint-down(sm){
+            padding: 20px 20px;
+        }
+        &:hover{
+            box-shadow: 0 10px 30px rgba(0,0,0,.10);
+            .icon{
+                transform: scaleX(-1);
+            }
+        }
+        .icon-box{
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            .icon{
+                position: relative;
+                height: 80px;
+                width: 80px;
+                background-color: var(--theme-color-gray);
+                color: var(--theme-color1);
+                font-size: 32px;
+                line-height: 1em;
+                @include flex-center;
+                border-radius: 15px;
+                border-bottom: 3px solid var(--theme-color1);
+                transition: all 300ms ease;
+            }
+            .count{
+                position: relative;
+                line-height: 60px;
+                text-align: center;
+                font-weight: 700;
+                font-size: 48px;
+                display: inline-block;
+                @include text-outline(var(--theme-color-dark));
+                @include title-font;
+                opacity: .2;
+            }
+        }
+        .title {
+            margin-bottom: 20px;
+            color: var(--theme-color2);
+        }
+        .text {
+            color: var(--theme-color2);
+        }
+    }
+}
+
+
+/***
+
+====================================================================
+    Process Section Three
+====================================================================
+
+***/
+
+.process-section-three{
+    position: relative;
+    padding: 120px 0 90px;
+}
+
+//Process Block Three
+.process-block-three{
+    position: relative;
+    margin-bottom: 30px;
+    .inner-box{
+        position: relative;
+        padding: 40px 30px;
+        border-radius: 10px;
+        border: 1px solid #E3E3E3;
+        background-color: var(--theme-color-light);
+        transition: all 300ms ease;
+        @include media-breakpoint-down(xl){
+            padding: 30px 30px;
+        }
+        &:hover{
+            box-shadow: 0 10px 30px rgba(0,0,0,.10);
+            .icon{
+                transform: scaleX(-1);
+            }
+        }
+        .count {
+            position: absolute;
+            right: 50px;
+            top: 20px;
+            line-height: 60px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 48px;
+            display: inline-block;
+            @include text-outline(var(--theme-color1));
+            @include media-breakpoint-down(xl){
+                position: relative;
+                right: 0;
+                top: 0;
+                margin-bottom: 10px;
+            }
+        }
+        .title {
+            margin-bottom: 25px;
+        }
+    }
+}
+
+
+
+/***
+
+====================================================================
+    Process Section Four
+====================================================================
+
+***/
+
+.process-section-four{
+    position: relative;
+    padding: 120px 0 90px;
+}
+
+// process-block-Four
+.process-block-four{
+    position: relative;
+    margin-bottom: 30px;
+    .inner-box{
+        border-radius: 10px;
+        padding: 20px 40px 30px ;
+        box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.07);
+        background-color: var(--theme-color-light);
+        position: relative;
+        text-align: center;
+        margin-top: 36px;
+        transition: all 300ms ease;
+        &:hover{
+            .icon{
+                background-color: var(--bg-theme-color2);
+            }
+            .count{
+                color: var(--theme-color1);
+            }
+        }
+        .icon{
+            position: absolute;
+            right: 38px;
+            top: -36px;
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            background: var(--theme-color1);
+            border-radius: 13.33px;
+            margin-bottom: 30px;
+            font-size: 36px;
+            color: var(--theme-color-light);
+            transition: all 300ms ease;
+        }
+        .title{
+            color: var(--theme-color-dark);
+            margin-bottom: 15px;
+        }
+        .count{
+            font-size: 48px;
+            color: #E3E3E3;
+            font-weight: 600;
+            line-height: 58px;
+            margin-bottom: 20px;
+            display: inline-block;
+            transition: all 300ms ease;
+        }
+    }
+}
+
+
+
+/***
+
+====================================================================
+    Process Section Five
+====================================================================
+
+***/
+
+.process-section-five{
+    position: relative;
+    padding: 120px 0 90px;
+    .sec-title{
+        margin-bottom: 75px;
+    }
+}
+
+// process-block-four
+.process-block-five{
+    margin-bottom: 30px;
+    .inner-box{
+        position: relative;
+        .content-box{
+            text-align: center;
+            background: #FFFFFF;
+            box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.07);
+            border-radius: 5px;
+            padding: 30px 30px;
+            margin-bottom: 80px;
+            &:hover{
+                .icon{
+                    transform: scale(-1) rotate(180deg);
+                }
+                .count{
+                    background-color: var(--bg-theme-color2);
+                    color: var(--theme-color-light);
+                }
+            }
+            .icon{
+                display: inline-block;
+                font-size: 60px;
+                color: var(--theme-color1);
+                line-height: 1em;
+                transition: all 300ms ease;
+                margin-bottom: 30px;
+            }
+            .title{
+                color: var(--theme-color2);
+                margin-bottom: 20px;
+            }
+            .text{
+                color: var(--text-color);
+                margin-bottom: 0;
+            }
+            .count{
+                position: absolute;
+                display: inline-block;
+                bottom: -80px;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                width: 50px;
+                height: 50px;
+                line-height: 50px;
+                text-align: center;
+                background-color: var(--theme-color1);
+                color: var(--theme-color-light);
+                border-radius: 50px;
+                font-size: 24px;
+                font-weight: 600;
+                transition: all 300ms ease;
+            }
+        }
+    }
+}
+
+
+/***
+
+====================================================================
+    Process Section Six
+====================================================================
+
+***/
+
+.process-section-six{
+    position: relative;
+    padding: 120px 0 90px;
+    .sec-title{
+        margin-bottom: 100px;
+    }
+}
+
+// Process Block Six
+.process-block-six{
+    position: relative;
+    margin-bottom: 30px;
+    .inner-box{
+        position: relative;
+        max-width: 300px;
+        margin: 0 auto;
+        .content-box{
+            text-align: center;
+            border: 1px solid #E3E3E3;
+            border-radius: 5px;
+            padding: 40px 20px 36px;
+            transition: all 300ms ease;
+            &:hover{
+                box-shadow: 0 10px 40px rgba(0, 0, 0, 0.07);
+                .icon{
+                    transform: scaleX(-1);
+                }
+                .count{
+                    background-color: var(--bg-theme-color2);
+                    color: var(--theme-color-light);
+                }
+            }
+            .icon{
+                font-size: 60px;
+                display: block;
+                color: var(--theme-color1);
+                line-height: 60px;
+                margin-bottom: 25px;
+                transition: all 300ms ease;
+            }
+            .title{
+                color: var(--theme-color2);
+                margin-bottom: 8px;
+            }
+            .text{
+                color: var(--text-color);
+                margin-bottom: 0;
+            }
+            .count{
+                width: 60px;
+                position: absolute;
+                top: -40px;
+                left: 50%;
+                transform: translateX(-50%);
+                height: 60px;
+                text-align: center;
+                line-height: 60px;
+                background-color: var(--theme-color-gray);
+                color: var(--theme-color2);
+                border-radius: 50px;
+                font-size: 24px;
+                font-weight: 600;
+                display: inline-block;
+                transition: all 300ms ease;
+            }
+        }
+    }
+}
+
+
+
+
+/***
+
+====================================================================
+    Process Section Seven
+====================================================================
+
+***/
+
+.process-section-seven{
+    position: relative;
+    padding: 120px 0 70px;
+    .content-column{
+        margin-bottom: 50px;
+        .inner-column{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+            padding-right: 100px;
+            @include media-breakpoint-down(xl){
+                padding-right: 0;
+            }
+        }
+        .sec-title{
+            margin-bottom: 40px;
+        }
+    }
+    .blocks-column{
+        margin-bottom: 20px;
+    }
+}
+
+// Process block Seven
+.process-block-seven{
+    position: relative;
+    margin-bottom: 30px;
+    .inner-box{
+        position: relative;
+        border: 1px solid #E3E3E3;
+        border-radius: 10px;
+        text-align: center;
+        padding: 40px 30px 60px;
+        margin-top: 30px;
+        margin-bottom: 25px;
+        transition: all 300ms ease;
+        &:hover{
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+            .icon{
+                background-color: var(--bg-theme-color2);
+                color: var(--theme-color-light);
+            }
+            .count{
+                color: var(--theme-color1);
+            }
+        }
+        .icon{
+            position: absolute;
+            top: -30px;
+            right: 40px;
+            display: block;
+            font-size: 30px;
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            border-radius: 50%;
+            background-color: var(--theme-color1);
+            color: var(--theme-color-light);
+            transition: all 300ms ease;
+        }
+        .count{
+            font-size: 48px;
+            font-weight: 600;
+            line-height: 58px;
+            color: #E3E3E3;
+            margin-bottom: 20px;
+            display: inline-block;
+            transition: all 300ms ease;
+        }
+        .title{
+            margin-bottom: 20px;
+        }
+        .read-more{
+            position: absolute;
+            bottom: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 65px;
+            height: 65px;
+            text-align: center;
+            border-radius: 50%;
+            background-color: var(--theme-color-gray);
+            display: inline-block;
+            line-height: 65px;
+            font-size: 20px;
+            transition: all 300ms ease;
+            &:hover{
+                background-color: var(--theme-color1);
+                color: var(--theme-color-light);
+            }
+        }
+    }
+}

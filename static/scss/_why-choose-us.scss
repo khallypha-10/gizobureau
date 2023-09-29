@@ -1,0 +1,676 @@
+/***
+
+====================================================================
+    Why Choose Us
+====================================================================
+
+***/
+
+.why-choose-us{
+    position: relative;
+    z-index: 3;
+    .outer-box{
+        position: relative;
+        padding: 80px 0 30px;
+        background-color: var(--theme-color-light);
+        border: 1px solid #E3E3E3;
+    }
+    .content-column{
+        margin-bottom: 30px;
+        .inner-column{
+            position: relative;
+            padding-right: 40px;
+            @include media-breakpoint-down(lg){
+                padding-right: 0;
+            }
+        }        
+        .sec-title{
+            margin-bottom: 30px;
+        }
+    }
+
+    // image-column
+    .image-column{
+        margin-bottom: 50px;
+        .inner-column{
+            position: relative;
+            padding-right: 15px;
+            padding-top: 10px;
+            padding-left: 40px;
+            @include media-breakpoint-down(lg){
+                padding-left: 0;
+                padding-right: 0;
+            }
+            .image-box{
+                text-align: right;
+                .icon{
+                    position: absolute;
+                    top: 25px;
+                    left: 102px;
+                    @include media-breakpoint-down(md){display: none;}
+                    i{
+                        font-size: 131px;
+                        color: #16243E;
+                        opacity: 0.2;
+                        line-height: 131px;
+                        animation: fa-spin 30s infinite linear;
+                    }
+                }
+            }
+            .info-box{
+                position: absolute;
+                left: 60px;
+                bottom: -40px;
+                width: 308px; 
+                padding: 32px 10px 29px 30px;
+                border-radius: 5px;
+                box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.07);
+                background: var(--theme-color-light);
+                @include media-breakpoint-down(lg){
+                    left: 0;
+                    bottom: 0;
+                }
+                @include media-breakpoint-down(md){
+                    position: relative;
+                    display: inline-block;
+                    width: 100%;
+                }
+                .inner{
+                    position: relative;
+                    padding-left: 97px;
+                    text-align: left;
+                }
+                .icon{
+                    position: absolute;
+                    left: 0px;
+                    top: 20px;
+                    font-size: 60px;
+                    color: var(--theme-color1);
+                }
+                .title{
+                    color: var(--theme-color2);
+                    margin-bottom: 10px;
+                    font-size: 27px;
+                    font-weight: 700;
+                    line-height: 37px;
+                }
+                .text{
+                    position: relative;
+                    font-size: 20px;
+                    line-height: 28px;
+                    letter-spacing: -0.8px;
+                    font-weight: 500;
+                    @include title-font;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+    
+// feature block
+.feature-block{
+    margin-bottom: 20px;
+    .inner-box{
+        position: relative;
+        padding-left: 30px;
+        .title{
+            position: relative;
+            margin-bottom: 10px;
+            &:before{
+                content: "";
+                position: absolute;
+                top: 9px;
+                left: -30px;
+                width: 20px;
+                height: 20px;
+                line-height: 20px;
+                background-color: var(--theme-color1);
+                border-radius: 50%;
+            }
+        }
+    }
+}
+
+
+/***
+
+====================================================================
+    Why Choose Us two
+====================================================================
+
+***/
+
+.why-choose-us-two{
+    position: relative;
+    padding: 120px 0 70px;
+    background-color: var(--theme-color-gray);
+
+    // image-column
+    .image-column{
+        position: relative;
+        margin-bottom: 50px;
+        .inner-column{
+            max-width: 594px;
+            background-color: var(--theme-color-light);
+            padding: 50px 60px 130px;
+            border-radius: 10px;
+            margin-bottom: 65px;
+            @include media-breakpoint-down(xl){
+                padding: 40px 40px;
+                margin-bottom: 0;
+                max-width: 100%;
+            }
+            @include media-breakpoint-down(lg){
+                padding: 0;
+                background-color: none;
+            }
+            .image-box{
+                position: relative;
+                text-align: left;
+                .image{
+                    img{
+                        border-radius: 10px;
+                        @include media-breakpoint-down(lg){
+                            width: 100%;
+                        }
+                    }
+                }
+                .icon-triangle{
+                    position: absolute;
+                    bottom: -45px;
+                    right: 0;
+                    @include media-breakpoint-down(xl){display: none}
+                }
+                .play-btn{
+                    @include overlay;
+                    @include flex-center;
+                    &:hover{
+                        .icon{
+                            background-color: var(--bg-theme-color1);
+                            color: var(--theme-color-light);
+                        }
+                    }
+                    .icon{
+                        width: 104.11px;
+                        height: 104.11px;
+                        line-height: 104px;
+                        background-color: var(--theme-color-light);
+                        color: var(--theme-color1);
+                        font-size: 29px;
+                        text-align: center;
+                        transition: all 300ms ease;
+                    }
+                }
+            }
+            .exp-box{
+                position: absolute;
+                left: 84px;
+                bottom: 0;
+                background: #FFFFFF;
+                border-radius: 10px;
+                max-width: 425px;
+                width: 100%;
+                filter: drop-shadow(0px 10px 30px rgba(0, 0, 0, 0.071));
+                @include media-breakpoint-down(xl){
+                    position: relative;
+                    left: 0;
+                    width: 100%;
+                }
+                .inner{
+                    position: relative;
+                    padding: 30px 42px 30px 123px;
+                    @include media-breakpoint-down(sm){
+                        padding: 30px 30px;
+                        text-align: center;
+                    }
+                    .icon{
+                        position: absolute;
+                        left: 50px;
+                        top: 34px;
+                        font-size: 64px;
+                        color: var(--theme-color1);
+                        line-height: 1em;
+                        @include media-breakpoint-down(sm){
+                            display: inline-block;
+                            position: relative;
+                            left: 0;
+                            top: 0;
+                            margin-bottom: 10px;
+                        }
+                    }
+                    .title{
+                        margin-bottom: 0;
+                        font-size: 27px;
+                        line-height: 38px;
+                        font-weight: 700;
+                        color: var(--theme-color2);
+                    }
+                }
+            }
+        }
+    }
+    // content-column
+    .content-column{
+        margin-bottom: 50px;
+        .inner-column{
+            margin-top: 74px;
+            @include media-breakpoint-down(xl){
+                margin-top: 0;
+            }
+            .sec-title{
+                margin-bottom: 50px;
+            }
+            .text{
+                margin-bottom: 50px;
+            }
+        }
+    }
+}
+
+//  feature-block-two
+.feature-block-two{
+    margin-bottom: 30px;
+    .inner{
+        position: relative;
+        padding: 16px 0 15px 79px;
+        &:hover{
+            .icon-box{
+                background-color: var(--theme-color-light);
+                color: var(--theme-color1);
+            }
+        }
+        .icon-box{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            background-color: var(--theme-color1);
+            border-radius: 10px;
+            transition: all 300ms ease;
+            color: var(--theme-color-light);
+            font-size: 30px;
+        }
+        .title{
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+
+/***
+
+====================================================================
+    Why Choose Us three
+====================================================================
+
+***/
+
+.why-choose-us-three{
+    position: relative;
+    background-color: var(--theme-color2);
+    padding: 120px 0 70px;
+    .content-column{
+        margin-bottom: 50px;
+        .inner-column{
+            padding-right: 90px;
+            padding-top: 20px;
+            @include media-breakpoint-down(xl){
+                padding-right: 0;
+                padding-top: 0;
+            }
+            .sec-title{
+                margin-bottom: 20px;
+            }
+            .list-style-two{
+                li{
+                    font-size: var(--body-font-size);
+                    line-height: var(--body-line-height);
+                    letter-spacing: 0;
+                    font-weight: 400;
+                    margin-bottom: 10px;
+                    i{
+                        line-height: var(--body-line-height);
+                    }
+                }
+            }
+        }
+    }
+    .image-column{
+        margin-bottom: 20px;
+        .icon-dots-9{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            @include media-breakpoint-down(md){display: none;}
+        }
+        .inner-column{
+            .image-box{
+                position: relative;
+                display: flex;
+                @include media-breakpoint-down(md){
+                    flex-direction: column;
+                }
+                .image-1{
+                    position: relative;
+                    margin-right: 21px;
+                    margin-bottom: 30px;
+                    @include media-breakpoint-down(md){
+                        margin-right: 0;
+                    }
+                    img{
+                        border-radius: 10px;
+                        @include media-breakpoint-down(md){
+                            width: 100%;
+                        }
+                    }
+                }
+                .image-2{
+                    position: relative;
+                    margin-bottom: 30px;
+                    img{
+                        border-radius: 10px;
+                        @include media-breakpoint-down(md) {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            .exp-box{
+                position: absolute;
+                left: 185px;
+                bottom: 60px;
+                background-color: var(--theme-color-light);
+                width: 268px;
+                border-radius: 50px;
+                padding: 11px 0px 11px 90px;
+                @include media-breakpoint-down(md){
+                    position: relative;
+                    left: 0;
+                    bottom: 0;
+                    width: 100%;
+                }
+                .icon{
+                    position: absolute;
+                    top: 12px;
+                    left: 12px;
+                    width: 63px;
+                    height: 63px;
+                    line-height: 63px;
+                    text-align: center;
+                    border-radius: 50%;
+                    background-color: var(--theme-color-gray);
+                    font-size: 40px;
+                    color: var(--theme-color1);
+                    @include media-breakpoint-down(md){display: none;}
+                }
+                .title{
+                    margin-bottom: 5px;
+                }
+                .text{
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+
+
+/***
+
+====================================================================
+    Why Choose Us four
+====================================================================
+
+***/
+
+.why-choose-us-four{
+    position: relative;
+    padding: 120px 0 90px;
+}
+
+// feature block four
+.feature-block-four{
+    margin-bottom: 30px;
+    .inner-box{
+        position: relative;
+        padding-left: 66px;
+        @include media-breakpoint-down(sm){
+            padding-left: 0;
+            padding-top: 66px;
+        }
+        &:hover{
+            .icon-box{
+                .icon{border-color: var(--theme-color1);}
+            }
+            .content-box{
+                &:before{opacity: 1;}
+                &::after{opacity: 0;}
+            }
+            .read-more{
+                i {color: var(--theme-color1);}
+            }
+        }
+        .icon-box{
+            position: absolute;
+            top: 38px;
+            left: 0;
+            z-index: 3;
+            @include media-breakpoint-down(sm){
+                left: 50%;
+                top: 8px;
+                margin-left: -64px;
+            }
+            .icon{
+                display: block;
+                background: #FFFFFF;
+                border: 3px solid #E3E3E3;
+                border-radius: 10px;
+                font-size: 60px;
+                width: 128px;
+                height: 128px;
+                line-height: 128px;
+                text-align: center;
+                background-color: var(--theme-color-light);
+                color: var(--theme-color1);
+                transition: all 0.3s ease;
+            }
+        }
+        .content-box{
+            position: relative;
+            padding: 30px 28px 25px 87px;
+            border-radius: 10px;
+            border: 1px solid #E3E3E3;
+            @include media-breakpoint-down(sm){
+                padding-left: 28px;
+                padding-top: 87px;
+                text-align: center;
+            }
+            &:after,
+            &:before{
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 93px;
+                height: 75px;
+                background-image: url(../images/icons/shape-7-2.png);
+                opacity: 0;
+                transition: all 300ms ease;
+            }            
+            &:after{
+                background-image: url(../images/icons/shape-7.png);
+                opacity: 1;
+            }
+
+        }
+        .title{
+            color: var(--theme-color2);
+            margin-bottom: 10px;
+        }
+        .text{
+            color: var(--text-color);
+            margin-bottom: 15px;
+        }
+        .read-more{
+            font-size: var(--body-font-size);
+            line-height: 22px;
+            font-weight: 700;
+            font-family: var(--title-font);
+            color: var(--theme-color2);
+            transition: all 0.3s ease;
+            i{
+                position: relative;
+                top: 0px;
+                margin-left: 10px;
+                transition: all 0.3s ease;
+            }
+        }
+    }
+}
+
+
+
+/***
+
+====================================================================
+    Why Choose Us five
+====================================================================
+
+***/
+
+.why-choose-us-five{
+    position: relative;
+    padding: 120px 0 70px;
+    // content-column
+    .content-column{
+        margin-bottom: 50px;
+        .list-style-two{
+            margin-bottom: 40px;
+            li{
+                color: var(--text-color);
+                font-size: var(--body-font-size);
+                line-height: var(--body-line-height);
+                margin-bottom: 10px;
+                i{
+                    font-size: var(--body-font-size);
+                    color: var(--theme-color2);
+                }
+            }
+        }
+        .read-more {
+            border: 1px solid var(--theme-color2);
+            background-color: #ffffff;
+            color: var(--theme-color2);
+            &:before{background-color: var(--bg-theme-color1);}
+            &:hover{
+                color: var(--theme-color-light);
+                border-color: transparent;
+            }
+        }
+    }
+    // image-column
+    .image-column{
+        margin-bottom: 25px;
+        .inner-column{
+            position: relative;
+            .image-box{
+                position: relative;
+                .image{
+                    margin-bottom: 25px;
+                    img{
+                        border-radius: 10px 10px 0 0;
+                        width: 100%;
+                    }
+                }
+                .image-2{
+                    margin-bottom: 25px;
+                    @include media-breakpoint-down(lg){display: none;}
+                    img{
+                        border-radius: 0 0 0 10px;
+                    }
+                }
+                .image-3{
+                    margin-bottom: 25px;
+                    @include media-breakpoint-down(lg){display: none;}
+                    img{
+                        border-radius: 0 0 10px 0;
+                    }
+                }
+            }
+            .exp-box{
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                background: var(--theme-color1);
+                border-radius: 10px;
+                text-align: center;
+                min-width: 249px;
+                border: 5px solid var(--theme-color-light);
+                margin-top: -10px;
+                transform: translate(-50%,-50%);
+                @include media-breakpoint-down(lg){
+                    position: relative;
+                    bottom: 0;
+                    left: 0;
+                    margin-top: 0;
+                    width: 100%;
+                    border: 0;
+                    transform: none;
+                }
+                .inner{
+                    position: relative;
+                    padding: 23px 23px 24px;
+                    .icon{
+                        font-size: 48px;
+                        color: var(--theme-color-light);
+                        line-height: 48px;
+                        margin-bottom: 10px;
+                    }
+                    .title{
+                        margin-bottom: 5px;
+                        font-weight: 700;
+                        color: var(--theme-color-light);
+                        font-size: 27px;
+                    }
+                    .text{
+                        color: var(--theme-color-light);
+                    }
+                }
+            }
+        }
+    }
+}
+
+//  feature-block-five
+.feature-block-five{
+    margin-bottom: 42px;
+    .inner{
+        position: relative;
+        padding-left: 79px;
+        &:hover{
+            .icon{
+                transform: scaleX(-1);
+                color: var(--theme-color2);
+            }
+        }
+        .icon{
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: var(--theme-color1);
+            font-size: 58px;
+            line-height: 1em;
+            transition: all 300ms ease;
+        }
+        .title{
+            margin-bottom: 0;
+            font-weight: 600;
+        }
+    }
+}

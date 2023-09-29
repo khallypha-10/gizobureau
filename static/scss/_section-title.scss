@@ -1,0 +1,76 @@
+/*** 
+
+====================================================================
+Section Title
+====================================================================
+
+***/
+
+.sec-title {
+    position: relative;
+    margin-bottom: 60px;
+    .sub-title {
+        position: relative;
+        display: inline-block;
+        top: -8px;
+        font-size: var(--sec-title-subtitle-font-size);
+        line-height: var(--sec-title-subtitle-line-height);
+        font-weight: var(--sec-title-subtitle-font-weight);
+        font-family: var(--sec-title-subtitle-font-family);
+        color: var(--sec-title-subtitle-color);
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        padding-left: 36px;
+        margin-bottom: 12px;
+        @include media-breakpoint-down(sm){
+            letter-spacing: 1px;
+        }
+        &:before{
+            position: absolute;
+            left: 5px;
+            top: 0;
+            height: 20px;
+            width: 26px;
+            content: "\f178";
+            color: var(--theme-color1);
+            font-family: 'Font Awesome 6 Pro';
+        }
+    }
+    h2 {
+        position: relative;
+        display: block;
+        font-size: var(--sec-title-font-size);
+        color: var(--sec-title-color);
+        font-family: var(--sec-title-font-family);
+        font-weight: var(--sec-title-font-weight);
+        letter-spacing: -1.92px;
+        line-height: 1.18em;
+        margin-bottom: 0;
+        z-index: 2;
+        @include media-breakpoint-down(sm){
+            font-size: 36px;
+            line-height: 1.1em;
+            letter-spacing: -1px;
+            br{display: none;}
+        }
+    }
+    .text {
+        margin-top: 20px;
+    }
+
+    &.style-two{
+        .sub-title{
+            color: var(--theme-color1);
+            margin-bottom: 5px;
+        }
+    }
+
+    &.light{
+        .sub-title,
+        .text,
+        h2,
+        h1{
+            color: #fff;
+        }
+    }
+}

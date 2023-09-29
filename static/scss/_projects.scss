@@ -1,0 +1,1302 @@
+/*** 
+
+====================================================================
+      Projects section
+====================================================================
+
+***/
+
+.projects-section{
+    position: relative;
+    padding: 120px 0 90px;
+    .mixitup-gallery{
+        .filter-btns{
+            justify-content: flex-end;
+            margin-top: 100px;
+            @include media-breakpoint-down(xl){
+                margin-top: 0;
+                justify-content: flex-start;
+            }
+        }
+    }
+}
+
+.mixitup-gallery{
+    .mix{display: none;}
+    .filter-btns{
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 50px;
+        .filter{
+            position: relative;
+            font-size: var(--body-font-size);
+            line-height: 32px;
+            padding: 10px 20px;
+            color: #67687A;
+            background-color: var(--theme-color-gray);
+            font-weight: 400;
+            margin-left: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 300ms ease;
+            margin-bottom: 10px;
+            &:first-child{margin-left: 0;}
+            @include media-breakpoint-down(sm){
+                width: 100%;
+                text-align: center;
+                margin-left: 0;
+            }
+            &:hover,
+            &.active{
+                background-color: var(--bg-theme-color1);
+                color: #fff;
+            }
+        }
+    }
+}
+
+.project-block{
+    position: relative;
+    margin-bottom: 30px;
+    &.mix{display: none;}
+    .inner-box {
+        position: relative;
+        &:hover{
+            .info-box{
+                bottom: 0;
+                opacity: 1;
+                visibility: visible;
+                transition: all 0.3s ease;
+                transition-delay: 300ms;
+            }
+            .image-box{
+                &::before{height: 100%;}
+                .image{
+                    border-radius: 10px;
+                    img{
+                        transform: scale(1.1);
+                        transition: all 300ms ease;
+                    }
+                }
+            }
+        }
+        .image-box{
+            position: relative;
+            &::before{
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 0%;
+                background: linear-gradient(180deg, rgba(14, 30, 42, 0) 0%, rgba(14, 30, 42, 0) 30.98%, #0E1E2A 100%);
+                border-radius: 10px;
+                z-index: 2;
+                pointer-events: none;
+                transition: all 300ms ease;
+                content: "";
+            }
+            .image{
+                position: relative;
+                overflow: hidden;
+                border-radius: 10px;
+                margin-bottom: 0px;
+                img{
+                    position: relative;
+                    width: 100%;
+                    min-height: 320px;
+                    object-fit: cover;
+                    transition: all 0.3s ease;
+                }
+            }
+        }
+        .info-box{
+            position: absolute;
+            left: 0px;
+            bottom: -30px;
+            padding: 38px 32px 10px;
+            border-radius: 20px;
+            width: 100%;
+            z-index: 3;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            .title{
+                color: var(--theme-color-light);
+                margin-bottom: 10px;
+                a{
+                    &:hover{
+                        color: #fff;
+                    }
+                }
+            }
+            .text{
+                position: relative;
+                display: block;
+                color: var(--theme-color-light);
+            }
+        }
+    }
+}
+
+/*** 
+
+====================================================================
+    Projects section Two
+====================================================================
+
+***/
+
+.projects-section-two{
+    position: relative;
+    padding: 120px 0 90px;
+}
+
+// Project Block Two
+.project-block-two{
+    position: relative;
+    margin-bottom: 30px;
+
+    .inner-box {
+        position: relative;
+        &:hover{
+            .image-box{
+                .image{
+                    border-radius: 10px;
+                    img{
+                        transform: scale(1.1);
+                        transition: all 300ms ease;
+                    }
+                }
+            }
+        }
+        .image-box{
+            position: relative;
+            .image{
+                position: relative;
+                overflow: hidden;
+                border-radius: 10px;
+                margin-bottom: 0px;
+                img{
+                    position: relative;
+                    width: 100%;
+                    min-height: 320px;
+                    object-fit: cover;
+                    transition: all 0.3s ease;
+                }
+            }
+        }
+        .caption-box{
+            position: absolute;
+            left: 0;
+            bottom: 30px;
+            right: 30px;
+            background-color: var(--theme-color-light);
+            border-radius: 0 10px 10px 0;
+            padding: 17px 80px 17px 30px;
+            .title{
+                margin-bottom: 0;
+                color: var( --theme-color2);
+            }
+            .icon{
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 74px;
+                height: 69px;
+                line-height: 69px;
+                text-align: center;
+                background: rgba(34, 211, 107, 0.1);
+                border-radius: 0px 10px 10px 0px;
+                display: inline-block;
+                transition: all 0.3s ease;
+                &:hover{
+                    background-color: var(--theme-color1);
+                    transition: all 0.3s ease;
+                    i{
+                        color: var(--theme-color-light);
+                    }
+                }
+                i{
+                    color: var(--theme-color1);
+                    font-size: 32px;
+                }
+            }
+        }
+    }
+}
+
+/*** 
+
+====================================================================
+    Projects section Three
+====================================================================
+
+***/
+
+.projects-section-three{
+    position: relative;
+    padding: 120px 0 90px;
+    .carousel-outer{
+        margin: 0 -440px;
+        @include media-breakpoint-down(xl){
+            margin: 0 -100px;
+        }
+        @include media-breakpoint-down(lg){
+            margin: 0;
+        }
+    }
+}
+
+// Project Block Three
+.project-block-three{
+    position: relative;
+    margin-bottom: 30px;
+    .inner-box {
+        position: relative;
+        &:hover{
+            .image-box{
+                .image{
+                    border-radius: 10px;
+                    img{
+                        transform: scale(1.1);
+                        transition: all 300ms ease;
+                    }
+                }
+            }
+        }
+        .image-box{
+            position: relative;
+            .image{
+                position: relative;
+                overflow: hidden;
+                border-radius: 10px;
+                margin-bottom: 0px;
+                img{
+                    position: relative;
+                    width: 100%;
+                    min-height: 320px;
+                    object-fit: cover;
+                    transition: all 0.3s ease;
+                }
+            }
+            .icon{
+                position: absolute;
+                bottom: 20px;
+                right: 20px;
+                width: 67px;
+                height: 67px;
+                line-height: 67px;
+                text-align: center;
+                background: var(--bg-theme-color1);
+                color: var(--theme-color-light);
+                border-radius: 50%;
+                transition: all 0.3s ease;
+                font-size: 36px;
+                display: inline-block;
+                @include media-breakpoint-down(md){
+                    height: 54px;
+                    width: 54px;
+                    line-height: 54px;
+                    font-size: 24px;
+                }
+                &:hover{
+                    background-color: var(--theme-color-light);
+                    color: var(--theme-color1);
+                    box-shadow: 0 10px 30px rgba(0, 0, 0, .01);
+                }
+            }
+        }
+    }
+}
+
+
+/*** 
+
+====================================================================
+    Projects Section Four
+====================================================================
+
+***/
+
+.projects-section-four{
+    position: relative;
+    padding: 120px 0 90px;
+    .carousel-outer{
+        position: relative;
+        margin: 0 -170px;
+        z-index: 2;
+        @include media-breakpoint-down(xl){
+            margin: 0;
+        }
+        .owl-nav{
+            position: absolute;
+            right: 150px;
+            top: -120px;
+            z-index: 9;
+            @include media-breakpoint-down(lg){display: none;}
+        }
+    }
+}
+
+// Project Block Four
+.project-block-four{
+    position: relative;
+    margin-bottom: 30px;
+    .inner-box{
+        position: relative;
+        &:hover{
+            .image{
+                img{
+                    transform: scale(1.1);
+                }
+            }
+            .info-box{
+                &::before{width: 100%;}
+                .title{
+                    left: 0;
+                    opacity: 1;
+                    visibility: visible;
+                    transition-delay: 200ms;
+                }
+            }
+        }
+    }
+    .image{
+        overflow: hidden;
+        border-radius: 10px;
+        img{
+            transition: all 0.3s ease;
+        }
+    }
+    .info-box{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        padding: 20px 30px;
+        width: 100%;
+        &:before{
+            @include overlay;
+            background-color: var(--bg-theme-color2);
+            opacity: 0.8;
+            border-radius: 0px 0px 10px 10px;
+            width: 0;
+            transition: all 300ms ease;
+            content: "";
+        }
+        .icon{
+            position: relative;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 5px;
+            background-color: #ffffff;
+            color: var(--theme-color1);
+            margin-right: 20px;
+        }
+        .title{
+            position: relative;
+            left: 30px;
+            color: var( --theme-color-light);
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+/*** 
+
+====================================================================
+    Project section Five
+====================================================================
+
+***/
+
+.projects-section-five{
+    position: relative;
+    padding: 120px 0 90px;
+}
+
+// Project Block five
+.project-block-five{
+    position: relative;
+    margin-bottom: 30px;
+
+    .inner-box {
+        position: relative;
+        &:hover{
+            .image-box{
+                .image{
+                    border-radius: 10px;
+                    img{
+                        transform: scale(1.1);
+                    }
+                }
+            }
+            .caption-box{
+                border-bottom: 2px solid var(--theme-color1);
+            }
+        }
+        .image-box{
+            position: relative;
+            .image{
+                position: relative;
+                overflow: hidden;
+                border-radius: 10px;
+                margin-bottom: 0px;
+                img{
+                    position: relative;
+                    width: 100%;
+                    min-height: 320px;
+                    object-fit: cover;
+                    transition: all 0.3s ease;
+                }
+            }
+        }
+        .caption-box{
+            position: relative;
+            background-color: var(--theme-color-light);
+            padding: 30px 30px;
+            background: #FFFFFF;
+            border-bottom: 2px solid transparent;
+            box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.07);
+            border-radius: 10px;
+            text-align: center;
+            max-width: 350px;
+            margin: -50px auto 0;
+            transition: all 300ms ease;
+            .title{
+                margin-bottom: 0;
+                color: var( --theme-color2);
+            }
+            .read-more{
+                color: var(--theme-color2);
+                font-weight: 700;
+                @include title-font;
+                transform: all 300ms ease;
+                i{margin-left: 10px;color: var(--theme-color1);}
+                &:hover{
+                    color: var(--theme-color1);
+                }
+            }
+        }
+    }
+}
+
+
+
+/*** 
+
+====================================================================
+    Projects section Six
+====================================================================
+
+***/
+
+.projects-section-six{
+    position: relative;
+    padding: 120px 0 90px;
+    .sec-title{
+        padding-right: 200px;
+        @include media-breakpoint-down(xl){
+            padding-right: 0;
+        }
+        .theme-btn{
+            position: absolute;
+            right: 0;
+            top: 97px;
+            @include media-breakpoint-down(xl){
+                position: relative;
+                top: 0;
+                margin-top: 30px;
+            }
+        }
+    }
+
+    .project-block{
+        .image-box{
+            .image{
+                img{
+                    min-height: 250px;
+                }
+            }
+        }
+    }
+}
+
+/***
+
+====================================================================
+    Projects section Seven
+====================================================================
+
+***/
+
+.projects-section-seven{
+    position: relative;
+    padding: 120px 0 30px;
+    overflow: hidden;
+    .owl-carousel{
+        padding-bottom: 50px;
+        .owl-nav{
+            display: none;
+        }
+        .owl-dots {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .owl-dot {
+                height: 10px;
+                width: 70px;
+                background-color: var(--theme-color-gray);
+                transition: all 300ms ease;
+                &:first-child{border-radius: 5px 0 0 5px;}
+                &:last-child{border-radius: 0 5px 5px 0;}
+                @include media-breakpoint-down(sm){
+                    width: 30px;
+                }
+                &.active {
+                    background-color: var(--bg-theme-color1);
+                }
+            }
+        }
+    }
+}
+
+// Project Block Seven
+.project-block-seven{
+    position: relative;
+    margin-bottom: 30px;
+    .inner-box {
+        position: relative;
+        &:hover {
+            .image img {
+                transform: scale(1.1);
+            }
+            .social-links {
+                transform: scaleY(1);
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+
+    .image-box {
+        position: relative;
+        .image {
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 0;
+            border-radius: 10px;
+            z-index: 1;
+            img {
+                width: 100%;
+                transition: all 400ms ease;
+            }
+        }
+    }
+    .info-box {
+        position: relative;
+        padding: 30px 30px 30px;
+        padding-right: 20px;
+        background: #F2F3F5;
+        border-right: 3px solid var(--theme-color1);
+        border-radius: 0px 10px 10px 0px;
+        max-width: 318px;
+        min-height: 150px;
+        margin-top: -92px;
+        z-index: 2;
+        .read-more{
+            color: var(--theme-color1);
+            font-size: 15px;
+            position: absolute;
+            bottom: 30px;
+            right: 25px;
+            line-height: 15px;
+        }
+    }
+}
+
+
+/***
+
+====================================================================
+    Projects section Eight
+====================================================================
+
+***/
+
+.projects-section-eight{
+    position: relative;
+    padding: 120px 0 80px;
+    overflow: hidden;
+    .sec-title {
+        padding-right: 200px;
+        @include media-breakpoint-down(lg){
+            padding-right: 0;
+        }
+        .btn-box {
+            position: absolute;
+            right: 0;
+            top: 100px;
+            @include media-breakpoint-down(lg){
+                position: relative;
+                top: 0;
+                margin-top: 20px;
+            }
+            .theme-btn{
+                border: 1px solid var(--theme-color1);
+                line-height: 23px;
+            }
+        }
+    }
+}
+
+// Project Block Eight
+.project-block-eight{
+    position: relative;
+    margin-bottom: 40px;
+    .inner-box {
+        position: relative;
+        &:hover {
+            .image img {
+                transform: scale(1.1);
+            }
+            .social-links {
+                transform: scaleY(1);
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+
+    .image-box {
+        position: relative;
+        .image {
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 0;
+            border-radius: 10px;
+            z-index: 1;
+            img {
+                width: 100%;
+                transition: all 400ms ease;
+            }
+        }
+    }
+
+    .info-box {
+        position: relative;
+        display: block;
+        padding: 30px;
+        background: var(--theme-color-gray);
+        border-right: 5px solid var(--theme-color1);
+        border-radius: 0px 10px 10px 0px;
+        max-width: 285px;
+        margin-top: -64px;
+        z-index: 2;
+        .title{
+            color: var(--theme-color2);
+            margin-bottom: 0;
+            a:hover{
+                color: var(--theme-color1);
+            }
+        }
+        .read-more{
+            position: absolute;
+            right: 25px;
+            top: 50%;
+            font-size: 18px;
+            line-height: 20px;
+            margin-top: -10px;
+            color: var(--theme-color2);
+            transition: all 300ms ease;
+            &:hover{color: var(--theme-color1);}
+        }
+    }
+}
+
+/***
+
+====================================================================
+    Projects section Nine
+====================================================================
+
+***/
+
+.projects-section-nine{
+    position: relative;
+    padding: 120px 0 80px;
+    overflow: hidden;
+    .owl-carousel{
+        position: relative;
+        z-index: 9;
+        .owl-nav{
+            position: absolute;
+            right: 0;
+            top: -120px;
+            @include media-breakpoint-down(lg){
+                position: relative;
+                top: 0;
+                justify-content: center;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+// Project Block Nine
+.project-block-nine{
+    position: relative;
+    margin-bottom: 40px;
+    .inner-box {
+        position: relative;
+        &:hover {
+            .info-box{
+                .read-more{
+                    background-color: var(--theme-color1);
+                    color: var(--theme-color-light);
+                }
+            }
+            .image img {
+                transform: scale(1.1);
+            }
+            .social-links {
+                transform: scaleY(1);
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+
+    .image-box {
+        position: relative;
+        .image {
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 0;
+            border-radius: 10px 10px 0 0;
+            z-index: 1;
+            img {
+                width: 100%;
+                transition: all 400ms ease;
+            }
+        }
+    }
+
+    .info-box {
+        position: relative;
+        padding: 30px;
+        background: #F2F3F5;
+        border-radius: 0px 0px 10px 10px;
+        width: 100%;
+        z-index: 2;
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        .title{
+            color: var(--theme-color2);
+            margin-bottom: 0;
+        }
+        .read-more{
+            position: relative;
+            display: block;
+            text-align: center;
+            color: var(--theme-color2);
+            font-size: 15px;
+            line-height: 40px;
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background-color: var(--theme-color-light);
+            transition: all 0.3s ease;
+        }
+    }
+}
+
+
+/*** 
+
+====================================================================
+    Projects section Ten
+====================================================================
+
+***/
+
+.projects-section-ten{
+    position: relative;
+    padding: 120px 0 90px;
+    .carousel-outer{
+        margin: 0 -440px;
+        @include media-breakpoint-down(xl){
+            margin: 0 -100px;
+        }
+        @include media-breakpoint-down(lg){
+            margin: 0;
+        }
+    }
+    .owl-carousel{
+        position: relative;
+        z-index: 8;
+        .owl-nav{
+            position: absolute;
+            max-width: 1280px;
+            margin: 0 auto;
+            top: -115px;
+            left: 0;
+            right: 0;
+            justify-content: flex-end;
+            @include media-breakpoint-down(lg){
+                position: relative;
+                top: 0;
+                justify-content: center;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+// Project Block Ten
+.project-block-ten{
+    position: relative;
+    margin-bottom: 30px;
+    .inner-box {
+        position: relative;
+        &:hover{
+            .image-box{
+                .image{
+                    border-radius: 10px;
+                    img{
+                        transform: scale(1.1);
+                        transition: all 300ms ease;
+                    }
+                }
+            }
+        }
+        .image-box{
+            position: relative;
+            .image{
+                position: relative;
+                overflow: hidden;
+                border-radius: 10px;
+                margin-bottom: 0px;
+                img{
+                    position: relative;
+                    width: 100%;
+                    min-height: 320px;
+                    object-fit: cover;
+                    transition: all 0.3s ease;
+                }
+            }
+            .icon{
+                position: absolute;
+                bottom: 30px;
+                right: 30px;
+                width: 50px;
+                height: 50px;
+                line-height: 50px;
+                text-align: center;
+                background: var(--bg-theme-color1);
+                color: var(--theme-color-light);
+                border-radius: 50%;
+                transition: all 0.3s ease;
+                font-size: 20px;
+                display: inline-block;
+                @include media-breakpoint-down(md){
+                    height: 54px;
+                    width: 54px;
+                    line-height: 54px;
+                    font-size: 24px;
+                }
+                &:hover{
+                    background-color: var(--theme-color-light);
+                    color: var(--theme-color1);
+                    box-shadow: 0 10px 30px rgba(0, 0, 0, .01);
+                }
+            }
+        }
+    }
+}
+
+
+
+/***
+
+====================================================================
+    Projects section Eleven
+====================================================================
+
+***/
+
+.projects-section-eleven{
+    position: relative;
+    padding: 120px 0 80px;
+    overflow: hidden;
+    .sec-title{
+        margin-bottom: 60px;
+    }
+    .carousel-outer{
+        margin: 0 -164px;
+        @include media-breakpoint-down(xl){
+            margin: 0;
+        }
+    }
+    .owl-carousel{
+        position: relative;
+        z-index: 8;
+        .owl-nav{
+            position: absolute;
+            max-width: 1280px;
+            margin: 0 auto;
+            top: -120px;
+            left: 0;
+            right: 0;
+            justify-content: flex-end;
+            @include media-breakpoint-down(lg){
+                position: relative;
+                justify-content: center;
+                top: 0;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+// Team Block Eleven
+.project-block-eleven{
+    position: relative;
+    margin-bottom: 40px;
+    .inner-box {
+        position: relative;
+        &:hover {
+            .image img {
+                transform: scale(1.1);
+            }
+            .social-links {
+                transform: scaleY(1);
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+
+    .image-box {
+        position: relative;
+        .image {
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 0;
+            border-radius: 10px;
+            z-index: 1;
+            img {
+                width: 100%;
+                transition: all 400ms ease;
+            }
+        }
+    }
+
+    .info-box {
+        position: relative;
+        padding: 20px;
+        padding-right: 70px;
+        background: var(--theme-color-light);
+        box-shadow: 0px 4.8px 24.4px -6px rgba(19, 16, 34, 0.1), 0px 4px 13px -2px rgba(19, 16, 34, 0.06);
+        border-radius: 10px;
+        max-width: 370px;
+        margin: 0 auto;
+        margin-top: -80px;
+        z-index: 2;
+        .title{
+            margin-bottom: 5px;
+            a:hover{
+                color: var(--theme-color1);
+            }
+        }
+        .designation{
+            color: var(--theme-color2);
+        }
+        .icon{
+            position: absolute;
+            bottom: 30px;
+            right: 20px;
+            background-color: var(--theme-color1);
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            border-radius: 10px;
+            color: var(--theme-color-light);
+        }
+    }
+}
+
+
+
+/***
+
+====================================================================
+    projects section Twelve
+====================================================================
+
+***/
+
+.projects-section-twelve{
+    position: relative;
+    padding: 120px 0 80px;
+    overflow: hidden;
+    .carousel-outer{
+        position: relative;
+        @include media-breakpoint-down(xl){
+            padding: 0 20px;
+        }
+    }
+}
+
+// Team Block Twelve
+.project-block-twelve{
+    position: relative;
+    margin-bottom: 40px;
+    .inner-box {
+        position: relative; 
+        transition: all 0.3s ease;
+        &:hover {
+            box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.07);
+            border-radius: 10px;
+            .info-box{
+                background: #FFFFFF;
+            }
+            .image img {
+                transform: scale(1.1);
+            }
+            .social-links {
+                transform: scaleY(1);
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+
+    .image-box {
+        position: relative;
+        .image {
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 0;
+            border-radius: 5px 5px 0 0;
+            z-index: 1;
+            img {
+                width: 100%;
+                transition: all 400ms ease;
+                min-height: 374px;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .info-box {
+        border-radius: 0 0 10px 10px;
+        position: relative;
+        padding: 20px 30px 30px;
+        padding-right: 60px;
+        background: #F2F3F5;
+        width: 100%;
+        z-index: 2;
+        .title{
+            color: var(--theme-color2);
+            margin-bottom: 10px;
+        }
+        .designation{
+            color: var(--theme-color2);
+        }
+        a{
+            position: absolute;
+            bottom: 58px;
+            right: 25px;
+            line-height: 20px;
+            i{
+                color: var(--theme-color1);
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+
+
+/***
+
+====================================================================
+    Project section thirteen
+====================================================================
+
+***/
+
+.projects-section-thirteen{
+    position: relative;
+    padding: 120px 0 90px;
+    .owl-carousel{
+        z-index: 3;
+        .owl-nav{
+            position: absolute;
+            right: 0;
+            top: -110px;
+            @include media-breakpoint-down(lg){
+                position: relative;
+                top: 0;
+                justify-content: center;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+// Project block thirteen
+.project-block-thirteen{
+    margin-bottom: 30px;
+    .inner-box{
+        position: relativee;
+        text-align: center;
+        &:hover{
+            .content-box{
+                background-color: var(--theme-color1);
+                .title{
+                    color: var(--theme-color-light);
+                }
+            }
+            .image-box{
+                .image{
+                    border-radius: 10px;
+                    img{
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+        .image-box{
+            position: relative;
+            margin-bottom: -38px;
+            .image{
+                overflow: hidden;
+                border-radius: 10px;
+                margin-bottom: 0;
+                img{
+                    transition: all 0.3s ease;
+                }
+            }
+        }
+        .content-box{
+            position: relative;
+            display: inline-flex;
+            z-index: 99;
+            background-color: var(--theme-color-gray);
+            padding: 20px 30px;
+            border-radius: 10px;
+            text-align: center;
+            transition: all 0.3s ease;
+            .title{
+                color: var(--theme-color2);
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+
+/***
+
+====================================================================
+    project section Fourteen
+====================================================================
+
+***/
+
+.projects-section-fourteen{
+    position: relative;
+    padding: 120px 0 80px;
+    overflow: hidden;
+}
+
+// project block Fourteen
+.project-block-fourteen{
+    position: relative;
+    margin-bottom: 40px;
+    .inner-box {
+        position: relative; 
+        transition: all 0.3s ease;
+        &:hover {
+            box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.07);
+            border-radius: 10px;
+            .image img {
+                transform: scale(1.1);
+            }
+            .social-links {
+                transform: scaleY(1);
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+
+    .image-box {
+        position: relative;
+        .image {
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 0;
+            border-radius: 10px;
+            z-index: 1;
+            img {
+                width: 100%;
+                transition: all 400ms ease;
+            }
+        }
+    }
+
+    .info-box {
+        position: absolute;
+        bottom: 30px;
+        border-radius: 10px;
+        padding: 15px 15px 15px 85px;
+        padding-right: 20px;
+        background: #F2F3F5;
+        z-index: 2;
+        transition: all 0.3s ease;
+        &:hover{
+            background: var(--theme-color1);
+            .title{
+                color: var(--theme-color-light);
+            }
+            .read-more{
+                background-color: var(--theme-color-light);
+                color: var(--theme-color1);
+            }
+        }
+        .title{
+            color: var(--theme-color2);
+            background: unset;
+            margin-bottom: 0
+        }
+        .read-more{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 67px;
+            height: 64px;
+            text-align: center;
+            line-height: 67px;
+            background-color: var(--bg-theme-color1);
+            color: var(--theme-color-light);
+            font-size: 21px;
+        }
+    }
+}

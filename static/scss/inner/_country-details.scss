@@ -1,0 +1,36 @@
+/*--------------------------------------------------------------
+# Country Details
+--------------------------------------------------------------*/
+
+.country-details {
+  background: #F0F5FB;
+  .country-content {
+    margin-left: 30px;
+    @media only screen and (max-width: 991px){
+      margin-left: 0;
+      margin-top: 30px;
+    }
+  }
+}
+
+
+.country-details-list li{
+  list-style-type: none;
+  padding: 13px 0 17px;
+  border-bottom: 1px solid #e5e5e5;
+  display: flex;
+  span {
+    font-size: 15px;
+    color: var(--theme-color1);
+    font-weight: 600;
+    width: 35%;
+    @media only screen and (max-width: 767px){
+      width: 50%;
+    }
+    &:last-child {
+      color: var(--text-color);
+      font-weight: normal;
+      width: 50%;
+    }
+  }
+}

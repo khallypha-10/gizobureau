@@ -1,0 +1,88 @@
+.theme-btn{
+    display:inline-flex;
+    justify-content: center;
+    text-align: center;
+    white-space: nowrap;
+    transition:all 0.3s ease;
+    @include title-font;
+    .btn-title {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+}
+
+/*Btn Style One*/
+.btn-style-one {
+    position: relative;
+    font-size: var(--body-font-size);
+    line-height: 26px;
+    padding: 15px 30px;
+    font-weight: 600;
+    overflow: hidden;
+    color: var(--theme-color-light);
+    background: var(--theme-color1);
+    letter-spacing: 0.8px;
+    border-radius: 7px;
+    i{
+        position: relative;
+        display: block;
+        margin-left: 10px;
+    }
+    &:before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        content: "";
+        background-color: var(--bg-theme-color2);
+        border-radius: 7px;
+        transform: scale(0, 1);
+        transform-origin: top right;
+        transition: -webkit-transform 500ms cubic-bezier(0.860, 0.000, 0.070, 1.000);
+        transition: transform 500ms cubic-bezier(0.860, 0.000, 0.070, 1.000);
+        transition: transform 500ms cubic-bezier(0.860, 0.000, 0.070, 1.000), -webkit-transform 500ms cubic-bezier(0.860, 0.000, 0.070, 1.000);
+        transition-timing-function: cubic-bezier(0.860, 0.000, 0.070, 1.000);
+    }
+    &:hover:before {
+        transform: scale(1, 1);
+        transform-origin: bottom left;
+    }
+    &:hover {
+        color: #ffffff;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
+    }
+    &.dark-bg{
+        background-color: var(--theme-color2);
+        &:hover{color: var(--theme-color2);}
+        &::before{background-color: var(--theme-color-light);}
+    }
+    &.light-bg{
+        background-color: var(--theme-color-light);
+        color: var(--theme-color2);
+        &:hover{color: var(--theme-color-light);}
+        &::before{background-color: var(--bg-theme-color1);}
+    }
+    &.hover-light{
+        &:hover{color: var(--theme-color2);}
+        &:before {background-color: var(--theme-color-light);}
+    }
+    &.hover-dark{
+        &:hover{color: var(--theme-color-light);}
+        &:before {background-color: var(--theme-color2);}
+    }
+}
+
+
+
+.theme-btn.small{
+    padding: 10px 30px;
+    line-height: 20px;
+    font-size: 10px;
+}
+
+.theme-btn.large{
+    padding: 20px 60px;
+    line-height: 25px;
+}

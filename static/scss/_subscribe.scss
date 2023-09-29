@@ -1,0 +1,762 @@
+/*** 
+
+====================================================================
+    Subscribe section
+====================================================================
+
+***/
+
+.subscribe-section{
+    position: relative;
+    background-color: var( --theme-color1);
+    padding: 85px 0 45px;
+    &.alternate{
+        background: transparent;
+        padding: 0;
+    }
+    .title-column{
+        position: relative;
+        margin-bottom: 40px;
+        @include media-breakpoint-down(md){
+            margin-bottom: 20px;
+        }
+        .title{
+            color: var(--theme-color-light);
+            letter-spacing: -1.92px;
+            @include media-breakpoint-down(xl){
+                text-align: center;
+            }
+            @include media-breakpoint-down(md){
+                font-size: 36px;
+            }
+        }
+    }
+    .form-column{
+        position: relative;
+        margin-bottom: 40px;
+        .newsletter-form{
+            padding-top: 35px;
+            padding-left: 60px;
+            @include media-breakpoint-down(xl){
+                padding-top: 0;
+                padding-left: 0;
+            }
+        }
+    }
+    .outer-box{ 
+        position: relative;
+        z-index: 3;
+        background-color: var(--theme-color1);
+        padding: 60px 80px 5px;
+        border-radius: 10px;
+        @include media-breakpoint-down(md){
+            padding: 40px 20px 10px;
+        }
+    }
+}
+
+/* Newsletter Form */
+.newsletter-form{
+	position: relative;
+	.form-group {
+		position: relative;
+        padding-right: 170px;
+        @include media-breakpoint-down(sm){
+            padding-right: 0;
+        }
+		input[type=text],
+		input[type=email] {
+			position: relative;
+			display: block;
+			height: 60px;
+			width: 100%;
+			font-size: var(--body-font-size);
+			line-height: 32px;
+			color: var(--theme-color-dark);
+			padding: 14px 27px;
+			background: rgba(255, 255, 255, 1);
+			border-radius: 10px;
+			transition: all 300ms ease;
+			&::placeholder {
+                color: #82828A;
+			}
+		}
+		.theme-btn {
+            position: absolute;
+            right: 0;
+            top: 0;
+            line-height: 30px;
+            padding: 15px 10px;
+            min-width: 150px;
+            @include media-breakpoint-down(sm){
+                position: relative;
+                width: 100%;
+                margin-top: 10px;
+            }
+		}
+	}
+}
+
+/*** 
+
+====================================================================
+    Subscribe section Two
+====================================================================
+
+***/
+
+.subscribe-section-two{
+    position: relative;
+    z-index: 2;
+    .outer-box{
+        position: relative;
+        padding: 85px 0 45px;
+        &:before{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: -320px;
+            right: -120px;;
+            box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.07);
+            content: "";
+            background-image: url(../images/icons/shape-2.png);
+            background-color: var(--theme-color-light);
+            background-repeat: no-repeat;
+            background-position: center right;
+        }
+    }
+    .title-column{
+        position: relative;
+        margin-bottom: 40px;
+        .title{
+            letter-spacing: -1.92px;
+            @include media-breakpoint-down(sm){
+                font-size: 36px;
+            }
+        }
+    }
+
+    .form-column{
+        position: relative;
+        margin-bottom: 40px;
+        .newsletter-form-two{
+            padding-right: 35px;
+            @include media-breakpoint-down(lg){
+                padding-right: 0;
+            }
+        }
+    }
+
+}
+
+/* Newsletter Form */
+.newsletter-form-two{
+	position: relative;
+	.form-group {
+		position: relative;
+        margin-bottom: 30px;
+		input[type=text],
+		input[type=email] {
+			position: relative;
+			display: block;
+			height: 60px;
+			width: 100%;
+			font-size: var(--body-font-size);
+			line-height: 32px;
+			color: var(--theme-color-dark);
+			padding: 14px 27px;
+            border: 1px solid #E3E3E3;
+            border-radius: 10px;
+			transition: all 300ms ease;
+			&::placeholder {
+                color: #82828A;
+			}
+		}
+		.theme-btn {
+            width: 100%;
+		}
+	}
+}
+
+/*** 
+
+====================================================================
+    Subscribe section Three
+====================================================================
+
+***/
+
+.subscribe-section-three{
+    position: relative;
+    background-color: var( --theme-color-gray);
+    padding: 120px 0;
+    .outer-box{
+        max-width: 870px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .sec-title{
+        margin-bottom: 30px;
+        .text{
+            margin-top: 10px;
+        }
+    }
+}
+
+/* Newsletter Form */
+.newsletter-form-three{
+	position: relative;
+	.form-group {
+		position: relative;
+		input[type=text],
+		input[type=email] {
+			position: relative;
+			display: block;
+			height: 72px;
+			width: 100%;
+			font-size: var(--body-font-size);
+			line-height: 32px;
+			color: var(--theme-color-dark);
+			padding: 20px 27px;
+			background: rgba(22, 36, 62, .1);
+			border-radius: 10px;
+			transition: all 300ms ease;
+			&::placeholder {
+                color: #82828A;
+			}
+		}
+		.theme-btn {
+            position: absolute;
+            right: 0;
+            top: 0;
+            line-height: 32px;
+            padding: 20px 30px;
+            background-color: transparent;
+            color: var(--theme-color2);
+            i{color: var(--theme-color1);}
+            @include media-breakpoint-down(sm){
+                position: relative;
+                margin-top: 20px;
+                width: 100%;
+                line-height: 20px;
+                background-color: var(--theme-color-light);
+            }
+		}
+	}
+}
+
+
+
+/*** 
+
+====================================================================
+    Subscribe section Four
+====================================================================
+
+***/
+
+.subscribe-section-four{
+    position: relative;
+    &:before{
+        @include overlay;
+        height: 170px;
+        top: auto;
+        bottom: 0;
+        background-color: var(--theme-color-gray);
+        content: "";
+    }
+    .outer-box{
+        position: relative;
+        background-color: var( --bg-theme-color1);
+        padding-top: 65px;
+        @include media-breakpoint-down(lg){padding-top: 0;}
+        &:before {
+            @include overlay;
+            height: 60px;
+            background-color: var(--theme-color-light);
+            content: "";
+            @include media-breakpoint-down(lg){display: none;}
+        }
+    }
+    
+    .form-column{
+        .inner-column{
+            position: relative;
+            padding: 50px 0;
+            margin-left: -50px;
+            max-width: 630px;
+            padding-right: 25px;
+            @include media-breakpoint-down(xl){
+                margin-left: 0;
+            }
+            @include media-breakpoint-down(lg){
+                text-align: center;
+                padding: 50px 30px;
+                margin: 0 auto 50px;
+            }
+        }
+        .sec-title{
+            margin-bottom: 30px;
+            .text{
+                margin-top: 10px;
+            }
+        }
+    }
+    .image-column{
+        position: relative;
+        .inner-column{
+            position: relative;
+            text-align: center;
+            margin-top: -60px;
+            overflow: hidden;
+        }
+        .image{
+            position: relative;
+            display: block;
+            margin:0 auto;
+        }
+        .bg-shpae{
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            bottom: -80px;
+            width: 383px;
+            height: 318px;
+            background-image: url(../images/icons/shape-3.png);
+        }
+    }
+}
+
+/* Newsletter Form Four */
+.newsletter-form-four{
+	position: relative;
+	.form-group {
+		position: relative;
+        padding-right: 200px;
+        @include media-breakpoint-down(md){
+            padding-right: 0;
+        }
+		input[type=text],
+		input[type=email] {
+			position: relative;
+			display: block;
+			height: 52px;
+			width: 100%;
+			font-size: var(--body-font-size);
+			line-height: 30px;
+			color: var(--theme-color-dark);
+			padding: 10px 27px;
+			background: rgba(255, 255, 255, 1);
+			border-radius: 10px;
+			transition: all 300ms ease;
+			&::placeholder {
+                color: #82828A;
+			}
+		}
+		.theme-btn {
+            position: absolute;
+            right: 0;
+            top: 0;
+            line-height: 30px;
+            padding: 10px 10px;
+            min-width: 170px;
+            border: 1px solid var(--theme-color-light);
+            @include media-breakpoint-down(md){
+                position: relative;
+                margin-top: 20px;
+            }
+		}
+	}
+}
+
+
+
+/*** 
+
+====================================================================
+    Subscribe section Five
+====================================================================
+
+***/
+
+.subscribe-section-five{
+    position: relative;
+    background-color: var( --theme-color-gray);
+    padding: 110px 0;
+    .outer-box{
+        max-width: 630px;
+        margin: 0 auto;
+        @include media-breakpoint-down(xl){
+            text-align: center;
+        }
+    }
+    .sec-title{
+        margin-bottom: 45px;
+    }
+}
+
+/* Newsletter Form Five */
+.newsletter-form-five{
+	position: relative;
+	.form-group {
+		position: relative;
+        max-width: 540px;
+        @include media-breakpoint-down(xl){margin: 0 auto;}
+		input[type=text],
+		input[type=email] {
+			position: relative;
+			display: block;
+			height: 60px;
+			width: 100%;
+			font-size: var(--body-font-size);
+			line-height: 30px;
+			color: var(--theme-color-dark);
+			padding: 15px 20px;
+            background-color: var(--theme-color-light);
+			border-radius: 10px;
+			transition: all 300ms ease;
+            @include media-breakpoint-down(md){text-align: center;}
+			&::placeholder {
+                color: #82828A;
+			}
+		}
+		.theme-btn {
+            position: absolute;
+            right: 0;
+            top: 0;
+            line-height: 30px;
+            padding: 15px 40px;
+            @include media-breakpoint-down(md){
+                position: relative;
+                width: 100%;
+                text-align: center;
+                margin-top: 20px;
+            }
+		}
+	}
+}
+
+/*** 
+
+====================================================================
+    Subscribe section Six
+====================================================================
+
+***/
+
+.subscribe-section-six{
+    position: relative;
+    &:before{
+        @include overlay;
+        height: 50%;
+        background-color: var(--theme-color-gray);
+        content: "";
+    }
+    .outer-box{
+        position: relative;
+        background-color: var( --bg-theme-color2);
+        border-radius: 20px;
+        overflow: hidden;
+        &:before{
+            @include overlay;
+            background-image: url(../images/icons/shape-5.png);
+            background-position: right top;
+            background-repeat: no-repeat;
+            content: "";
+            @include media-breakpoint-down(lg){
+                display: none;
+            }
+        }
+    }
+    
+    .form-column{
+        .inner-column{
+            position: relative;
+            padding: 90px 0 100px;
+            @include media-breakpoint-down(lg){
+                text-align: center;
+                padding: 70px 30px;
+            }
+        }
+        .sec-title{
+            margin-bottom: 40px;
+            .text{
+                margin-top: 20px;
+            }
+        }
+        .newsletter-form-six {
+            max-width: 520px;
+            @include media-breakpoint-down(lg){
+                margin: 0 auto;
+            }
+        }
+    }
+    .image-column{
+        position: relative;
+        .inner-column{
+            position: relative;
+            text-align: center;
+            padding-top: 35px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            @include media-breakpoint-down(lg){
+                padding-top: 0;
+            }
+        }
+        .image{
+            position: relative;
+            display: block;
+            margin:0 auto;
+        }
+    }
+}
+
+/* Newsletter Form Six */
+.newsletter-form-six{
+	position: relative;
+	.form-group {
+		position: relative;
+		input[type=text],
+		input[type=email] {
+			position: relative;
+			display: block;
+			height: 52px;
+			width: 100%;
+			font-size: var(--body-font-size);
+			line-height: 30px;
+			color: var(--theme-color-dark);
+			padding: 10px 27px;
+			background: rgba(255, 255, 255, 1);
+			border-radius: 10px;
+			transition: all 300ms ease;
+			&::placeholder {
+                color: #82828A;
+			}
+		}
+		.theme-btn {
+            position: absolute;
+            right: 0;
+            top: 0;
+            line-height: 30px;
+            padding: 10px 10px;
+            min-width: 170px;
+            border: 1px solid transparent;
+            @include media-breakpoint-down(sm){
+                position: relative;
+                width: 100%;
+                margin-top: 10px;
+            }
+		}
+	}
+}
+
+
+
+/*** 
+
+====================================================================
+    Subscribe Section Seven
+====================================================================
+
+***/
+
+.subscribe-section-seven{
+    position: relative;
+    padding: 80px 0 40px;
+    background-color: var(--theme-color-gray);
+    // image-column
+    .image-column{
+        margin-bottom: 50px;
+        .inner-column{
+            .image-box{
+                padding-left: 45px;
+                @include media-breakpoint-down(lg){
+                    text-align: center;
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+    // content-column
+    .content-column{
+        margin-bottom: 50px;
+        .inner-column{
+            padding-top: 15px;
+            .sec-title{
+                margin-bottom: 25px;
+                @include media-breakpoint-down(lg){
+                    text-align: center;
+                }
+                @include media-breakpoint-down(md){
+                    br{display: none;}
+                }
+                .sub-title{
+                    padding-left: 0;
+                    color: var(--theme-color1);
+                    &:before{
+                        display: none;
+                    }
+                }
+                .text{
+                    margin-top: 9px;
+                }
+            }
+            .newsletter-form-six{
+                max-width: 410px;
+                @include media-breakpoint-down(lg){
+                    margin: 0 auto;
+                }
+                .theme-btn{
+                    padding: 10px 30px;
+                    min-width: auto;
+                }
+            }
+        }
+    }
+}
+
+
+/*** 
+
+====================================================================
+    Subscribe section Eight
+====================================================================
+
+***/
+
+.subscribe-section-eight{
+    position: relative;
+    background-color: var( --theme-color-gray);
+    padding: 120px 0 70px;
+    
+    .title-column{
+        position: relative;
+        margin-bottom: 50px;
+        .title{
+            letter-spacing: -1.92px;
+            margin-bottom: 0;
+            @include media-breakpoint-down(lg){
+                text-align: center;
+                br{display: none;}
+            }
+        }
+    }
+
+    .form-column{
+        position: relative;
+        margin-bottom: 40px;
+        .newsletter-form-three{
+            padding-top: 25px;
+            padding-left: 60px;
+            @include media-breakpoint-down(lg){
+                padding-left: 0;
+                padding-top: 0;
+            }
+            .form-group{
+                input:not([type=submit]){
+                    background-color: var(--theme-color-light);
+                }
+                .theme-btn{
+                    background-color: var(--theme-color1);
+                    color: var(--theme-color-light);
+                    font-weight: 400;
+                    border-radius: 0 10px 10px 0;
+                    padding-left: 40px;
+                    padding-right: 40px;
+                }
+            }
+        }
+    }
+}
+
+
+
+/*** 
+
+====================================================================
+    Subscribe section Nine
+====================================================================
+
+***/
+
+.subscribe-section-nine{
+    position: relative;
+    z-index: 3;
+    .bg-icon{
+        @include media-breakpoint-down(xl){display: none}
+        .icon-left{
+            position: absolute;
+            top: 0;
+            left: 79px;
+        }
+        .icon-right{
+            position: absolute;
+            bottom: 95px;
+            right: 0;
+        }
+    }
+    .outer-box{
+        position: relative;
+        border-radius: 10px;
+        padding: 80px 30px 70px;
+        background-color: var(--theme-color-light);
+        &:before{
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 739px;
+            height: 100%;
+            background: linear-gradient(255.88deg, #D0F4DE 2.63%, rgba(208, 244, 222, 0) 90.75%);
+            @include media-breakpoint-down(lg){width: 100%;}
+        }
+        &:after{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 739px;
+            height: 100%;
+            background: linear-gradient(91.77deg, rgba(34, 211, 107, 0.11) 3.46%, rgba(34, 211, 107, 0) 95.75%);
+            @include media-breakpoint-down(lg){width: 100%;}
+        }
+        .sec-title{
+            margin-bottom: 23px;
+            .sub-title{
+                padding-left: 0;
+                color: var(--theme-color1);
+                &:before{
+                    display: none;
+                }
+            }
+        }
+        .newsletter-form-five{
+            max-width: 500px;
+            margin: 0 auto;
+            z-index: 2;
+            .form-group{
+                input:not([type=submit]){
+                    background-color: var(--theme-color-light);
+                    border-radius: 10px;
+                    height: 65px;
+                    border: 1px solid var(--gray-200, #E3E3E3);
+                    padding: 20px 25px;
+                    line-height: 23px;
+                }
+                .theme-btn{
+                    background-color: var(--theme-color1);
+                    color: var(--theme-color-light);
+                    font-weight: 400;
+                    border-radius: 0 10px 10px 0;
+                    padding: 20px 23px;
+                    line-height: 25px;
+                    min-width: auto;
+                }
+            }
+        }
+    }
+}
+

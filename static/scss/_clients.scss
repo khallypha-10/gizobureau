@@ -1,0 +1,125 @@
+/*** 
+
+====================================================================
+    Clients Section
+====================================================================
+
+***/
+
+.clients-section{
+    position: relative;
+    background-color: var(--bg-theme-color1);
+    &.pull-down{
+        padding-bottom: 195px;
+        margin-bottom: -195px;
+    }
+    .icon-boxes{
+        @include absolute;
+    }
+    .sponsors-outer{
+        padding: 60px 0px;
+    }
+}
+
+.client-block{
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    a {
+        position: relative;
+        padding: 20px 30px;
+        display: inline-block;
+        transition: all 300ms ease;
+        text-align: center;
+        border-radius: 10px;
+        &:hover{
+            background-color: rgba(255,255,255,.20);
+            img {
+                opacity: 1;
+            }
+        }
+    }
+    img {
+        display: inline-block !important;
+        width: auto !important;
+        transition: all 0.3s ease;
+    }
+}
+
+/*** 
+
+====================================================================
+    Clients Section Two
+====================================================================
+
+***/
+
+.clients-section-two{
+    position: relative;
+    background-color: var(--theme-color-gray);
+    &.pull-up{
+        padding-top: 170px;
+        margin-top: -170px;
+    }
+    .icon-boxes{
+        @include absolute;
+    }
+    .sponsors-outer{
+        padding: 100px 0px;
+    }
+}
+
+
+/*** 
+
+====================================================================
+    Clients Section Three
+====================================================================
+
+***/
+
+.clients-section-three{
+    position: relative;
+    padding: 120px 0;
+    background-color: var(--theme-color-gray);
+    .sponsors-outer{
+        padding: 60px 30px;
+        background-color: var(--bg-theme-color1);
+        border-radius: 10px;
+    }
+    .client-block {
+        a{
+            min-height: 112px;
+            @include flex-center;
+            img {
+                opacity: .8;
+            }
+        }
+    }
+}
+
+
+/*** 
+
+====================================================================
+    Clients Section Four
+====================================================================
+
+***/
+
+.clients-section-four{
+    position: relative;
+    padding: 120px 0 90px;
+    .client-block {
+        a {
+            min-height: 100px;
+            padding: 0;
+            @include flex-center;
+            &:hover{
+                img{
+                    opacity: .8;
+                }
+            }
+        }
+    }
+}

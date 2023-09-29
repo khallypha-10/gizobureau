@@ -1,0 +1,1615 @@
+/*** 
+
+====================================================================
+    Banner Section
+====================================================================
+
+***/
+
+.banner-section {
+    position: relative;
+    overflow: hidden;
+    min-height: 895px;
+    @include media-breakpoint-down(lg){
+        min-height: auto
+    }
+    .bg-overlay{
+        @include overlay;
+        background-image: url(../images/banner/overlay.png);
+        background-position: left top;
+        background-size: 56.5% 100%;
+        @include media-breakpoint-down(xl){
+            background-image: none;
+            background-color: var(--bg-theme-color2);
+            mix-blend-mode: hard-light;
+        }
+    }
+    .content-box {
+        position: relative;
+        padding: 215px 0 120px;
+        max-width: 540px;
+        @include media-breakpoint-down(lg){
+            text-align: center;
+            max-width: 100%;
+            padding: 150px 0;
+        }
+        .sub-title{
+            display: block;
+            font-size: var(--body-font-size);
+            line-height: 22px;
+            color: var(--theme-color-light);
+            font-weight: 700;
+            letter-spacing: 0.8px;
+            @include title-font;
+            margin-bottom: 33px;
+        }
+        .title{
+            color: var(--theme-color-light);
+            line-height: 1.1em;
+            letter-spacing: -3px;
+            text-transform: capitalize;
+            margin-bottom: 28px;
+            @include media-breakpoint-down(md){
+                font-size: 54px;
+                letter-spacing: 0;
+            }
+            @include media-breakpoint-down(sm) {
+                font-size: 42px;
+            }
+        }
+        .text{
+            color: var(--theme-color-light);
+            margin-bottom: 40px;
+        }
+        .btn-box{
+            .theme-btn{
+                line-height: 24px;
+                padding: 20px 40px;
+            }
+        }
+    }
+}
+.map,
+.h450{
+    height: 450px;
+}
+/*** 
+
+====================================================================
+    Banner Section Two
+====================================================================
+
+***/
+
+.banner-section-two {
+    position: relative;
+    padding: 180px 0;
+    background: var(--theme-color-gray);
+    @include media-breakpoint-down(lg){
+        padding: 120px 0;
+    }
+    .content-columnn{
+        .content-box {
+            @include media-breakpoint-down(lg){
+                text-align: center;
+                max-width: 100%;;
+                padding-bottom: 60px;
+            }
+            .sub-title {
+                font-weight: 600;
+                line-height: 22px;
+                letter-spacing: 0.8px;
+                color: var(--theme-color1);
+                margin-bottom: 20px;
+            }
+            .title {
+                line-height: 1.146em;
+                letter-spacing: -3px;
+                text-transform: capitalize;
+                color: var(--theme-color2);
+                margin-bottom: 26px;
+                @include media-breakpoint-down(md){
+                    font-size: 54px;
+                    letter-spacing: 0;
+                }
+                @include media-breakpoint-down(sm) {
+                    font-size: 42px;
+                }
+            }
+            .text {
+                color: var(--theme-color2);
+                margin-bottom: 60px;
+            }
+            .theme-btn{
+                padding: 15px 40px;
+                line-height: 32px;
+            }
+        }
+    }
+
+    .image-column{
+        .image-box{
+            position: relative;
+            padding-left: 60px;
+            margin-right: -60px;
+            margin-top: -60px;
+            @include media-breakpoint-down(xl){
+                margin-top: 0;
+                padding-left: 0;
+            }
+            @include media-breakpoint-down(lg){
+                text-align:center;
+                margin-right: 0;
+            }
+        }
+        .icon-dots-3{
+            position: absolute;
+            right: -40px;
+            bottom: -82px;
+        }
+        .info-box{
+            position: absolute;
+            left: 67px;
+            top: -18px;
+            background-color: var(--theme-color-light);
+            padding: 10px 20px 25px;
+            border-radius: 10px;
+            background: #FFFFFF;
+            text-align: center;
+            min-width: 230px;
+            box-shadow: 0px 0px 18px 5px rgba(0, 0, 0, 0.05);
+            @include media-breakpoint-down(lg){
+                top: 0;
+            }
+            @include media-breakpoint-down(sm){
+                display: none;
+            }
+            .icon-box{
+                position: relative;
+                .count{
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    font-weight: 700;
+                    font-size: 20px;
+                    line-height: 24px;
+                    letter-spacing: -0.4px;
+                    color: var(--theme-color2);
+                }
+            }
+            .title{
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+/*** 
+
+====================================================================
+    Banner Section Three
+====================================================================
+
+***/
+
+.banner-section-three{
+    position: relative;
+    padding: 195px 0 154px;
+    background: var(--bg-theme-color2);
+    @include media-breakpoint-down(lg){
+        padding: 140px 0 80px;
+    }
+    .content-column{
+        .content-box {
+            position: relative;
+            padding-top: 35px;
+            @include media-breakpoint-down(lg){
+                text-align: center;
+                max-width: 100%;;
+                padding-bottom: 60px;
+            }
+            .sub-title{
+                position: relative;
+                display: inline-block;
+                font-size: 18px;
+                line-height: 26px;
+                color: var(--theme-color-light);
+                font-weight: 700;
+                @include title-font;
+                text-transform: uppercase;
+                letter-spacing: 4px;
+                padding-left: 36px;
+                margin-bottom: 26px;
+                &:before{
+                    position: absolute;
+                    left: 5px;
+                    top: 0;
+                    height: 26px;
+                    width: 26px;
+                    content: "\f178";
+                    color: var(--theme-color1);
+                    font-family: 'Font Awesome 6 Pro';
+                }
+            }
+            .title {
+                line-height: 1.146em;
+                letter-spacing: -3px;
+                text-transform: capitalize;
+                color: var(--theme-color-light);
+                margin-bottom: 26px;
+                @include media-breakpoint-down(xl){
+                    font-size: 58px;
+                }
+                @include media-breakpoint-down(md){
+                    font-size: 54px;
+                    letter-spacing: 0;
+                }
+                @include media-breakpoint-down(sm) {
+                    font-size: 42px;
+                }
+            }
+            .text {
+                color: var(--theme-color-light);
+                margin-bottom: 60px;
+            }
+            .theme-btn{
+                padding: 15px 40px;
+                line-height: 32px;
+            }
+        }
+    }
+    .image-column{
+        position: relative;
+        text-align: right;
+        @include media-breakpoint-down(lg){
+            text-align: center;
+        }
+        .image-box{
+            position: relative;
+            display: inline-block;
+            text-align: right;
+            padding-right: 35px;
+            @include media-breakpoint-down(xl){
+                padding-right: 0;
+            }
+            .info-box{
+                position: absolute;
+                min-width: 235px;
+                left: -95px;
+                background-color: var(--theme-color-light);
+                border-radius: 10px;
+                padding: 25px 30px 25px;
+                bottom: 38px;
+                text-align: left;
+                @include media-breakpoint-down(xl){
+                    left: -40px;
+                }
+                @include media-breakpoint-down(md){
+                    position: relative;
+                    left: 0;
+                    border-radius: 0 0 10px 10px;
+                    margin: 30px auto 0;
+                }
+                .inner{
+                    position: relative;
+                    padding-left: 75px;
+                    .icon{
+                        position: absolute;
+                        left: 0px;
+                        top: 6px;
+                        font-size: 52px;
+                        line-height: 1em;
+                        color: var(--theme-color1);
+                    }
+                    .title{
+                        font-size: 32px;
+                        color: var(--theme-color2);
+                        font-weight: 700;
+                        margin-bottom: 3px;
+                        @include text-font;
+                    }
+                    .text{
+                        color: var(--theme-color2);
+                        font-size: 12px;
+                        line-height: 20px;
+                        font-weight: 700;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+        .icon-triangle{
+            position: absolute;
+            right: 0;
+            bottom: -30px;
+            width: 276px;
+            height: 285px;
+            background-image: url(../images/banner/icon-triangle.png);
+            @include media-breakpoint-down(lg) {
+                display: none;
+            }
+        }
+        .icon-line{
+            position: absolute;
+            right: -40px;
+            top: -56px;
+            width: 153px;
+            height: 94px;
+            background-image: url(../images/banner/icon-line.png);
+            @include media-breakpoint-down(lg) {
+                display: none;
+            }
+        }
+    }
+}
+
+/*** 
+
+====================================================================
+    Banner Section Four
+====================================================================
+
+***/
+
+.banner-section-four{
+    position: relative;
+    padding: 124px 0 144px;
+    background: var(--bg-theme-color2);
+    .bg{   top: 25px;}
+    @include media-breakpoint-down(lg){
+        padding: 120px 0 80px;
+    }
+    .content-column{
+        margin-bottom: 50px;
+        .content-box {
+            position: relative;
+            padding-top: 60px;
+            @include media-breakpoint-down(lg){
+                padding-top: 0;
+                text-align: center;
+                max-width: 100%;;
+            }
+            .sub-title{
+                position: relative;
+                display: inline-block;
+                font-size: 18px;
+                line-height: 26px;
+                color: var(--theme-color-light);
+                font-weight: 700;
+                @include title-font;
+                text-transform: uppercase;
+                letter-spacing: 4px;
+                padding-left: 36px;
+                margin-bottom: 15px;
+                &:before{
+                    position: absolute;
+                    left: 5px;
+                    top: 0;
+                    height: 26px;
+                    width: 26px;
+                    content: "\f178";
+                    color: var(--theme-color1);
+                    font-family: 'Font Awesome 6 Pro';
+                }
+            }
+            .title {
+                line-height: 1.146em;
+                letter-spacing: -3px;
+                text-transform: capitalize;
+                color: var(--theme-color-light);
+                margin-bottom: 35px;
+                @include media-breakpoint-down(xl){
+                    font-size: 58px;
+                }
+                @include media-breakpoint-down(md){
+                    font-size: 54px;
+                    letter-spacing: 0;
+                }
+                @include media-breakpoint-down(sm) {
+                    font-size: 42px;
+                }
+            }
+            .text {
+                color: var(--theme-color-light);
+                margin-bottom: 40px;
+            }
+            .theme-btn{
+                line-height: 32px;
+            }
+        }
+    }
+    .image-column{
+        position: relative;
+        text-align: center;
+        .image-box{
+            position: relative;
+            display: inline-block;
+            padding: 87px 45px 70px;
+            .bg-shape{
+                @include overlay;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 100%;
+                content: "";
+                background-image: url(../images/banner/shape-1.png);
+            }
+            .image{
+                margin: 0;
+            }
+        }
+    }
+}
+
+/*** 
+
+====================================================================
+    Banner Section Five
+====================================================================
+
+***/
+
+.banner-section-five{
+    position: relative;
+    padding: 90px 0;
+    background: var(--theme-color-gray);
+    .content-columnn{
+        .content-box {
+            @include media-breakpoint-down(lg){
+                text-align: center;
+                max-width: 100%;;
+                padding-bottom: 60px;
+            }
+            .sub-title{
+                position: relative;
+                display: inline-block;
+                font-size: 18px;
+                line-height: 26px;
+                color: var(--theme-color1);
+                font-weight: 700;
+                @include title-font;
+                text-transform: uppercase;
+                letter-spacing: 4px;
+                padding-left: 36px;
+                margin-bottom: 25px;
+                &:before{
+                    position: absolute;
+                    left: 5px;
+                    top: 0;
+                    height: 26px;
+                    width: 26px;
+                    content: "\f178";
+                    color: var(--theme-color1);
+                    font-family: 'Font Awesome 6 Pro';
+                }
+            }
+            .title {
+                line-height: 1.146em;
+                letter-spacing: -3px;
+                text-transform: capitalize;
+                color: var(--theme-color2);
+                margin-bottom: 25px;
+                @include media-breakpoint-down(xxl){
+                    br{display: none;}
+                }
+                @include media-breakpoint-down(md){
+                    font-size: 54px;
+                    letter-spacing: 0;
+                }
+                @include media-breakpoint-down(sm) {
+                    font-size: 42px;
+                }
+            }
+            .text {
+                color: var(--theme-color2);
+                margin-bottom: 40px;
+                @include media-breakpoint-down(xxl){
+                    br{display: none;}
+                }
+            }
+        }
+    }
+
+    .image-column{
+        @include media-breakpoint-down(lg){
+            text-align: center;
+        }
+        .image-box{
+            position: relative;
+            display: inline-block;
+            .image{
+                $width : 100%;
+                width: $width;
+                height: $width;
+                border-radius: 500px 0 0 500px;
+                overflow: hidden;
+                border: 10px solid var(--theme-color-light);
+                margin-bottom: 0;
+                @include media-breakpoint-down(lg){
+                    border-radius: 500px 500px 0 0;
+                }
+            }
+        }
+    }
+}
+
+/*** 
+
+====================================================================
+    Banner Section Six
+====================================================================
+
+***/
+
+.banner-section-six{
+    position: relative;
+    background: var(--theme-color-gray);
+    .content-columnn{
+        .content-box {
+            padding: 232px 0px 210px;
+            padding-right: 100px;
+            @include media-breakpoint-down(xl){
+                padding-right: 0px;
+            }
+            @include media-breakpoint-down(lg){
+                text-align: center;
+                max-width: 100%;;
+                padding: 200px 0px 120px;
+            }
+            .sub-title{
+                position: relative;
+                display: inline-block;
+                font-size: 18px;
+                line-height: 26px;
+                color: var(--theme-color1);
+                font-weight: 700;
+                @include title-font;
+                text-transform: uppercase;
+                letter-spacing: 4px;
+                margin-bottom: 25px;
+            }
+            .title {
+                line-height: 1.146em;
+                letter-spacing: -3px;
+                text-transform: capitalize;
+                color: var(--theme-color2);
+                margin-bottom: 22px;
+                @include media-breakpoint-down(md){
+                    font-size: 54px;
+                    letter-spacing: 0;
+                }
+                @include media-breakpoint-down(sm) {
+                    font-size: 42px;
+                }
+            }
+            .text {
+                color: var(--theme-color2);
+                margin-bottom: 53px;
+            }
+            .theme-btn{
+                padding: 22px 40px;
+                line-height: 20px;
+            }
+        }
+    }
+
+    .image{
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 50%;
+        height: 100%;
+        overflow: hidden;
+        margin-bottom: 0;
+        z-index: 2;
+        @include media-breakpoint-down(lg){
+            display: none;
+        }
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+/*** 
+
+====================================================================
+    Banner Section Seven
+====================================================================
+
+***/
+
+.banner-section-seven{
+    position: relative;
+    background: var(--theme-color-gray);
+    .content-columnn{
+        .content-box {
+            padding: 200px 0 210px;
+            padding-right: 150px;
+            @include media-breakpoint-down(lg){
+                text-align: center;
+                padding-right: 0;
+                padding: 100px 0;
+                max-width: 100%;
+            }
+            .sub-title{
+                position: relative;
+                display: inline-block;
+                font-size: 18px;
+                line-height: 26px;
+                color: var(--theme-color1);
+                font-weight: 700;
+                @include title-font;
+                text-transform: uppercase;
+                letter-spacing: 4px;
+                margin-bottom: 25px;
+            }
+            .title {
+                line-height: 1.146em;
+                letter-spacing: -3px;
+                text-transform: capitalize;
+                color: var(--theme-color2);
+                margin-bottom: 40px;
+                @include media-breakpoint-down(md){
+                    font-size: 54px;
+                    letter-spacing: 0;
+                }
+                @include media-breakpoint-down(sm) {
+                    font-size: 42px;
+                }
+            }
+            .text {
+                color: var(--theme-color2);
+                font-weight: 500;
+                margin-bottom: 40px;
+            }
+            .theme-btn{
+                padding: 22px 40px;
+                line-height: 20px;
+            }
+        }
+    }
+
+    .image-box{
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 50%;
+        @include media-breakpoint-down(xl){
+            width: 40%;
+        }
+        @include media-breakpoint-down(lg){
+            display: none;
+        }
+        .image{
+            position: absolute;
+            top: 0px;;
+            right: 0;
+            left: -100px;
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    
+        .image-2{
+            position: absolute;
+            top:345px;
+            left: -48px;
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+/*** 
+
+====================================================================
+    Banner Section Eight
+====================================================================
+
+***/
+
+.banner-section-eight{
+    position: relative;
+    padding: 210px 0 205px;
+    @include media-breakpoint-down(md){
+        padding: 120px 0
+    }
+    .bg-image{
+        @include background;
+        &::before{
+            @include overlay;
+            opacity: .4;
+            background-color: var(--bg-theme-color2);
+            content: "";
+            @include media-breakpoint-down(xl){
+                opacity: .9;
+            }
+        }
+    }
+    .content-column{
+        .content-box {
+            position: relative;
+            @include media-breakpoint-down(lg){
+                text-align: center;
+                max-width: 100%;
+            }
+            .sub-title{
+                position: relative;
+                display: block;
+                font-size: var(--body-font-size);
+                line-height: 22px;
+                color: var(--theme-color1);
+                font-weight: 600;
+                letter-spacing: 0.8px;
+                @include title-font;
+                margin-bottom: 15px;
+            }
+            .title {
+                line-height: 1.146em;
+                letter-spacing: -3px;
+                text-transform: capitalize;
+                color: var(--theme-color-light);
+                margin-bottom: 25px;
+                @include media-breakpoint-down(xl){
+                    font-size: 58px;
+                }
+                @include media-breakpoint-down(md){
+                    font-size: 54px;
+                    letter-spacing: 0;
+                }
+                @include media-breakpoint-down(sm) {
+                    font-size: 42px;
+                }
+            }
+            .text {
+                color: var(--theme-color-light);
+                margin-bottom: 40px;
+            }
+            .theme-btn{
+                line-height: 32px;
+            }
+        }
+    }
+    .video-btn-box{
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        flex-direction: column;
+        @include media-breakpoint-down(xl){
+            align-items: center;
+        }
+        .play-btn{
+            @include media-breakpoint-down(lg){
+                margin-top: 30px;
+            }
+            .icon{
+                border: 0;
+                width: 113px;
+                height: 113px;
+                border-radius: 0;
+                @include flex-center;
+                font-size: 32px;
+                color: var(--theme-color-dark);
+                @include media-breakpoint-down(lg){
+                    height: 80px;
+                    width: 80px;
+                    font-size: 24px;
+                    border-radius: 50%;
+                }
+            }
+            &:hover{
+                .icon{
+                    border-radius: 50%;
+                    color: var(--theme-color-light);
+                }
+            }
+        }
+    }
+}
+
+/*** 
+
+====================================================================
+    Banner Section Nine
+====================================================================
+
+***/
+
+.banner-section-nine{
+    position: relative;
+    .content-column{
+        .content-box {
+            position: relative;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 120px 0;
+            @include media-breakpoint-down(lg){
+                text-align: center;
+                max-width: 100%;
+            }
+            .sub-title{
+                position: relative;
+                display: block;
+                font-size: var(--body-font-size);
+                line-height: 22px;
+                color: var(--theme-color1);
+                font-weight: 600;
+                letter-spacing: 0.8px;
+                @include title-font;
+                margin-bottom: 15px;
+            }
+            .title {
+                line-height: 1.146em;
+                letter-spacing: -3px;
+                text-transform: capitalize;
+                margin-bottom: 25px;
+                @include media-breakpoint-down(xl){
+                    font-size: 58px;
+                }
+                @include media-breakpoint-down(md){
+                    font-size: 54px;
+                    letter-spacing: 0;
+                }
+                @include media-breakpoint-down(sm) {
+                    font-size: 42px;
+                }
+            }
+            .text {
+                color: var(--theme-color2);
+                font-weight: 500;
+                margin-bottom: 60px;
+            }
+            .theme-btn{
+                padding: 15px 40px;
+                line-height: 34px;
+            }
+        }
+    }
+
+    .image-column{
+        position: relative;
+    }
+    .image-box{
+        position: relative;
+        padding-top: 25px;
+        text-align: right;
+        @include media-breakpoint-down(md){
+            padding-top: 0;
+        }
+        .image{
+            position: relative;
+            margin-right: -10px;
+        }
+        .icon-shape{
+            position: absolute;
+            left: 26px;
+            bottom: 0;
+            height: 645px;
+            width: 384px;
+            background-image: url(../images/banner/shape-2.png);
+            @include media-breakpoint-down(md){display: none;}
+        }
+        .icon-dots{
+            position: absolute;
+            left: -58px;
+            bottom: 93px;
+            width: 206px;
+            height: 73px;
+            background-image: url(../images/banner/icon-dots.png);
+        }
+        .icon-flower{
+            position: absolute;
+            top: 215px;
+            right: 0px;
+            width: 252px;
+            height: 252px;
+            background-image: url(../images/banner/icon-flower.png);
+            animation: fa-spin 30s infinite linear;
+        }
+        .icon-triangle{
+            position: absolute;
+            right: -16px;
+            bottom: 100px;
+            width: 291px;
+            height: 139px;
+            background-image: url(../images/banner/icon-triangle-2.png);
+            @include media-breakpoint-down(md){display: none;}
+        }
+    }
+}
+
+/*** 
+
+====================================================================
+    Banner Section Ten
+====================================================================
+
+***/
+
+.banner-section-ten{
+    position: relative;
+    padding: 225px 0 110px;
+    background: var(--bg-theme-color2);
+    .bg{
+        opacity: .05;
+    }
+    .content-column{
+        margin-bottom: 50px;
+        .content-box {
+            position: relative;
+            padding-top: 25px;
+            @include media-breakpoint-down(lg){
+                padding-top: 0;
+                text-align: center;
+                max-width: 100%;;
+            }
+            .sub-title{
+                position: relative;
+                display: inline-block;
+                font-size: 18px;
+                line-height: 26px;
+                color: var(--theme-color-light);
+                font-weight: 700;
+                @include title-font;
+                text-transform: uppercase;
+                letter-spacing: 4px;
+                padding-left: 36px;
+                margin-bottom: 15px;
+                &:before{
+                    position: absolute;
+                    left: 5px;
+                    top: 0;
+                    height: 26px;
+                    width: 26px;
+                    content: "\f178";
+                    color: var(--theme-color1);
+                    font-family: 'Font Awesome 6 Pro';
+                }
+            }
+            .title {
+                line-height: 1.146em;
+                letter-spacing: -3px;
+                text-transform: capitalize;
+                color: var(--theme-color-light);
+                margin-bottom: 35px;
+                @include media-breakpoint-down(xl){
+                    font-size: 58px;
+                }
+                @include media-breakpoint-down(md){
+                    font-size: 54px;
+                    letter-spacing: 0;
+                }
+                @include media-breakpoint-down(sm) {
+                    font-size: 42px;
+                }
+            }
+            .text {
+                color: var(--theme-color-light);
+                margin-bottom: 40px;
+            }
+        }
+    }
+    .image-column{
+        position: relative;
+        .image-box{
+            position: relative;
+            text-align: right;
+            @include media-breakpoint-down(lg){
+                text-align: center;
+            }
+            .image{
+                display: inline-block;
+                margin: 0;
+                margin-right: -20px;
+            }
+        }
+    }
+}
+
+/*** 
+
+====================================================================
+    Banner Section Eleven
+====================================================================
+
+***/
+
+.banner-section-eleven{
+    position: relative;
+    padding: 160px 0 120px;
+    background: var(--bg-theme-color2);
+    .content-column{
+        margin-bottom: 50px;
+        .content-box {
+            position: relative;
+            @include media-breakpoint-down(lg){
+                padding-top: 0;
+                text-align: center;
+                max-width: 100%;
+            }
+            .sub-title{
+                position: relative;
+                display: inline-block;
+                font-size: 18px;
+                line-height: 26px;
+                color: var(--theme-color-light);
+                font-weight: 700;
+                @include title-font;
+                text-transform: uppercase;
+                letter-spacing: 4px;
+                padding-left: 36px;
+                margin-bottom: 15px;
+                &:before{
+                    position: absolute;
+                    left: 5px;
+                    top: 0;
+                    height: 26px;
+                    width: 26px;
+                    content: "\f178";
+                    color: var(--theme-color1);
+                    font-family: 'Font Awesome 6 Pro';
+                }
+            }
+            .title {
+                line-height: 1.146em;
+                letter-spacing: -3px;
+                text-transform: capitalize;
+                color: var(--theme-color-light);
+                margin-bottom: 34px;
+                @include media-breakpoint-down(xl){
+                    font-size: 58px;
+                }
+                @include media-breakpoint-down(md){
+                    font-size: 54px;
+                    letter-spacing: 0;
+                }
+                @include media-breakpoint-down(sm) {
+                    font-size: 42px;
+                }
+            }
+            .text {
+                color: var(--theme-color-light);
+                margin-bottom: 30px;
+            }
+            .btn-box{
+                @include media-breakpoint-down(sm){
+                    display: flex;
+                    flex-direction: column;
+                    .theme-btn{
+                        margin: 10px 0 0 !important;
+                    }
+                }
+            }
+            .theme-btn.alt{
+                background-color: transparent;
+                border: 2px solid var(--theme-color1);
+                line-height: 22px;
+                padding: 15px 30px;
+                margin-left: 25px;
+                &:before{
+                    background-color: var(--bg-theme-color1);
+                }
+            }
+        }
+    }
+    .image {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 50%;
+        height: 100%;
+        overflow: hidden;
+        margin-bottom: 0;
+        background-repeat: no-repeat;
+        background-position: center left;
+        background-size: cover;
+        z-index: 2;
+        @include media-breakpoint-down(xl){
+            background-position: right center;
+        }
+        @include media-breakpoint-down(lg){
+            display: none;
+        }
+    }
+    .bg-shapes{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 359px;
+        height: 498px;
+        background-repeat: no-repeat;
+        z-index: 2;
+        background-image: url(../images/banner/shape-3.png);
+        @include media-breakpoint-down(xxl){display: none;}
+    }
+}
+
+/*** 
+
+====================================================================
+    Banner Section Twelve
+====================================================================
+
+***/
+
+.banner-section-twelve{
+    position: relative;
+    padding: 150px 0 300px;
+    background: var(--bg-theme-color2);
+    @include media-breakpoint-down(lg){
+        padding: 120px 0;
+    }
+    
+    .gradient-overlay{
+        &:before{
+            @include overlay;
+            content: "";
+            background: linear-gradient(90.22deg, var(--bg-theme-color2) 0.19%, rgba(22, 36, 62, 0) 99.81%);
+            @include media-breakpoint-down(lg){
+                background: var(--bg-theme-color2);
+                opacity: .9;
+            }
+        }
+    }
+    
+    .content-column{
+        margin-bottom: 50px;
+        .content-box {
+            position: relative;
+            @include media-breakpoint-down(lg){
+                text-align: center;
+                max-width: 100%;
+            }
+            .sub-title{
+                position: relative;
+                display: inline-block;
+                font-size: 18px;
+                line-height: 26px;
+                color: var(--theme-color-light);
+                font-weight: 700;
+                @include title-font;
+                text-transform: uppercase;
+                letter-spacing: 4px;
+                padding-left: 36px;
+                margin-bottom: 20px;
+                &:before{
+                    position: absolute;
+                    left: 5px;
+                    top: 0;
+                    height: 26px;
+                    width: 26px;
+                    content: "\f178";
+                    color: var(--theme-color1);
+                    font-family: 'Font Awesome 6 Pro';
+                }
+            }
+            .title {
+                line-height: 1.146em;
+                letter-spacing: -3px;
+                text-transform: capitalize;
+                color: var(--theme-color-light);
+                margin-bottom: 45px;
+                @include media-breakpoint-down(xl){
+                    font-size: 58px;
+                }
+                @include media-breakpoint-down(md){
+                    font-size: 54px;
+                    letter-spacing: 0;
+                }
+                @include media-breakpoint-down(sm) {
+                    font-size: 42px;
+                }
+            }
+            .btn-box{
+                @include media-breakpoint-down(sm){
+                    display: flex;
+                    flex-direction: column;
+                    .theme-btn{
+                        margin: 10px 0 0 !important;
+                    }
+                }
+            }
+            .theme-btn.alt{
+                background-color: transparent;
+                border: 2px solid var(--theme-color1);
+                line-height: 22px;
+                padding: 15px 30px;
+                margin-left: 25px;
+                &:before{
+                    background-color: var(--bg-theme-color1);
+                }
+            }
+        }
+    }
+    .image {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 50%;
+        height: 100%;
+        overflow: hidden;
+        margin-bottom: 0;
+        background-repeat: no-repeat;
+        background-position: center left;
+        background-size: cover;
+        z-index: 2;
+    }
+    .bg-shapes{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 359px;
+        height: 498px;
+        background-repeat: no-repeat;
+        background-image: url(../images/icons/shape-3.png);
+    }
+}
+
+/*** 
+
+====================================================================
+    Banner Section Thirteen
+====================================================================
+
+***/
+
+.banner-section-thirteen{
+    position: relative;
+    padding: 100px 0;
+    background: var(--theme-color-gray);
+    .content-columnn{
+        .content-box {
+            padding-top: 100px;
+            padding-right: 20px;
+            @include media-breakpoint-down(xl){
+                padding-right: 0;
+                padding-top: 0;
+            }
+            @include media-breakpoint-down(lg){
+                text-align: center;
+                max-width: 100%;;
+            }
+            .title {
+                line-height: 1.2em;
+                letter-spacing: -3px;
+                text-transform: capitalize;
+                color: var(--theme-color2);
+                margin-bottom: 25px;
+                @include media-breakpoint-down(md){
+                    font-size: 54px;
+                    letter-spacing: 0;
+                }
+                @include media-breakpoint-down(sm) {
+                    font-size: 42px;
+                }
+            }
+            .text {
+                color: var(--theme-color2);
+                margin-bottom: 40px;
+            }
+            .btn-box{
+                display: flex;
+                align-items: center;
+                @include media-breakpoint-down(lg){
+                    justify-content: center;
+                }
+                @include media-breakpoint-down(md) {
+                    flex-direction: column;
+                }
+                .play-btn{
+                    display: flex;
+                    align-items: center;
+                    margin-left: 40px;
+                    @include media-breakpoint-down(md){
+                        margin-left: 0;
+                        margin-top: 20px;
+                    }
+                    .btn-title{
+                        margin-bottom: 0;
+                        letter-spacing: 0;
+                        text-transform: capitalize;
+                        font-weight: 700;
+                        @include title-font;
+                        letter-spacing: -0.8px;
+                        font-size: 20px;
+                        margin-left: 15px;
+                    }
+                    &:hover{
+                        .btn-title{
+                            color: var(--theme-color2);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .image-column{
+        .image-box{
+            position: relative;
+            padding-left: 75px;
+            @include media-breakpoint-down(xl){
+                padding-left: 0;
+            }
+            @include media-breakpoint-down(lg) {
+                    padding-top: 50px;
+                    text-align: center;
+            }
+            .image{
+                position: relative;
+                &:before{
+                    @include overlay;
+                    left: -20px;
+                    top: 20px;
+                    background-color: var(--bg-theme-color1);
+                    content: "";
+                    @include media-breakpoint-down(xl){display: none;}
+                }
+                img{
+                    position: relative;
+                }
+            }
+            .shape{
+                position: absolute;
+                left:-55px;
+                bottom: -60px;
+                width: 402px;
+                height: 310px;
+                background-image: url(../images/banner/shape-4.png);
+                background-repeat: no-repeat;
+                @include media-breakpoint-down(xl){display: none;}
+            }
+        }
+    }
+}
+
+/*** 
+
+====================================================================
+    Banner Section Fourteen
+====================================================================
+
+***/
+
+.banner-section-fourteen{
+    position: relative;
+    padding: 220px 0;
+    background: #0E1E2A;
+    @include media-breakpoint-down(lg){
+        padding: 180px 0;
+    }
+    @include media-breakpoint-down(md){
+        padding: 120px 0;
+    }
+    .bg-image{
+        max-width: 50%;
+        left: auto;
+        right: 0;
+        @include media-breakpoint-down(xl){display: none;}
+        .bg{
+            width: auto;
+            left: 100px;
+            right: 0;
+        }
+    }
+    .content-columnn{
+        .content-box {
+            @include media-breakpoint-down(lg){
+                text-align: center;
+                max-width: 100%;;
+            }
+            .title {
+                line-height: 1.2em;
+                letter-spacing: -3px;
+                text-transform: capitalize;
+                color: var(--theme-color-light);
+                margin-bottom: 25px;
+                @include media-breakpoint-down(md){
+                    font-size: 54px;
+                    letter-spacing: 0;
+                }
+                @include media-breakpoint-down(sm) {
+                    font-size: 42px;
+                }
+            }
+            .text {
+                color: var(--theme-color-light);
+                margin-bottom: 40px;
+                @include media-breakpoint-down(md){
+                    br{display: none;}
+                }
+            }
+            .btn-box{
+                display: flex;
+                align-items: center;
+                @include media-breakpoint-down(lg){
+                    justify-content: center;
+                }
+                @include media-breakpoint-down(md){
+                    flex-direction: column;
+                }
+                .play-btn{
+                    display: flex;
+                    align-items: center;
+                    margin-left: 40px;
+                    @include media-breakpoint-down(md){
+                        margin-left: 0;
+                        margin-top: 30px;
+                    }
+                    .icon{
+                        background-color: transparent;
+                        &:before{position: relative;}
+                        &::after{
+                            position: absolute;
+                            top: 3px;
+                            right: 3px;
+                            bottom: 3px;
+                            left: 3px;
+                            background-color: var(--theme-color-light);
+                            content: "";
+                            z-index: -1;
+                            border-radius: 50%;
+                        }
+                    }
+                    .btn-title{
+                        margin-bottom: 0;
+                        letter-spacing: 0;
+                        text-transform: capitalize;
+                        font-weight: 700;
+                        @include title-font;
+                        letter-spacing: -0.8px;
+                        font-size: 20px;
+                        margin-left: 15px;
+                        color: var(--theme-color-light);
+                        transition: all 300ms ease;
+                    }
+                    &:hover{
+                        .icon{
+                            color: var(--theme-color2);
+                            transform: rotate(360deg);
+                        }
+                        .btn-title{
+                            color: var(--theme-color1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .image-column{
+        .image-box{
+            position: relative;
+            padding-left: 75px;
+            .image{
+                position: relative;
+                &:before{
+                    @include overlay;
+                    left: -20px;
+                    top: 20px;
+                    background-color: var(--bg-theme-color1);
+                    content: "";
+                }
+                img{
+                    position: relative;
+                }
+            }
+            .shape{
+                position: absolute;
+                left:-55px;
+                bottom: -60px;
+                width: 402px;
+                height: 310px;
+                background-image: url(../images/banner/shape-4.png);
+                background-repeat: no-repeat;
+            }
+        }
+    }
+}
+
+/*** 
+
+====================================================================
+    Banner Section Fifteen
+====================================================================
+
+***/
+
+.banner-section-fifteen{
+    position: relative;
+    padding: 70px 0;
+    background: var(--theme-color-gray);
+    @include media-breakpoint-down(xl){
+        padding: 120px 0;
+    }
+    .content-columnn{
+        .content-box {
+            padding-top: 120px;
+            @include media-breakpoint-down(xl){
+                padding-top: 0;
+            }
+            @include media-breakpoint-down(lg){
+                text-align: center;
+                max-width: 100%;;
+            }
+            .title {
+                font-size: 75px;
+                line-height: 95px;
+                letter-spacing: -3px;
+                text-transform: capitalize;
+                color: var(--theme-color-light);
+                margin-bottom: 20px;
+                @include media-breakpoint-down(xl){
+                    font-size: 62px;
+                    line-height: 1.2em;
+                }
+                @include media-breakpoint-down(md){
+                    font-size: 54px;
+                    letter-spacing: 0;
+                }
+                @include media-breakpoint-down(sm) {
+                    font-size: 42px;
+                }
+            }
+            .text {
+                color: var(--theme-color-light);
+                margin-bottom: 38px;
+            }
+            .btn-box{
+                display: flex;
+                align-items: center;
+                @include media-breakpoint-down(lg){
+                    justify-content: center;
+                }
+                @include media-breakpoint-down(sm){
+                    flex-direction: column;
+                }
+                .theme-btn.alt {
+                    background-color: transparent;
+                    border: 2px solid var(--theme-color1);
+                    line-height: 22px;
+                    padding: 15px 30px;
+                    margin-left: 25px;            
+                    @include media-breakpoint-down(sm){
+                        margin-left: 0;
+                        margin-top: 10px;
+                    }
+                    &:before {
+                        background-color: var(--bg-theme-color1);
+                    }
+                }
+            }
+        }
+    }
+
+    .image-column{
+        .image-box{
+            position: relative;
+            padding-right: 30px;
+            @include media-breakpoint-down(lg){
+                padding-right: 0;
+                text-align: center;
+                margin-top: 70px;
+            }
+            .image{
+                position: relative;
+                img{
+                    position: relative;
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+}
