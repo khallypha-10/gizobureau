@@ -1,0 +1,49 @@
+{% extends 'navbar.html' %}
+{% load static %}
+{% block content %}
+<div class="page-wrapper">
+
+		<!-- Start main-content -->
+		<section class="page-title">
+			<div class="auto-container">
+				<div class="title-outer d-sm-flex align-items-center justify-content-sm-between">
+					<h1 class="title">Services</h1>
+					<ul class="page-breadcrumb">
+						<li><a href="{% url 'home' %}">Home</a></li>
+						<li>Services</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<!-- end main-content -->
+
+		<!-- Service section Four -->
+		<section class="services-section-four">
+			<div class="auto-container">
+				<div class="row">
+					<!-- Service Block Four -->
+					{% for service in services %}
+					<div class="service-block-four col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+						<div class="inner-box">
+							<div class="image-box">
+								<figure class="image"><a href="{% url 'service-detail' service.slug %}"><img src={{service.image.url}} alt=""></a></figure>
+							</div>
+							<div class="content-box">
+								<i class="icon {{service.icon}}"></i>
+								<h4 class="title"><a href="{% url 'service-detail' service.slug %}">{{service.name}}</a></h4>
+								<div class="text">{{service.description|truncatewords:7}}</div>
+							</div>
+						</div>
+					</div>
+					{% endfor %}
+					
+				</div>
+			</div>
+		</section>
+		<!-- end service section fore -->
+
+
+	</div><!-- End Page Wrapper -->
+	<!-- Scroll To Top -->
+	<div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
+{% endblock content %}

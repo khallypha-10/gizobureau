@@ -1,0 +1,98 @@
+{% extends 'navbar.html' %}
+{% load static %}
+{% block content %}
+
+<div class="page-wrapper">    
+	<!-- Start main-content -->
+	<section class="page-title">
+		<div class="auto-container">
+			<div class="title-outer d-sm-flex align-items-center justify-content-sm-between">
+				<h1 class="title">{{service.name}}</h1>
+				<ul class="page-breadcrumb">
+					<li><a href="{% url 'home' %}">Home</a></li>
+					<li><a href="{% url 'service' %}">Services</a></li>
+					<li>{{service.name}}</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+
+	<!--Start Services Details-->
+	<section class="services-details">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-xl-8 col-lg-8">
+					<div class="services-details__content">
+						<img src={{service.image.url}} alt="" />
+						<h3 class="mt-4">{{service.name}}</h3>
+						<p>{{service.description}}</p>
+						
+						
+						<div class=" mt-25">
+                            
+							<h3>Frequently Asked Question</h3>
+							
+							<ul class="accordion-box wow fadeInRight">
+								<!--Block-->
+								<li class="accordion block">
+									<div class="acc-btn">{{service.question1}}
+										<div class="icon fa fa-plus"></div>
+									</div>
+									<div class="acc-content">
+										<div class="content">
+											<div class="text">{{service.answer1}}</div>
+										</div>
+									</div>
+								</li>
+								<!--Block-->
+								<li class="accordion block active-block">
+									<div class="acc-btn active">{{service.question2}}
+										<div class="icon fa fa-plus"></div>
+									</div>
+									<div class="acc-content current">
+										<div class="content">
+											<div class="text">{{service.answer2}}</div>
+										</div>
+									</div>
+								</li>
+								<!--Block-->
+								<li class="accordion block">
+									<div class="acc-btn">{{service.question3}}
+										<div class="icon fa fa-plus"></div>
+									</div>
+									<div class="acc-content">
+										<div class="content">
+											<div class="text">{{service.answer3}}</div>
+										</div>
+									</div>
+								</li>
+								<!--Block-->
+								<li class="accordion block">
+									<div class="acc-btn">{{service.question4}}
+										<div class="icon fa fa-plus"></div>
+									</div>
+									<div class="acc-content">
+										<div class="content">
+											<div class="text">{{service.answer4}}</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!--End Services Details Content-->
+			</div>
+		</div>
+	</section>
+	<hr>
+	<!--End Services Details-->
+
+
+<!-- Scroll To Top -->
+<div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
+
+
+{% endblock content %}

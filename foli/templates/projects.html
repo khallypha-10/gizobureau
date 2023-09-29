@@ -1,0 +1,66 @@
+{% extends 'navbar.html' %}
+{% load static %}
+{% block content %}
+
+
+	<div class="page-wrapper">
+
+		<!-- Start main-content -->
+		<section class="page-title">
+			<div class="auto-container">
+				<div class="title-outer d-sm-flex align-items-center justify-content-sm-between">
+					<h1 class="title">Projects</h1>
+					<ul class="page-breadcrumb">
+						<li><a href="{% url 'home' %}">Home</a></li>
+						<li>Projects</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<!-- end main-content -->
+
+		<!-- Projects-section Five-->
+		<section class="projects-section-five">
+			
+			<div class="auto-container">
+				
+				<div class="row">
+					<!-- Project Block Five-->
+					{% for project in projects  %}
+					<div class="project-block-five col-lg-4 col-md-6 wow fadeInUp">
+						
+						<div class="inner-box">
+							<div class="image-box">
+								<figure class="image"><a href="{% url 'project' project.slug %}"><img src={{project.image.url}} alt=""></a></figure>
+							</div>
+							<div class="caption-box">
+								<h4 class="title"><a href="{% url 'project' project.slug %}">{{project.name}}</a></h4>
+								<a href="{% url 'project' project.slug %}" class="read-more">View More <i class="fa fa-arrow-right"></i></a>
+							</div>
+						</div>
+						
+					</div>
+					{% endfor %}
+				</div>
+				<nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center"> {% if projects.has_previous %}
+                      <li class="page-item"><a class="page-link" href="?page={{projects.previous_page_number}}">Previous</a></li>{% endif %}
+                      {% for page in projects.paginator.page_range %}
+                      <li class="page-item"><a class="page-link" href="?page={{ page }}">{{ page }}</a></li>
+                      {% endfor %}
+                      {% if projects.has_next %}
+                      <li class="page-item"><a class="page-link" href="?page={{projects.next_page_number}}">Next</a></li>{% endif %}
+                    </ul>
+                </nav>
+				
+			</div>
+			
+		</section>
+		<!-- End Projects-section -->
+
+		
+
+	</div><!-- End Page Wrapper -->
+	<!-- Scroll To Top -->
+	<div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
+	{% endblock content %}

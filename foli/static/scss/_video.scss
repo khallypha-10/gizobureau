@@ -1,0 +1,37 @@
+/*** 
+
+====================================================================
+    Video Section
+====================================================================
+
+***/
+
+.video-section{
+    position: relative;
+    z-index: 2;
+    .image{
+        border-radius: 10px;
+        overflow: hidden;
+        img{
+            width: 100%;
+            min-height: 300px;
+            object-fit: cover;
+        }
+    }
+    .content-box{
+        position: relative;
+    }
+    .play-btn{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);   
+        .icon{
+            height: 80px;
+            width: 80px;
+            border: 0;
+            line-height: 82px;
+            font-size: 28px;
+        }
+    }
+}

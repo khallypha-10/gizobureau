@@ -1,0 +1,93 @@
+{% extends 'navbar.html' %}
+{% load static %}
+{% block content %}
+
+
+    <div class="page-wrapper">
+	
+	<!-- Preloader -->
+	
+	
+	
+
+        <!-- Hidden bar back drop -->
+        <div class="hidden-bar-back-drop"></div>
+
+            <!-- Start main-content -->
+            <section class="page-title">
+                <div class="auto-container">
+                    <div class="title-outer d-sm-flex align-items-center justify-content-sm-between">
+                        <h1 class="title">About Us</h1>
+                        <ul class="page-breadcrumb">
+                            <li><a href="{% url 'home' %}">Home</a></li>
+                            <li>About Us</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <!-- end main-content -->
+
+        <!-- About-section -->
+        <section class="about-section-four">
+            <div class="auto-container">
+                <div class="row">
+                    <!-- Content Column -->
+                    <div class="content-column col-xl-7 col-lg-6 order-lg-2 wow fadeInRight" data-wow-delay="600ms">
+                        <div class="inner-column">
+                            <div class="sec-title">
+                                <span class="sub-title">About us</span>
+                                <h2>Breathing life to your ideas</h2>
+                                <div class="text">Gizo Bureau is a digital agency specializing in Web development, Design and Marketing, having a holistic approach to branding. Paramount to us, is delivering quality service and bringing forth your ideas. Aside from quality service, customer satisfaction is quite imperative to us. We also give importance to consistency and creativity. Our team is dedicated to providing lasting branding identities and experience. We look forward to working with you <font color="white"><i class="fa-regular fa-face-smile-beam"></i></font></div>
+                            </div>
+
+                            <div class="row">
+                                <div class="info-box col-lg-6 col-md-6">
+                                    <div class="content-box">
+                                        <div class="inner">
+                                            <i class="icon flaticon-web-programming"></i>
+                                            <h6 class="title">Website Development</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="info-box col-lg-6 col-md-6">
+                                    <div class="content-box">
+                                        <div class="inner">
+                                            <i class="icon flaticon-creativity"></i>
+                                            <h6 class="title">Design</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="info-box col-lg-6 col-md-6">
+                                    <div class="content-box">
+                                        <div class="inner">
+                                            <i class="icon flaticon-promotion"></i>
+                                            <h6 class="title">Marketing</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image-column col-xl-5 col-lg-6">
+                        <div class="inner-column wow fadeInLeft">
+                            <div class="image-box">
+                                <div class="icon icon-dots-5 bounce-y"></div><br><br><br>
+                                <figure class="image overlay-anim wow fadeInUp"><img src="{% static 'images/Screenshot 2023-09-27 225045.png' %}" alt=""></figure>
+                                <div class="exp-box">
+                                    <h2 class="title">3</h2>
+                                    <p class="text">years experiences</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End about section -->
+
+  
+    </div><!-- End Page Wrapper -->
+    <!-- Scroll To Top -->
+    <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
+
+{% endblock content %}

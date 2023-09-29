@@ -1,0 +1,126 @@
+{% extends 'navbar.html' %}
+{% load static %}
+{% block content %}
+
+
+<div class="page-wrapper">
+
+
+	<!-- Start main-content -->
+	<section class="page-title">
+		<div class="auto-container">
+			<div class="title-outer d-sm-flex align-items-center justify-content-sm-between">
+				<h1 class="title">{{project.name}}</h1>
+				<ul class="page-breadcrumb">
+					<li><a href="{% url 'home' %}">Home</a></li>
+					<li><a href="{% url 'projects' %}">Projects</a></li>
+					<li>{{project.name}}</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<!-- end main-content -->
+
+	<!--Project Details Start-->
+	<section class="project-details">
+		<div class="container">
+			<div class="row">
+				<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active"  style= "max-height 320px">
+                        <img src={{project.image.url}} class="rounded mx-auto d-block"  alt="...">
+                      </div>
+                      <div class="carousel-item" style= "max-height 320px">
+
+                        <img src={{project.image2.url}} class="rounded mx-auto d-block"  alt="...">
+                      </div>
+                      <div class="carousel-item" style= "max-height 320px">
+                        <img src={{project.image3.url}} class="rounded mx-auto d-block" alt="...">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-xl-10">
+					<div class="project-details__content-right">
+						<div class="project-details__details-box">
+							<div class="row">
+								<div class="col">
+									<p class="project-details__client">Date</p>
+									<h4 class="project-details__name">{{project.date}}</h4>
+								</div>
+								<div class="col">
+									<p class="project-details__client">Client</p>
+									<h4 class="project-details__name">{{project.client}}</h4>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="project-details__content">
+				<div class="row">
+					<div class="col-xl-12">
+						<div class="project-details__content-left">
+							<h3 class="mb-4 mt-5">Know About The Project</h3>
+							<p class="">{{project.description}}</p>
+							
+
+               
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</section>
+	<!--Project Details End-->
+
+	<!-- Projects Section -->
+	<section class="projects-section pt-0">
+		<div class="auto-container">
+			<div class="sec-title text-center">
+				<span class="sub-title">our portfolio</span>
+				<h2>Explore our new recently <br>completed projects.</h2>
+			</div>
+
+			<div class="outer-box">
+				<div class="row">
+					<!-- Project Block -->
+					{% for project  in projects  %}
+                    <div class="project-block col-lg-3 col-md-6 col-sm-12">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <figure class="image"><a href="{% url 'project' project.slug %}"><img src={{project.image.url}} alt=""></a></figure>
+                                <div class="info-box">
+                                    <h4 class="title"><a href="{% url 'project' project.slug %}">{{project.name}}</a></h4>
+                                    <p class="text">{{project.description|truncatewords:8}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					{% endfor %}
+				
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--End projects-section-->
+
+
+</div><!-- End Page Wrapper -->
+
+
+<!-- Scroll To Top -->
+<div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
+
+
+{% endblock content %}

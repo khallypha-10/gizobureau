@@ -1,0 +1,281 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Gizoo Bureau | Digital Agency   </title>
+<meta property="og:image" content="{% static 'images/SmartSelect_20230928_173630_WhatsApp.png' %} ">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="description" content="Gizo Bureau is a digital agency specializing in Web development, Design and Marketing.">
+<meta name="keywords" content="agency, digital agency, website, web development, marketing, design, website building, ui/ux, web development agency, website agency, marketing agency, design agency">
+<meta description= "Gizo Bureau is a digital agency specializing in Web development, Design and Marketing.">
+<!-- Stylesheets -->
+<link href="{% static 'css/bootstrap.min.css' %} " rel="stylesheet">
+<link href="{% static 'css/style.css' %} " rel="stylesheet">
+<link href="{% static 'css/style-dark.css' %}" rel="stylesheet">
+
+<link rel="shortcut icon" href=" {% static 'images/logo.png' %}" type="image/png">
+<link rel="icon" href=" {% static 'images/logo.png' %}" type="image/png">
+<!-- Responsive -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+<!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+</head>
+
+<!-- Main Header-->
+<header class="main-header header-style-four bg-dark-1">
+    <!-- Header Top -->
+    <div class="header-top">
+        <div class="inner-container">
+            <div class="top-left">
+                <!-- Info List -->
+                <ul class="list-style-one light">
+                    <li><i class="fa fa-phone"></i> <a href="tel:+234 702 570 5253">+234 702 570 5253</a></li>
+                    <li><i class="fa fa-envelope"></i> <a href="https://mail.google.com/mail/?view=cm&fs=1&to=gizobureau@gmail.com">gizobureau@gmail.com</a></li>
+                    
+                </ul>
+            </div>
+    
+            <div class="top-right">
+                <ul class="social-icon-one">
+                    <li><a href="https://www.tiktok.com/@gizobureau?_t=8g2hQOAwqgw&_r=1"><i class="fa-brands fa-tiktok"></i></i></a></li>
+								<li><a href="https://twitter.com/gizobureau"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="https://www.linkedin.com/in/gizo-bureau-b67625293"><i class="fa-brands fa-linkedin"></i></a></li>
+								<li><a href="https://instagram.com/gizobureau?igshid=MzRlODBiNWFlZA=="><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Header Top -->
+      
+    <div class="header-lower">
+        <!-- Main box -->
+        <div class="main-box">
+            
+            <div class="logo-box bg-dark-1">
+                <div class="logo">  <a href="{% url 'home' %} "><img src=" {% static 'images/logo.png' %}" alt="Gizo bureau logo" title="Digicod"></a></div>
+            </div>
+
+            <!--Nav Box-->
+            <div class="nav-outer">    
+                <nav class="nav main-menu">
+                    <ul class="navigation">
+                        <li ><a href="{% url 'home' %}">Home</a>
+                            
+                        </li>
+                        
+                        <li><a href="{% url 'service' %}">Services</a></li>
+                        <li><a href="{% url 'projects' %}">Projects</a></li>
+                        <li><a href="{% url 'about' %}">About Us</a></li>
+                        <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Main Menu End-->
+                <div class="outer-box">
+                   
+
+                    <button class="ui-btn ui-btn toggle-hidden-bar">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </button>
+                    
+                    <!-- Mobile Nav toggler -->
+                    <div class="mobile-nav-toggler"><span class="icon lnr-icon-bars"></span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu  -->
+    <div class="mobile-menu">
+        <div class="menu-backdrop"></div>
+        <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
+        <nav class="menu-box">
+            <div class="upper-box">
+                <div class="nav-logo"><a href="{% url 'home' %}"><img src="{% static 'images/logo.png' %} " alt="Gizo bureau logo" title=""></a></div>
+                <div class="close-btn"><i class="icon fa fa-times"></i></div>
+            </div>
+            <ul class="navigation clearfix">
+                <!--Keep This Empty / Menu will come through Javascript-->
+            </ul>
+            <ul class="contact-list-one">
+                <li>
+                    <i class="icon lnr-icon-phone-handset"></i>
+                    <span class="title">Call Now</span>
+                    <div class="text"><a href="tel:+234 702 570 5253">+234 702 570 5253</a></div>
+                </li>
+               
+                <li>
+                    <i class="icon lnr-icon-envelope1"></i>
+                    <span class="title">Send Email</span>
+                    <div class="text"><a href="https://mail.google.com/mail/?view=cm&fs=1&to=gizobureau@gmail.com">gizobureau@gmail.com</a></div>
+                </li>
+               
+            </ul>
+            <ul class="social-links">
+                <li><a href="https://www.tiktok.com/@gizobureau?_t=8g2hQOAwqgw&_r=1"><i class="fa-brands fa-tiktok"></i></i></a></li>
+				<li><a href="https://twitter.com/gizobureau"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/gizo-bureau-b67625293"><i class="fa-brands fa-linkedin"></i></a></li>
+				<li><a href="https://instagram.com/gizobureau?igshid=MzRlODBiNWFlZA=="><i class="fab fa-instagram"></i></a></li>
+            </ul>
+        </nav>
+    </div><!-- End Mobile Menu -->
+
+    
+
+    <!-- Sticky Header  -->
+    <div class="sticky-header">
+        <div class="auto-container">
+            <div class="inner-container">
+                <!--Logo-->
+                <div class="logo">
+                    <a href="{% url 'home' %}" title=""><img src=" {% static 'images/logo.png' %}" alt="Gizo bureau logo" title=""></a>
+                </div>
+    
+                <!--Right Col-->
+                <div class="nav-outer">
+                    <!-- Main Menu -->
+                    <nav class="main-menu">
+                        <div class="navbar-collapse show collapse clearfix">
+                            <ul class="navigation clearfix">
+                                <!--Keep This Empty / Menu will come through Javascript-->
+                            </ul>
+                        </div>
+                    </nav><!-- Main Menu End-->
+    
+                    <!--Mobile Navigation Toggler-->
+                    <div class="mobile-nav-toggler"><span class="icon lnr-icon-bars"></span></div>
+                </div>
+            </div>
+        </div>
+    </div><!-- End Sticky Menu -->
+</header>
+<!--End Main Header -->
+
+<!-- Hidden Bar -->
+<section class="hidden-bar">
+    <div class="inner-box">
+        <div class="upper-box">
+            <div class="nav-logo"><a href="{% url 'home' %}"><img src=" {% static 'images/logo.png' %}" alt="Gizo bureau logo" title=""></a></div>
+            <div class="close-btn"><i class="icon fa fa-times"></i></div>
+        </div>
+
+        <div class="text-box">
+            <h4 class="title">Breathing life to your ideas</h4>
+            <div class="text">Gizo Bureau is a digital agency specializing in Web development, Design and Marketing. Paramount to us, is delivering quality service and bringing forth your ideas... <font color="blue" ><a href="{% url 'about'  %}" class="read-more">Read More <i class="fa fa-arrow-right"></i></a></font></div>
+        </div>
+        <ul class="contact-list-one">
+            <li>
+                <i class="icon lnr-icon-envelope1"></i>
+                <span class="title">Send Email</span>
+                <div class="text"><a href="https://mail.google.com/mail/?view=cm&fs=1&to=gizobureau@gmail.com">gizobureau@gmail.com</div>
+            </li>
+            <li>
+                <i class="icon lnr-icon-phone-handset"></i>
+                <span class="title">Call Now</span>
+                <div class="text"><a href="tel:+234 702 570 5253">+234 702 570 5253</a></div>
+            </li>    
+        </ul>
+        <ul class="social-links">
+            <li><a href="https://www.tiktok.com/@gizobureau?_t=8g2hQOAwqgw&_r=1"><i class="fa-brands fa-tiktok"></i></a></li>
+            <li><a href="https://twitter.com/gizobureau"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/gizo-bureau-b67625293"><i class="fa-brands fa-linkedin"></i></a></li>
+            <li><a href="https://instagram.com/gizobureau?igshid=MzRlODBiNWFlZA=="><i class="fab fa-instagram"></i></a></li>
+        </ul>
+    </div>
+</section>
+<!--End Hidden Bar -->
+
+<body>
+
+{% block content %}
+    
+{% endblock content %}
+<script src="{% static 'js/jquery.js' %}"></script> 
+<script src="{% static 'js/popper.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/jquery.fancybox.js' %}"></script>
+<script src="{% static 'js/wow.js' %}"></script>
+<script src="{% static 'js/appear.js' %}"></script>
+<script src="{% static 'js/mixitup.js' %}"></script>
+<script src="{% static 'js/owl.js' %}"></script>
+<script src="{% static 'js/script.js' %}"></script>
+</body>
+
+	<!-- Main Footer -->
+	<footer class="main-footer footer-style-four bg-dark-2 pull-up">
+		<div class="bg footer-bg-4"></div>
+		<!-- Widgets Section -->
+		<div class="widgets-section">
+			<div class="auto-container">
+				<div class="row">
+					<div class="footer-column col-xl-3 col-lg-6 col-md-6">
+						<div class="footer-widget about-widget">
+							<div class="logo"><a href="/"><img src="{% static 'images/SmartSelect_20230928_173630_WhatsApp.png' %}" alt="Gizo bureau logo"></a></div>
+							
+							
+							<ul class="social-icon-four">
+								<li><a href="https://www.tiktok.com/@gizobureau?_t=8g2hQOAwqgw&_r=1"><i class="fa-brands fa-tiktok"></i></i></a></li>
+								<li><a href="https://twitter.com/gizobureau"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="https://www.linkedin.com/in/gizo-bureau-b67625293"><i class="fa-brands fa-linkedin"></i></a></li>
+								<li><a href="https://instagram.com/gizobureau?igshid=MzRlODBiNWFlZA=="><i class="fab fa-instagram"></i></a></li>
+							</ul>
+						</div>
+					</div>
+					
+					<!-- Footer COlumn -->
+					<div class="footer-column col-xl-3 col-lg-6 col-md-6">
+						<div class="footer-widget contact-widget">
+							
+							<div class="widget-content">
+								<ul class="contact-list-three">
+									<li class="contact-info">
+										<span class="icon fa fa-phone"></span>
+										<span class="title">Phone</span>
+										<div class="text"><a href="tel:+234 702 570 5253">+234 702 570 5253</a></div>
+									</li>
+									<li class="contact-info">
+										<span class="icon fa fa-envelope"></span>
+										<span class="title">E-mail</span>
+										<div class="text"><a href="https://mail.google.com/mail/?view=cm&fs=1&to=gizobureau@gmail.com">gizobureau@gmail.com</a></div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					
+				
+
+					<!-- Footer COlumn -->
+                    <div class="footer-column col-xl-3 col-lg-6 col-md-6">
+						<div class="footer-widget contact-widget">
+                       <a href="{% url 'service' %}"><h4 class="widget-title"><font color="grey"> Services</font></h4></a>
+							<a href="{% url 'contact' %}"><h4 class="widget-title"><font color="grey"> Contact Us</font></h4></a>
+                            <a href="{% url 'projects' %}"><h4 class="widget-title"><font color="grey"> Projects</font></h4></a>
+                            <a href="{% url 'about' %}"><h4 class="widget-title"><font color="grey"> About Us</font></h4></a>
+							
+						</div>
+					</div>
+					
+                    
+				</div>
+			</div>
+		</div>
+
+		<!--  Footer Bottom -->
+		<div class="footer-bottom">
+			<div class="auto-container">
+				<div class="inner-container">
+					<div class="copyright-text">©Gizo Bureau</a> 2023 | All Rights Reserved</div>
+		
+					<ul class="footer-nav">
+						<li><a href="{% url 'contact' %}">Contact Us</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!--End Main Footer -->
+

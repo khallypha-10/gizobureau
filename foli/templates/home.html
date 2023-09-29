@@ -1,0 +1,582 @@
+{% extends 'navbar.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<div class="preloader"></div>
+
+<div class="page-wrapper">
+	
+	<!-- Preloader -->
+	
+	
+	
+
+	<!-- Hidden bar back drop -->
+	<div class="hidden-bar-back-drop"></div>
+
+	
+	
+	<!-- Banner Section Three -->
+	<section class="banner-section-four bg-dark-2">
+		{% if messages %}
+   		 <br>
+        <div class="messages">
+            {% for message in messages %}
+                <div class="alert {% if message.tags %}alert-{{ message.tags }}"{% endif %}>
+                    <i class="fa-solid fa-thumbs-up"></i> {{ message }}
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+		<div class="bg"></div>
+		<div class="auto-container">
+			<div class="row">
+				<div class="content-column col-lg-6">
+					<div class="content-box">
+						<span class="sub-title wow fadeInUp">Strive for perfection</span>
+						<h1 class="title wow fadeInUp" data-wow-delay="300ms">Gizo Bureau Digital Agency</h1>
+						<div class="text wow fadeInUp" data-wow-delay="600ms">And In Order To Give Birth To Your Ideas, Website, Design, Brand Advertising And Marketing Play A Vital Role.</div>
+						<div class="btn-box wow fadeInUp" data-wow-delay="900ms">
+							<a href="{% url 'about' %}" class="theme-btn btn-style-one hover-light"><span class="btn-title">Read More <i class="fa fa-arrow-right"></i></span></a>
+						</div>
+					</div>
+				</div>
+				<div class="image-column col-lg-6">
+					<div class="">
+						<div class="bg-shape wow zoomIn" data-wow-delay="1500ms"></div>
+						<figure class="image wow zoomIn" data-wow-delay="1200ms"><img src="{% static 'images/logg.png' %}" alt="logo image"></figure>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Banner Section Three -->
+
+	<!-- About-section -->
+	<section class="about-section-four">
+		<div class="auto-container">
+			<div class="row">
+				<!-- Content Column -->
+				<div class="content-column col-xl-7 col-lg-6 order-lg-2 wow fadeInRight" data-wow-delay="600ms">
+					<div class="inner-column">
+						<div class="sec-title">
+							<span class="sub-title">About us</span>
+							<h2>Innovative Technology and concepts for <br>Modern Businesses</h2>
+							<div class="text">Modern Businesses Call For New And Innovative Ideas. Technology, Innovation And Creativity Drive Our Agency To Success.</div>
+						</div>
+
+						<div class="row">
+							<div class="info-box col-lg-6 col-md-6">
+								<div class="content-box">
+									<div class="inner">
+										<i class="icon flaticon-web-programming"></i>
+										<h6 class="title">Website Development</h6>
+									</div>
+								</div>
+							</div>
+							<div class="info-box col-lg-6 col-md-6">
+								<div class="content-box">
+									<div class="inner">
+										<i class="icon flaticon-creativity"></i>
+										<h6 class="title">Design</h6>
+									</div>
+								</div>
+							</div>
+							<div class="info-box col-lg-6 col-md-6">
+								<div class="content-box">
+									<div class="inner">
+										<i class="icon flaticon-promotion"></i>
+										<h6 class="title">Marketing</h6>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="btn-box animate-2">
+							<a href="{% url 'about' %}" class="theme-btn btn-style-one"><span class="btn-title">Read More <i class="fa fa-arrow-right"></i></span></a>
+						</div>
+					</div>
+				</div>
+				<div class="image-column col-xl-5 col-lg-6">
+					<div class="inner-column wow fadeInLeft">
+						<div class="image-box">
+							<div class="icon icon-dots-5 bounce-y"></div>
+							<figure class="image overlay-anim wow fadeInUp"><img src="{% static 'images/brain.png' %}" alt="light bulb shaped like brain"></figure>
+							<div class="exp-box bg-dark-2">
+								<h2 class="title">3</h2>
+								<p class="text">years experience</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End about section -->
+
+	<!-- Service section Four -->
+	<section class="services-section-four bg-dark-1 pt-0">
+		<div class="auto-container">
+			<div class="sec-title text-center">
+				<span class="sub-title">Our Services</span>
+				<h2>Digital solutions for your <br>every need</h2>
+			</div>
+			<div class="row">
+				<!-- Service Block Four -->
+				{% for service in services  %}
+				<div class="service-block-four col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+					<div class="inner-box">
+						<div class="image-box">
+							<figure class="image"><a href="{% url 'service-detail' service.slug %}"><img src="{{service.image.url}}" alt="service image"></a></figure>
+						</div>
+						<div class="content-box">
+							<i class="icon {{service.icon}}"></i>
+							<h4 class="title"><a href="{% url 'service-detail' service.slug %}">{{service.name}}</a></h4>
+							<div class="text">{{service.description|truncatewords:7}}</div>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</section>
+	<!-- end service section fore -->
+
+	<!-- Projects Section Four -->
+	<section class="projects-section-four pt-0">
+		<div class="auto-container">
+			<div class="sec-title">
+				<span class="sub-title">Our gallery</span>
+				<h2>Take A Loook At Some Of <br>Our Works</h2>
+			</div>
+			<div class="carousel-outer">
+				<div class="project-carousel owl-carousel owl-theme default-navs-two">
+					<!-- Project Block Four -->
+					{% for project in projects  %}
+					<div class="project-block-four">
+						<div class="inner-box">
+							<figure class="image-box"><a href="{% url 'project' project.slug %}"><img  src="{{project.image.url}}" alt="project image"></a></figure>
+							<div class="info-box">
+								<i class="icon fa fa-angles-right"></i>
+								<h6 class="title"><a href="{% url 'project' project.slug %}">{{project.name}}</a></h6>
+							</div>
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- end Projects section -->
+
+	
+	
+	<!-- Combine Background -->
+	<div class="combine-bg">
+		<div class="bg bg-pattern-12"></div>
+
+		<!-- Team Section Four-->
+		<section class="team-section-four">    
+			<div class="auto-container">
+				<div class="sec-title text-center">
+					<span class="sub-title">Our Team</span>
+					<h2>We Are Pleased To Present The<br> Gizo Agency Board</h2>
+				</div>
+
+				<div class="row">
+					<!-- Team block Four -->
+					{% for member in members  %}
+					<div class="team-block-four col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+						<div class="inner-box">
+							<div class="image-box">
+								<figure class="image"><img src={{member.image.url}} alt="member image"></a></figure>
+								<div class="social-links">
+									<a href="#"><i class="fab fa-twitter"></i></a>
+									<a href="#"><i class="fab fa-facebook-f"></i></a>
+									<a href="#"><i class="fab fa-instagram"></i></a>
+								</div> 
+							</div>
+							<div class="info-box">
+								<h4 class="name">{{member.name|title}}</a></h4>
+								<span class="designation">{{member.position|title}}</span>
+							</div>
+						</div>
+					</div>
+					{% endfor %}
+					
+				</div>
+			</div>
+		</section>
+		<!-- End Team Section Two -->
+		
+		<!-- FAQ Section Four -->
+		<section class="faqs-section-four pt-0">
+			<div class="auto-container">
+				<div class="outer-box">
+					<div class="row">
+						<!-- FAQ Column -->
+						<div class="faq-column col-xl-7 col-lg-12 wow fadeInLeft">
+							<div class="inner-column">
+								<div class="sec-title">
+									<span class="sub-title">Our FAQ</span>
+									<h2>Frequently Asked Questions</h2>
+								</div>
+								
+								<ul class="accordion-box style-four wow fadeInRight">
+									<!--Block-->
+									<li class="accordion block active-block">
+										<div class="acc-btn active">How much does your service cost ? <div class="icon fa fa-angle-double-right"></div></div>
+										<div class="acc-content current">
+											<div class="content">
+												<div class="text">It depends on the service you want and the scope of it. For more information, please <font color="white"> <u><a href="{% url 'contact' %}">contact us</a></u></font></div>
+											</div>
+										</div>
+									</li>
+									
+									<!--Block-->
+									<li class="accordion block">
+										<div class="acc-btn">How do I know if my project is on track ? <div class="icon fa fa-angle-double-right"></div></div>
+										<div class="acc-content">
+											<div class="content">
+												<div class="text">We will periodically update you on the process. Communication is very important for us.</div>
+											</div>
+										</div>
+									</li>
+
+									<!--Block-->
+									<li class="accordion block">
+										<div class="acc-btn">How many times can I update my request?<div class="icon fa fa-angle-double-right"></div></div>
+										<div class="acc-content">
+											<div class="content">
+												<div class="text">As many times as you'd like. We are here to serve your needs. Do not hesitate to ask for any changes.</div>
+											</div>
+										</div>
+									</li>
+
+									<!--Block-->
+									<li class="accordion block">
+										<div class="acc-btn">What does Gizo mean?<div class="icon fa fa-angle-double-right"></div></div>
+										<div class="acc-content">
+											<div class="content">
+												<div class="text">It is a Hausa word meaning "Web".</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<!-- Image Column -->
+						<div class="image-column col-xl-5 col-lg-12 wow fadeInRight">
+							<div class="inner-column">
+								<figure class="image"><img src="{% static 'images/some.png' %}" alt="telephone and notebook"></figure>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--End FAQ Section -->
+		
+		<!-- Fun Fact Section Four -->
+		<section class="fun-fact-section-four">
+			<div class="auto-container">
+				<div class="fact-counter">
+					<div class="row">
+						<!-- Counter block Four-->
+						<div class="counter-block-four col-xl-3 col-lg-6 col-md-6 col-sm-12 wow fadeInUp">
+							<div class="inner">
+								<div class="content">
+									<i class="icon flaticon-love-planet"></i>
+									<div class="count-box"><span class="count-text" data-speed="1000" data-stop="10"></span>+</div>
+									<h6 class="counter-title">Client reviews</h6>
+								</div>
+							</div>
+						</div>
+
+						<!-- Counter block Four-->
+						<div class="counter-block-four col-xl-3 col-lg-6 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="300ms">
+							<div class="inner">
+								<div class="content">
+									<i class="icon flaticon-workers"></i>
+									<div class="count-box"><span class="count-text" data-speed="1000" data-stop="3"></span>+</div>
+									<h6 class="counter-title">Team members</h6>
+								</div>
+							</div>
+						</div>
+
+						<!-- Counter block Four-->
+						<div class="counter-block-four col-xl-3 col-lg-6 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="600ms">
+							<div class="inner">
+								<div class="content">
+									<i class="icon flaticon-target"></i>
+									<div class="count-box"><span class="count-text" data-speed="1000" data-stop="{{project}}"></span>+</div>
+									<h6 class="counter-title">Projects</h6>
+								</div>
+							</div>
+						</div>
+
+						<!-- Counter block Four-->
+						
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Fun Fact Section Two-->
+	</div>
+	<!-- End Combine Background -->
+
+	<!-- Contact Section fOUR -->
+	<section class="contact-section-four pull-up bg-dark-1">
+		<div class="auto-container">
+			<div class="outer-box">
+				<div class="row">
+					<!-- Form Column -->
+					<div class="form-column col-lg-6 col-md-12 col-sm-12 order-lg-2">
+						<div class="inner-column">
+							<!-- Contact Form -->
+							<div class="contact-form style-two wow fadeInLeft">
+								<div class="sec-title">
+									<span class="sub-title">Contact us</span>
+									<h2>Want To Reach Us?</h2>
+								</div>
+
+								<!--Contact Form-->
+								<form method="post" action="{% url 'contact' %}" id="contact-form">
+									{% csrf_token %}
+									<div class="row">
+										<div class="form-group col-lg-12">
+											<div class="input-outer">
+												<input type="text" name="name" placeholder="Your First Name" required>
+												<span class="icon fa fa-at"></span>
+											</div>
+										</div>
+										<div class="form-group col-lg-12">
+											<div class="input-outer">
+												<input type="text" name="lastname" placeholder="Your Last Name" required>
+												<span class="icon fa fa-at"></span>
+											</div>
+										</div>
+										<div class="form-group col-lg-12">
+											<div class="input-outer">
+												<input type="text" name="phone" placeholder="Phone Number" required>
+												<span class="icon fa fa-phone"></span>
+											</div>
+										</div>
+										
+										<div class="form-group col-lg-12">
+											<div class="input-outer">
+												<input type="email" name="email" placeholder="Email address" required>
+												<span class="icon fa fa-paper-plane"></span>
+											</div>
+										</div>
+										
+										<div class="form-group col-lg-12">
+											<div class="input-outer">
+												<textarea name="message" placeholder="Your Message" required></textarea>
+												<span class="icon fa fa-envelope"></span>
+											</div>
+										</div>
+						
+										<div class="form-group col-lg-12">
+											<button class="theme-btn btn-style-one" type="submit" name="submit-form"><span class="btn-title">Submit Now</span></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							<!--End Contact Form -->
+						</div>
+					</div>
+
+					<!-- Image Column -->
+					<div class="image-column col-lg-6 col-md-12">
+						<div class="inner-column">
+							<div class="image-box">
+								<span class="icon icon-lines"></span><br><br><br>
+								<figure class="image-1"><img src="{% static 'images/contac.png' %}" alt="gear drawing"></figure>
+								
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Contact Section -->
+
+	<!-- Combine Background -->
+	<div class="combine-bg">
+		<div class="bg bg-pattern-13"></div>
+
+		<!-- testimonial section Four -->
+		<section class="testimonial-section-four pt-0">
+			<div class="auto-container">
+				<div class="sec-title text-center">
+					<span class="sub-title">Testomonial</span>
+					<h2>Some Of The Things People Have Said <br> About Us </h2>
+				</div>
+				<div class="carousel-outer">
+					<div class="testimonial-carousel owl-carousel owl-theme disable-navs">
+						<!-- Testimonial Block Four -->
+						<div class="testimonial-block-four">
+							<div class="inner-box">
+								<div class="rating">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+								</div>
+								<div class="info-box">
+									<h6 class="name">Safiyya Maude</h6>
+									<span class="designation"></span>
+									<span class="icon fa fa-quote-right"></span>
+								</div>
+								<div class="text">
+									Very good designs and builds. Would really recommend.
+								</div>
+							</div>
+						</div>
+
+						<!-- Testimonial Block Four -->
+						<div class="testimonial-block-four">
+							<div class="inner-box">
+								
+								<div class="rating">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									
+								</div>
+								<div class="info-box">
+									<h6 class="name">John A.</h6>
+									<span class="designation"></span>
+									<span class="icon fa fa-quote-right"></span>
+								</div>
+								<div class="text">
+									Amazing work done. Really good stuff. 
+								</div>
+							</div>
+						</div>
+						<div class="testimonial-block-four">
+							<div class="inner-box">
+								<div class="rating">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+								</div>
+								<div class="info-box">
+									<h6 class="name">Abubakar Musa</h6>
+									<span class="designation"></span>
+									<span class="icon fa fa-quote-right"></span>
+								</div>
+								<div class="text">
+									Their response time is quite good. So is their communication and care.
+								</div>
+							</div>
+						</div>
+						<div class="testimonial-block-four">
+							<div class="inner-box">
+								<div class="rating">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									
+								</div>
+								<div class="info-box">
+									<h6 class="name">Wilson Michael</h6>
+									<span class="designation"></span>
+									<span class="icon fa fa-quote-right"></span>
+								</div>
+								<div class="text">
+									I was really impressed with their level of care and dedication.
+								</div>
+							</div>
+						</div>
+
+						<div class="testimonial-block-four">
+							<div class="inner-box">
+								<div class="rating">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+								</div>
+								<div class="info-box">
+									<h6 class="name">Aisha Ibrahim</h6>
+									<span class="designation"></span>
+									<span class="icon fa fa-quote-right"></span>
+								</div>
+								<div class="text">
+									Their website looks so beautiful.
+								</div>
+							</div>
+						</div>
+
+						<div class="testimonial-block-four">
+							<div class="inner-box">
+								<div class="rating">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									
+								</div>
+								<div class="info-box">
+									<h6 class="name">Peter G.</h6>
+									<span class="designation"></span>
+									<span class="icon fa fa-quote-right"></span>
+								</div>
+								<div class="text">
+									I was impressed with their commitment and attitude. 
+								</div>
+							</div>
+						</div>
+
+						<div class="testimonial-block-four">
+							<div class="inner-box">
+								<div class="rating">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+								</div>
+								<div class="info-box">
+									<h6 class="name">Ibrahim Ali</h6>
+									<span class="designation"></span>
+									<span class="icon fa fa-quote-right"></span>
+								</div>
+								<div class="text">
+									They really take your thoughts into consideration.
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End testmonial section -->
+
+	
+
+	</div>
+	<!-- End Combine Background -->
+	
+<!-- Scroll To Top -->
+<div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
+
+</div><!-- End Page Wrapper -->
+
+
+
+
+{% endblock content %}
+
+

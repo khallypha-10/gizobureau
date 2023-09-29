@@ -1,0 +1,145 @@
+{% extends 'navbar.html' %}
+{% load static %}
+{% block content %}
+
+
+<div class="page-wrapper">
+
+
+	<!-- Start main-content -->
+	<section class="page-title" >
+		<div class="auto-container">
+			<div class="title-outer d-sm-flex align-items-center justify-content-sm-between">
+				<h1 class="title">Contact Us</h1>
+				<ul class="page-breadcrumb">
+					<li><a href="{% url 'home' %}">Home</a></li>
+					<li>Contact</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<!-- end main-content -->
+    
+	<!--Contact Details Start-->
+	<section class="contact-details">
+		<div class="container ">
+			<div class="row">
+				<div class="col-xl-7 col-lg-6">
+					<div class="sec-title">
+						<span class="sub-title">Get In Touch With Us</span>
+						<h2>Don't hesitate to contact us</h2>
+					</div>
+					<!-- Contact Form -->
+					<form id="contact_form" name="contact_form" class=""  method="post">
+                        {% csrf_token %}
+						<div class="row">
+							<div class="col-sm-6">
+								<div class="mb-3">
+									<input name="name" class="form-control" type="text" placeholder="Enter First Name">
+								</div>
+							</div>
+							<div class="col-sm-6">
+								<div class="mb-3">
+									<input name="lastname" class="form-control" type="text" placeholder="Enter Last Name">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-6">
+								<div class="mb-3">
+									<input name="email" class="form-control required email" type="email" placeholder="Enter Email">
+								</div>
+							</div>
+							<div class="col-sm-6">
+								<div class="mb-3">
+									<input name="phone" class="form-control" type="text" placeholder="Enter Phone">
+								</div>
+							</div>
+						</div>
+						<div class="mb-3">
+							<textarea name="message" class="form-control required" rows="7" placeholder="Enter Message"></textarea>
+						</div>
+						<div class="mb-5">
+							<input name="form_botcheck" class="form-control" type="hidden" value="" />
+							<button type="submit" class="theme-btn btn-style-one" data-loading-text="Please wait..."><span class="btn-title">Send message</span></button>
+							
+						</div>
+					</form>
+					<!-- Contact Form Validation-->
+				</div>
+				<div class="col-xl-5 col-lg-6">
+					<div class="contact-details__right">
+						<div class="sec-title">
+							<span class="sub-title">Need any help?</span>
+							<h2>Get in touch with us</h2>
+							<div class="text">You can also reach us via phone or email. We will endeavour to get back ASAP! </div>
+						</div>
+						<ul class="list-unstyled contact-details__info">
+							<li>
+								<div class="icon bg-theme-color2">
+									<span class="lnr-icon-phone-plus"></span>
+								</div>
+								<div class="text">
+									<h6>Call Us</h6>
+									<a href="tel:+234 702 570 5253">+234 702 570 5253</a>
+								</div>
+							</li>
+							<li>
+								<div class="icon">
+									<span class="lnr-icon-envelope1"></span>
+								</div>
+								<div class="text">
+									<h6>Email Us</h6>
+									<a href="https://mail.google.com/mail/?view=cm&fs=1&to=gizobureau@gmail.com">gizobureau@gmail.com</a>
+								</div>
+							</li>
+							
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+        <!-- Scroll To Top -->
+<div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
+	</section>
+	<!--Contact Details End-->
+
+
+
+ 
+  
+  
+
+
+
+<!-- form submit -->
+<script src="{% static 'js/jquery.validate.min.js' %}"></script>
+<script src="{% static 'js/jquery.form.min.js' %}"></script>
+<script>
+	(function($) {
+		$("#contact_form").validate({
+			submitHandler: function(form) {
+				var form_btn = $(form).find('button[type="submit"]');
+				var form_result_div = '#form-result';
+				$(form_result_div).remove();
+				form_btn.before('<div id="form-result" class="alert alert-success" role="alert" style="display: none;"></div>');
+				var form_btn_old_msg = form_btn.html();
+				form_btn.html(form_btn.prop('disabled', true).data("loading-text"));
+				$(form).ajaxSubmit({
+					dataType:  'json',
+					success: function(data) {
+						if( data.status == 'true' ) {
+							$(form).find('.form-control').val('');
+						}
+						form_btn.prop('disabled', false).html(form_btn_old_msg);
+						$(form_result_div).html(data.message).fadeIn('slow');
+						setTimeout(function(){ $(form_result_div).fadeOut('slow') }, 6000);
+					}
+				});
+			}
+		});
+	})(jQuery);
+</script>
+
+
+{% endblock content %}

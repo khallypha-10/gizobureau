@@ -1,0 +1,803 @@
+/*** 
+
+====================================================================
+    Contact Section
+====================================================================
+
+***/
+
+.contact-section{
+    position: relative;
+    padding: 120px 0;
+    z-index: 2;
+    .form-column{
+        position: relative;
+        z-index: 3;
+        .inner-column{
+            position: relative;
+            padding: 80px 0;
+            margin-left: -30px;
+            @include media-breakpoint-down(lg){
+                margin-left: 0;
+                padding-top: 0;
+            }
+        }
+        .contact-form {
+            position: relative;
+            padding: 80px 60px;
+            @include media-breakpoint-down(sm) {
+                padding: 50px 20px;
+            }
+        }
+    }
+
+    .image-column{
+        @include media-breakpoint-down(lg){
+            order: 3;
+        }
+        .inner-column{
+            margin-right: -75px;
+            @include media-breakpoint-down(lg){
+                margin-right: 0;
+            }
+        }
+        .image{
+            margin-bottom: 0;
+            overflow: hidden;
+            img{
+                @include media-breakpoint-down(lg){
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.contact-form {
+    position: relative;
+    background-color: var(--theme-color-gray);
+    border-radius: 10px;
+    .sec-title{
+        margin-bottom: 50px;
+    }
+    .input-outer {
+        position: relative;
+        .icon{
+            position: absolute;
+            right: 30px;
+            top: 23px;
+            font-size: var(--body-font-size);
+            line-height: 1em;
+            color: var(--theme-color1);
+        }
+    }
+    .form-group {
+        position: relative;
+        margin-bottom: 20px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    .select2-container--default .select2-selection--single,
+    input:not([type="submit"]),
+    textarea,
+    select {
+        position: relative;
+        display: block;
+        height: 60px;
+        width: 100%;
+        padding: 15px 20px;
+        font-size: var(--body-font-size);;
+        color: #67687A;
+        line-height: 32px;
+        font-weight: 400;
+        background-color: var(--theme-color-light);
+        border: 1px solid transparent;
+        border-radius: 10px;
+        margin-bottom: 0;
+        transition: all 300ms ease;
+    }
+    ::-webkit-input-placeholder {color: #67687A;}
+    input:focus,
+    select:focus,
+    textarea:focus {
+        border-color: var(--theme-color2);
+    }
+    textarea {
+        height: 148px;
+        resize: none;
+    }
+    input[type="submit"],
+    button {
+        width: 100%;
+        font-weight: 600;
+        line-height: 32px;
+        padding: 15px 30px;
+    }
+
+    &.style-two{
+        .select2-container--default .select2-selection--single,
+        input:not([type="submit"]),
+        textarea,
+        select {
+            height: 65px;
+            padding: 20px 30px;
+            line-height: 25px;
+        }
+        .input-outer {
+            .icon {
+                top: 20px;
+                line-height: 25px;
+            }
+        }
+        textarea {
+            height: 157px;
+            resize: none;
+        }
+    }
+}
+
+/*** 
+
+====================================================================
+    Contact Section Two
+====================================================================
+
+***/
+
+.contact-section-two{
+    position: relative;
+    z-index: 2;
+    .outer-box{
+        position: relative;
+        &::before{
+            @include overlay;
+            background-color: var(--theme-color-gray);
+            width: 1000%;
+            content: "";
+            @include media-breakpoint-down(lg){
+                width: auto;
+                left: -20px;
+                right: -20px;
+            }
+        }
+    }
+    .form-column{
+        position: relative;
+        z-index: 3;
+        .inner-column{
+            position: relative;
+            padding: 120px 0;
+            padding-left: 60px;
+            margin-left: -60px;
+            @include media-breakpoint-down(xl){
+                margin-left: 0;
+                padding-left: 0;
+            }
+        }
+        .sec-title{
+            margin-bottom: 50px;
+        }
+    }
+
+    .image-column{
+        .inner-column{
+            padding-right: 30px;
+            height: 100%;
+            @include media-breakpoint-down(xl){
+                padding-right: 0;
+            }
+        }
+        .image-box{
+            position: relative;
+            height: 100%;
+            .play-btn{
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                .icon{
+                    height: 93px;
+                    width: 93px;
+                    line-height: 91px;
+                    border-color: var(--theme-color-light);
+                    font-size: 28px;
+                }
+            }
+        }
+        .image{
+            margin-bottom: 0;
+            overflow: hidden;
+            height: 100%;
+            img{
+                height: 100%;
+                object-fit: cover;
+                @include media-breakpoint-down(lg){
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+// Contact Form Two
+.contact-form-two{
+    position: relative;
+    background-color: var(--theme-color-gray);
+    border-radius: 10px;
+    .sec-title{
+        margin-bottom: 50px;
+    }
+    .form-group {
+        position: relative;
+        margin-bottom: 30px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    .select2-container--default .select2-selection--single,
+    input:not([type="submit"]),
+    textarea,
+    select {
+        position: relative;
+        display: block;
+        height: 72px;
+        width: 100%;
+        padding: 20px 20px;
+        font-size: var(--body-font-size);
+        color: var(--theme-colro2);
+        line-height: 32px;
+        font-weight: 400;
+        background-color: var(--theme-color-light);
+        border: 1px solid transparent;
+        border-radius: 10px;
+        margin-bottom: 0;
+        transition: all 300ms ease;
+    }
+    ::-webkit-input-placeholder {color: #67687A;}
+    input:focus,
+    select:focus,
+    textarea:focus {
+        border-color: var(--theme-color2);
+    }
+    textarea {
+        height: 118px;
+        resize: none;
+    }
+    input[type="submit"],
+    button {
+        width: 100%;
+        font-weight: 600;
+        line-height: 35px;
+        padding: 20px 30px;
+    }
+}
+
+/*** 
+
+====================================================================
+    Contact Section Three
+====================================================================
+
+***/
+
+.contact-section-three{
+    position: relative;
+    z-index: 2;
+    .outer-box{
+        position: relative;
+        background-color: var(--theme-color-gray);
+    }
+    .form-column{
+        position: relative;
+        z-index: 3;
+        .inner-column{
+            position: relative;
+            padding: 100px 0;
+            padding-right: 60px;
+            @include media-breakpoint-down(lg){
+                padding: 70px 20px;
+            }
+        }
+        .sec-title{
+            margin-bottom: 50px;
+        }
+    }
+
+    .image-column{
+        @include media-breakpoint-down(lg){
+            order: 3;
+        }
+        .inner-column{
+            padding: 100px 0;
+            padding-right: 20px;
+            padding-left: 60px;
+            height: 100%;
+            @include media-breakpoint-down(lg){
+                padding: 70px 0px;
+            }
+        }
+        .image-box{
+            position: relative;
+            display: inline-block;
+            height: 100%;
+            @include media-breakpoint-down(lg){
+                display: block;
+                height: auto;
+            }
+            .image{
+                margin-bottom: 0;
+                border-radius: 5px;
+                overflow: hidden;
+                height: 100%;
+                img{
+                    @include media-breakpoint-down(xl){
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+
+    .skill-box{
+        position: absolute;
+        left: 20px;
+        bottom: 20px;
+        height: 246px;
+        width: 246px;
+        text-align: center;
+        background-color: var(--theme-color-light);
+        padding: 30px 30px 20px;
+        border-radius: 5px;
+        @include media-breakpoint-down(lg){
+            position: relative;
+            left: 0;
+            width: 100%;
+            bottom: 0;
+            margin-bottom: 50px;
+        }
+        .pie-graph {
+            position: relative;
+            height: 140px;
+            width:140px;
+            margin: 0 auto 20px;
+            .graph-outer{
+                position: relative;
+                .count-box{
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -54%);
+                    font-weight: 700;
+                    font-size: 27px;
+                    line-height: 38px;                
+                    letter-spacing: -0.54px;
+                    color: var(--theme-color2);
+                    @include title-font;
+                }
+            }
+        }
+    }
+}
+
+/*** 
+
+====================================================================
+    Contact Section Four
+====================================================================
+
+***/
+
+.contact-section-four{
+    position: relative;
+    padding: 120px 0 70px;
+    background-color: var(--theme-color-gray);
+    z-index: 2;
+    &.pull-up{
+        padding-top: 270px;
+        margin-top: -160px;
+    }
+    .form-column{
+        position: relative;
+        margin-bottom: 50px;
+        z-index: 3;
+        .sec-title{
+            margin-bottom: 40px;
+        }
+    }
+
+    .image-column{
+        margin-bottom: 50px;
+        .inner-column{
+            padding-right: 55px;
+            @include media-breakpoint-down(lg){
+                padding-right: 0;
+            }
+        }
+        .image-box{
+            position: relative;
+            padding-bottom: 150px;
+            padding-top: 70px;
+            @include media-breakpoint-down(sm){
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+            .icon-lines{
+                position: absolute;
+                left: 70px;
+                top: -10px;
+                @include media-breakpoint-down(lg){
+                    display: none;
+                }
+            }
+        }
+        .image-1{
+            position: relative;
+            text-align: right;
+            margin-bottom: 0;
+            img{
+                display: inline-block;
+                border-radius: 10px;
+                @include media-breakpoint-down(sm){
+                    width: 100%;
+                }
+            }
+        }
+        .image-2{
+            position: absolute;
+            left: 20px;
+            bottom: 45px;
+            @include media-breakpoint-down(sm){display: none;}
+            img{
+                border-radius: 10px;
+                border: 5px solid var(--theme-color-light);
+            }
+        }
+
+        .info-box{
+            position: absolute;
+            right: -20px;
+            bottom: 0px;
+            padding: 5px 20px 25px;
+            background-color: var(--theme-color-light);
+            border-radius: 10px;
+            background: #FFFFFF;
+            text-align: center;
+            min-width: 245px;
+            box-shadow: 0px 0px 18px 5px rgba(0, 0, 0, 0.05);
+            @include media-breakpoint-down(lg){
+                right: 0;
+            }
+            @include media-breakpoint-down(sm){
+                position: relative;
+                width: 100%;
+            }
+            .icon-box{
+                position: relative;
+                margin-bottom: -5px;
+                .count{
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    font-weight: 700;
+                    font-size: 20px;
+                    line-height: 24px;
+                    letter-spacing: -0.4px;
+                    color: var(--theme-color2);
+                }
+            }
+            .title{
+                margin-bottom: 0;
+            }
+        }
+
+        .play-btn{
+            position: absolute;
+            left: -10px;
+            bottom: 180px;
+            &:hover{
+                .icon{
+                    background-color: var(--bg-theme-color1);
+                    color: var(--theme-color-light);
+                }
+            }
+            .icon{
+                height: 80px;
+                width: 80px;
+                border-radius: 0;
+                background-color: var(--theme-color-gray);
+                border: 0;
+                @include flex-center;
+                font-size: 28px;
+            }
+        }
+    }
+}
+
+/*** 
+
+====================================================================
+    Contact Section Five
+====================================================================
+
+***/
+
+.contact-section-five{
+    position: relative;
+    padding: 120px 0;
+    &.pull-up{
+        .bg{
+            top: -307px;
+            bottom: 0;
+            height: auto;
+            background-color: var(--theme-color-gray);
+        }
+    }
+    .outer-box{
+        position: relative;
+        background-color: var(--theme-color-light);
+    }
+    .form-column{
+        .inner-column{
+            position: relative;
+            padding: 60px 60px 60px 0;
+            @include media-breakpoint-down(lg){
+                padding: 0px 20px 50px;
+            }
+            .contact-form{
+                background-color: transparent;
+                .select2-container--default .select2-selection--single,
+                input:not([type="submit"]),
+                textarea,
+                select {
+                    border: 1px solid #E3E3E3;
+                }
+                textarea{
+                    height: 100px;
+                }
+            }
+        }
+     }
+     .content-column{
+         .inner-column{
+            padding: 67px 40px 80px 60px;
+            @include media-breakpoint-down(lg){
+                padding: 50px 20px;
+            }
+            .sec-title{
+                margin-bottom: 30px;
+            }
+            .info-link{
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 28px;
+                letter-spacing: -0.8px;
+                display: flex;
+                @include title-font;
+                i{
+                    color: var(--theme-color1);
+                    margin-right: 10px;
+                    font-size: var(--body-font-size);;
+                }
+            }
+        }
+     }
+}
+
+/*** 
+
+====================================================================
+    Contact Section Six
+====================================================================
+
+***/
+
+.contact-section-six{
+    position: relative;
+    padding: 120px 0 70px;
+     .content-column{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 3;
+        margin-bottom: 50px;
+         .inner-column{
+            position: relative;
+            border-radius: 10px;
+            padding: 60px 60px;
+            background-color: var(--bg-theme-color1);
+            margin-left: -20px;
+            @include media-breakpoint-down(xl){
+                margin-left: 0;
+                padding: 40px 40px;
+            }
+            @include media-breakpoint-down(sm){
+                margin-left: 0;
+                padding: 30px 20px;
+            }
+            .sec-title{
+                @include media-breakpoint-down(lg){
+                    br{display: none;}
+                }
+                .sub-title{
+                    &::before{color: var(--theme-color-light);}
+                }
+                .text{
+                    margin-top: 30px;
+                }
+                .theme-btn{
+                    margin-top: 30px;
+                    padding: 15px 40px;
+                    line-height: 30px;
+                }    
+            }
+        }
+     }
+     .image-column{
+        margin-bottom: 50px;
+        .inner-column{
+            margin-right: -70px;
+            @include media-breakpoint-down(lg){
+                margin-right: 0;
+            }
+        }
+        .image{
+            img{
+                width: 100%;
+            }
+        }
+     }
+}
+
+
+/*** 
+
+====================================================================
+    Contact Section Seven
+====================================================================
+
+***/
+
+.contact-section-seven{
+    position: relative;
+    padding: 120px 0;
+    z-index: 2;
+    .form-column{
+        position: relative;
+        z-index: 3;
+        .inner-column{
+            position: relative;
+            padding: 80px 0;
+            margin-left: -30px;
+            @include media-breakpoint-down(lg){
+                margin-left: 0;
+                padding-top: 0;
+            }
+        }
+        .contact-form {
+            position: relative;
+            padding: 80px 60px 50px;
+            background-color: var(--theme-color-light);
+            border-radius: 10px;
+            box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.07);
+            @include media-breakpoint-down(xl){
+                padding: 70px 20px 20px;
+            }
+            .form-group{
+                margin-bottom: 30px;
+            }
+            .select2-container--default .select2-selection--single,
+            input:not([type="submit"]),
+            textarea,
+            select {
+                border: 1px solid #E3E3E3;
+                border-radius: 5px;
+            }
+            textarea{
+                height: 134px;
+            }
+        }
+    }
+
+    .image-column{
+        .inner-column{
+            margin-right: -145px;
+            @include media-breakpoint-down(lg){
+                margin-right: 0;
+            }
+        }
+        .image{
+            margin-bottom: 0;
+            overflow: hidden;
+            img{
+                @include media-breakpoint-down(lg){
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+/*** 
+
+====================================================================
+    Contact Section Eight
+====================================================================
+
+***/
+
+.contact-section-eight{
+    position: relative;
+    padding: 120px 0 70px;
+    z-index: 2;
+    .form-column{
+        position: relative;
+        margin-bottom: 50px;
+        z-index: 3;
+        .inner-column{
+            position: relative;
+            padding-right: 60px;
+            @include media-breakpoint-down(xl){
+                padding-right: 0;
+            }
+        }
+        .contact-form {
+            position: relative;
+            background-color: var(--theme-color-light);
+            .select2-container--default .select2-selection--single,
+            input:not([type="submit"]),
+            textarea,
+            select {
+                height: 72px;
+                line-height: 30px;
+                padding: 20px 30px;
+                background-color: var(--theme-color-gray);
+                border-radius: 5px;
+            }
+            textarea{
+                height: 145px;
+            }
+            .theme-btn{
+                line-height: 30px;
+                padding: 20px 30px;
+            }
+            .input-outer{
+                .icon{
+                    right: 6px;
+                    top: 1px;
+                    @include flex-center;
+                    background-color: var(--theme-color-gray);
+                    height: 68px;
+                    width: 68px;
+                    text-align: center;
+                    border-radius: 10px;
+                    pointer-events: none;
+                }
+            }
+        }
+    }
+
+    .image-column{
+        margin-bottom: 50px;
+        @include media-breakpoint-down(xl){display: none;}
+        .inner-column{
+            margin-left: -320px;
+            @include media-breakpoint-down(xl){
+                margin-left: 0;
+            }
+        }
+        .image{
+            margin-bottom: 0;
+            overflow: hidden;
+            img{
+                @include media-breakpoint-down(lg){
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
