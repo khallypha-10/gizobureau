@@ -27,7 +27,7 @@ DEBUG = False
 CSRF_TRUSTED_ORIGINS = [
     'https://www.gizobureau.com','https://gizobureau.com', 'http://www.gizobureau.com', 'http://gizobureau.com'
 ]
-ALLOWED_HOSTS = ['testserver', '127.0.0.1', '3.86.220.116', 'https://www.gizobureau.com','https://gizobureau.com', 'http://www.gizobureau.com', 'http://gizobureau.com']
+ALLOWED_HOSTS = ['testserver', '127.0.0.1', '3.86.220.116', 'www.gizobureau.com', 'gizobureau.com', 'https://www.gizobureau.com','https://gizobureau.com', 'http://www.gizobureau.com', 'http://gizobureau.com']
 
 
 # Application definition
