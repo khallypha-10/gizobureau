@@ -1,0 +1,306 @@
+
+/*** 
+
+====================================================================
+  Anim Icons
+====================================================================
+
+***/
+
+.anim-icons {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    max-width: 1290px;
+    margin: 0 auto;
+}
+
+[text-split] {
+    opacity: 0;
+}
+
+.word {
+    overflow: hidden;
+    padding-bottom: 0.1em;
+    margin-bottom: -0.1em;
+    transform-origin: bottom;
+}
+
+.anim-icons.full-width {
+    max-width: 100%;
+}
+
+.anim-icons .icon {
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.icon-dots{
+    width: 277px;
+    height: 241px;
+    background-image: url(../images/icons/icon-dots.png);
+}
+
+.icon-dots-2{
+    width: 155px;
+    height: 144px;
+    background-image: url(../images/icons/icon-dots-2.png);
+}
+
+.icon-dots-3{
+    width: 278px;
+    height: 240px;
+    background-image: url(../images/icons/icon-dots-3.png);
+}
+
+.icon-dots-4{
+    width: 199px;
+    height: 325px;
+    background-image: url(../images/icons/icon-dots-4.png);
+}
+
+.icon-dots-5{
+    width: 243px;
+    height: 212px;
+    background-image: url(../images/icons/icon-dots-5.png);
+}
+
+.icon-dots-6{
+    width: 163px;
+    height: 152px;
+    background-image: url(../images/icons/icon-dots-6.png);
+}
+
+.icon-dots-7{
+    width: 277px;
+    height: 241px;
+    background-image: url(../images/icons/icon-dots-7.png);
+}
+
+.icon-dots-8{
+    width: 94px;
+    height: 82px;
+    background-image: url(../images/icons/icon-dots-8.png);
+}
+
+.icon-dots-9{
+    width: 289px;
+    height: 252px;
+    background-image: url(../images/icons/icon-dots-9.png);
+}
+
+
+.icon-lines{
+    width: 122px;
+    height: 133px;
+    background-image: url(../images/icons/icon-lines.png);
+}
+
+
+.icon-chat{
+    width: 332px;
+    height: 244px;
+    background-image: url(../images/icons/icon-chat.png);
+}
+
+.icon-flower{
+    width: 229px;
+    height: 181px;
+    background-image: url(../images/icons/icon-flower.png);
+}
+
+.icon-arrow-round{
+    width: 96px;
+    height: 107px;
+    background-image: url(../images/icons/icon-arrow-round.png);
+}
+
+.icon-arrow-down{
+    width: 50px;
+    height: 59px;
+    background-image: url(../images/icons/icon-arrow-down.png);
+}
+
+.icon-arrow-down-2{
+    width: 71px;
+    height: 133px;
+    background-image: url(../images/icons/icon-arrow-down-2.png);
+}
+
+.icon-boxes{
+    width: 299px;
+    height: 391px;
+    background-image: url(../images/icons/icon-boxes.png);
+}
+
+.icon-triangle{
+    width: 377px;
+    height: 372px;
+    background-image: url(../images/icons/icon-triangle.png);
+}
+
+.icon-circle-lines{
+    width: 210px;
+    height: 210px;
+    background-image: url(../images/icons/icon-circle-lines.png);
+}
+
+
+
+
+
+.bounce-y{
+    animation: bounce-y 10s infinite linear;
+}
+
+.bounce-x{
+    animation: bounce-x 10s infinite linear;
+}
+
+.zoom-one{
+    animation: zoom-one 10s infinite linear;
+}
+
+.zoom-two{
+    animation: zoom-two 5s infinite linear;
+}
+
+@keyframes float{
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce-y {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-30px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce-x {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(30px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes zoom-one {
+    0% {
+        transform: scale(.95);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(.95);
+    }
+}
+
+@keyframes zoom-two {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(.95);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+.overlay-anim {
+    position: relative;
+    &:after {
+        background: rgba(255, 255, 255, 0.3);
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 0;
+        opacity: 1;
+        z-index: 2;
+        pointer-events: none;
+    }
+    &:hover{
+        &:after {
+            height: 100%;
+            opacity: 0;
+            transition: all 400ms linear;
+        }
+    }   
+}
+
+
+// Animated Moving Circles
+
+.circle {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    left: -10px;
+    top: -10px;
+    border-radius: 100%;
+    z-index: 1;
+    pointer-events: none;
+    z-index: 10000;
+    transform: scale(1);
+    @supports (mix-blend-mode: difference) {
+        background-color: white;
+        mix-blend-mode: difference;
+    }
+    @include for-md{
+        display: none !important;
+    }
+}
+
+.circle-follow {
+    position: fixed;
+    mix-blend-mode: difference;
+    width: 30px;
+    height: 30px;
+    left: -21px;
+    top: -21px;
+    border-radius: 100%;
+    z-index: 1;
+    user-select: none;
+    pointer-events: none;
+    z-index: 10000;
+    transform: scale(1);
+    @supports (mix-blend-mode: difference) {
+        border: 1px solid #fff;
+        mix-blend-mode: difference;
+    }
+    @include for-md {
+        display: none !important;
+    }
+}

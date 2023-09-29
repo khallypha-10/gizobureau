@@ -1,0 +1,330 @@
+/*** 
+
+====================================================================
+		Call To Action
+====================================================================
+
+***/
+
+.call-to-action{
+    position: relative;
+    z-index: 2;
+    .outer-box{
+        position: relative;
+        background-color: var(--theme-color-gray);
+        padding: 70px 0px;
+        border-radius: 10px 10px 0px 0px;
+    }
+    .title-column{
+        position: relative;
+        .inner-column{
+            padding-left: 100px;
+            @include media-breakpoint-down(xl){
+                padding-left: 0;
+                text-align: center;
+                margin-bottom: 40px;
+            }
+        }
+    }
+    .btn-column{
+        .inner-column{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            @include media-breakpoint-down(xl){
+                align-items: center;
+            }
+        }
+    }
+}
+
+/*** 
+
+====================================================================
+		Call To Action Two
+====================================================================
+
+***/
+
+.call-to-action-two{
+    position: relative;
+    z-index: 2;
+    .outer-box{
+        position: relative;
+        background-color: var(--theme-color-gray);
+        @include media-breakpoint-down(lg){
+            .bg,
+            br{display: none;}
+        }
+    }
+    .title-column{
+        .inner-column{
+            padding: 40px 60px;
+            @include media-breakpoint-down(lg){
+                padding: 40px 40px;
+            }
+            .sec-title{
+                .text{
+                    margin-top: 10px;
+                }
+            }
+        }
+        .info-btn{
+            position: relative;
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 28px;
+            letter-spacing: -0.8px;
+            @include title-font;
+            .icon{
+                position: relative;
+                @include flex-center;
+                height: 40px;
+                width: 40px;
+                margin-right: 10px;
+                border-radius: 5px;
+                background-color: var(--bg-theme-color1);
+                color: var(--theme-color-light);
+            }
+        }
+    }
+    .image-column{
+        .inner-column{
+            position: relative;
+            margin-right: -70px;
+            height: 100%;
+            @include media-breakpoint-down(lg){
+                margin-right: 0;
+            }
+            .image{
+                margin-bottom: 0;
+                height: 100%;
+                &:before{
+                    position: absolute;
+                    right: -1px;
+                    top: -1px;
+                    width: 190px;
+                    bottom: -1px;
+                    clip-path: polygon(100% 0, 0 0, 100% 100%);
+                    content: "";
+                    background-color: var(--theme-color-gray);
+                    background-image: url(../images/icons/pattern-10.jpg);
+                    background-position: -520px 10px;
+                    @include media-breakpoint-down(lg){display: none;}
+                }
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
+
+/*** 
+
+====================================================================
+		Call To Action Three
+====================================================================
+
+***/
+
+.call-to-action-three{
+    position: relative;
+    padding: 100px 0;
+    &:before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--bg-theme-color1);
+        mix-blend-mode: multiply;
+        z-index: 2;
+    }
+    .bg{opacity: .2;}
+    .outer-box{
+        position: relative;
+        z-index: 9;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include media-breakpoint-down(lg){
+            flex-direction: column;
+            text-align: center;
+        }
+        .title{
+            margin-bottom: 0;
+            color: var(--theme-color-light);
+            letter-spacing: -1.92px;
+            padding-right: 30px;
+            @include media-breakpoint-down(lg){
+                padding-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+        .btn-style-one{
+            background-color: var(--theme-color-light);
+            color: var(--theme-color2);
+            line-height: 30px;
+            padding: 10px 30px;
+            &:hover{
+                color: var(--theme-color-light);
+            }
+        }
+    }
+}
+
+
+/*** 
+
+====================================================================
+    Call To Action Four
+====================================================================
+
+***/
+
+.call-to-action-four{
+    position: relative;
+    padding: 120px 0;
+    &:before{
+        @include overlay;
+        background-color: var(--theme-color-gray);
+        top: auto;
+        bottom: 0;
+        max-height: 50%;
+        content: "";
+    }
+    .outer-box{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--theme-color1);
+        padding: 80px 220px 80px 300px;
+        border-radius: 5px;
+        @include media-breakpoint-down(xl){
+            flex-direction: column;
+            text-align: center;
+            padding: 70px 70px;
+            br{display: none;}
+        }
+        @include media-breakpoint-down(md){
+            padding: 70px 20px;
+        }
+        .anim-icons{
+            @include media-breakpoint-down(xl){
+                display: none;
+            }
+            .left-icon{
+                position: absolute;
+                left: 89px;
+                top: 86px;
+            }
+            .right-icon{
+                position: absolute;
+                bottom: 10px;
+                right: 51px;
+            }
+        }
+       .sec-title{
+            margin-bottom: 0;
+            .sub-title{
+                padding-left: 0;
+                &:before{display: none;}
+            }
+        }
+        .btn-style-one{
+            background-color: var(--theme-color-light);
+            color: var(--theme-color2);
+            height: fit-content;
+            &:hover{
+                color: var(--theme-color-light);
+            }
+            @include media-breakpoint-down(xl){
+                margin-top: 30px;
+            }
+        }
+    }
+}
+
+/*** 
+
+====================================================================
+    Call To Action Five
+====================================================================
+
+***/
+
+.call-to-action-five{
+    position: relative;
+    background-color: var(--bg-theme-color1);
+    min-height: 250px;
+    .outer-box{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--theme-color1);
+        padding: 66px 0;
+        @include media-breakpoint-down(xl){
+            flex-direction: column;
+            text-align: center;
+        }
+        .image{
+            position: absolute;
+            left: -320px;
+            top: 0;
+            @include media-breakpoint-down(xl){display: none;}
+        }
+       .sec-title{
+            margin-bottom: 0;
+            padding-left: 395px;
+            @include media-breakpoint-down(xl){
+                padding-left: 0;
+                margin-bottom: 20px;
+            }
+            .icon{
+                position: absolute;
+                left: 255px;
+                top: 50%;
+                width: 89px;
+                height: 89px;
+                font-size: 32px;
+                border-radius: 89px;
+                background:  #F2F3F5;
+                margin-top: -44px;
+                color: var(--theme-color2);
+                line-height: 89px;
+                @include flex-center;
+                @include media-breakpoint-down(xl){
+                    position: relative;
+                    left: 0;
+                    top: 0;
+                    margin-top: 0;
+                    display: inline-block;
+                    margin-bottom: 10px;
+                }
+            }
+            .title{
+                color: var(--theme-color-light);
+                margin-bottom: 0;
+            }
+        }
+        .btn-style-one{
+            background-color: var(--theme-color-light);
+            color: var(--theme-color2);
+            height: fit-content;
+            &:hover{
+                color: var(--theme-color-light);
+            }
+        }
+    }
+}
