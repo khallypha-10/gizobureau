@@ -90,7 +90,7 @@ DATABASES = {
         'NAME': 'gizo',
         'USER': 'gizo',
         'PASSWORD': 'gizobureau$',
-        'HOST': 'gizo.ck6y4qsdqaiv.us-east-1.rds.amazonaws.com',
+        'HOST': 'gizobureau.ck6y4qsdqaiv.us-east-1.rds.amazonaws.com',
         'PORT': '5432',
     }
 }
