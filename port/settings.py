@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-&gy2nvu0+*@t^y_x$ihxkt4&74$hds%^z@qqt$#au33bdy%p1k'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 CSRF_TRUSTED_ORIGINS = [
     'https://www.gizobureau.com','https://gizobureau.com', 'http://www.gizobureau.com', 'http://gizobureau.com'
 ]
@@ -151,3 +151,9 @@ AWS_S3_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL =  None
 AWS_S3_VERITY = True
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+AWS_ACCESS_KEY_ID = 'AKIA4R3UTL2TDUQN6SNJ'
+AWS_SECRET_ACCESS_KEY= '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'
+EMAIL_BACKEND = 'django_ses.SESBackend'
+AWS_SES_REGION_NAME = 'us-east-1' #(ex: us-east-2)
+AWS_SES_REGION_ENDPOINT ='email.us-east-1.amazonaws.com' #(ex: email.us-east-2.amazonaws.com)

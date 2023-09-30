@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from . models import Contact, Member, Project, Service
 from django.contrib import messages
 from django.core.paginator import Paginator
+from django.core.mail import send_mail, BadHeaderError
 # Create your views here.
 
 
@@ -33,6 +34,22 @@ def contact(request):
         message = request.POST['message']
         contact = Contact(first_name=first_name, last_name=last_name, phone=phone, email=email, message=message)
         contact.save()
+        
+        subject = "Inquiry" 
+        body = {
+		    'first_name': first_name, 
+			'last_name': last_name, 
+            'phone': phone,
+			'email': email, 
+			'message':message, 
+			}
+        message = "\n".join(body.values()) 
+
+        try:
+            send_mail(subject, message, 'gizobureau@gmail.com', ['gizobureau@gmail.com']) 
+        except BadHeaderError: #add this
+                return HttpResponse('Invalid header found.')
+        
         messages.success(request, 'Your message was received. We will get back to you shortly')
         return redirect("home")
     return render(request, "contact.html") 
