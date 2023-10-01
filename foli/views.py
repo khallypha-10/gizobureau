@@ -6,15 +6,9 @@ from django.core.mail import send_mail, BadHeaderError
 # Create your views here.
 
 
-def navba(request):
-    projectss = Project.objects.all().last()
-    proje = Project.objects.all()[:2]
-    context = {"proje": proje, "projectss":projectss}
-    return render(request, "navbar.html", context)
-
 
 def home(request):
-    projects = Project.objects.all()[:5]
+    projects = Project.objects.all()[:10]
     services = Service.objects.all()
     members = Member.objects.all()
     project = Project.objects.all().count()

@@ -11,12 +11,12 @@ class Member(models.Model):
     
 class Project(models.Model):
     name = models.CharField(max_length=100)
-    date = models.DateField(auto_now_add=True)
+    date = models.DateField(auto_now=True)
     client = models.CharField(max_length=150)
     description = models.TextField()
-    image = ResizedImageField(size=[400, 300], quality=100, crop=['middle', 'center'], upload_to='project')
-    image2 = ResizedImageField(size=[400, 300], quality=100, crop=['middle', 'center'], upload_to='project')
-    image3 = ResizedImageField(size=[400, 300],quality=100, crop=['middle', 'center'], upload_to='project')
+    image = ResizedImageField(size=[1600, 2000], quality=100, crop=['middle', 'center'], upload_to='project')
+    image2 = ResizedImageField(size=[1600, 2000], quality=100, crop=['middle', 'center'], upload_to='project')
+    image3 = ResizedImageField(size=[1600, 2000],quality=100, crop=['middle', 'center'], upload_to='project')
     slug = models.SlugField(null=True, blank=True)
     def save(self, *args, **kwargs):
         self.slug = slugify(self.name)
