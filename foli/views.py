@@ -27,7 +27,7 @@ def contact(request):
         budget = request.POST['budget']
         currency = request.POST['currency']
         message = request.POST['message']
-        contact = Contact(first_name=first_name, last_name=last_name, phone=phone, email=email, message=message, budget=budget, currency=currency)
+        contact = Contact(first_name=first_name, last_name=last_name, phone=phone, email=email, message=message)
         contact.save()
         
         subject = "Inquiry" 
