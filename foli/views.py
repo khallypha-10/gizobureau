@@ -36,10 +36,10 @@ def contact(request):
 			'last_name': last_name, 
             'phone': phone,
 			'email': email, 
-			'message':message, 
             'currency': currency, 
             'budget': budget,
-			}
+			'message':message, 
+            }
         message = "\n".join(body.values()) 
 
         try:
