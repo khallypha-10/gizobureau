@@ -10,7 +10,7 @@ class ProjectAdmin(admin.ModelAdmin):
 
 @admin.register(Contact)
 class ContactAdmin(admin.ModelAdmin):
-    list_display = ['first_name', 'last_name', 'email', 'phone', 'currency', 'budget','message',]
+    list_display = ['first_name', 'last_name', 'email', 'phone', 'message',]
 
 
 @admin.register(Service)
