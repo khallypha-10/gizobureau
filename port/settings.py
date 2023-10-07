@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-&gy2nvu0+*@t^y_x$ihxkt4&74$hds%^z@qqt$#au33bdy%p1k'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 CSRF_TRUSTED_ORIGINS = [
     'https://www.gizobureau.com','https://gizobureau.com', 'http://www.gizobureau.com', 'http://gizobureau.com'
 ]
@@ -92,7 +92,7 @@ DATABASES = {
         'NAME': 'gizo',
         'USER': 'gizo',
         'PASSWORD': 'gizobureau$',
-        'HOST': 'gizo.ck6y4qsdqaiv.us-east-1.rds.amazonaws.com',
+        'HOST': 'gizobureau.ck6y4qsdqaiv.us-east-1.rds.amazonaws.com',
         'PORT': '5432',
     }
 }
