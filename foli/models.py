@@ -29,8 +29,8 @@ class Contact(models.Model):
     last_name = models.CharField(max_length=70)
     email = models.EmailField(max_length=254)
     phone = models.BigIntegerField()
-    currency = models.CharField(max_length=70)
-    budget = models.PositiveIntegerField()
+    currency = models.CharField(max_length=70, null=True, blank=True)
+    budget = models.PositiveIntegerField(null = True, blank = True)
     message = models.TextField()
 
 class Service(models.Model):
