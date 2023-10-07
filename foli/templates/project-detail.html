@@ -37,15 +37,23 @@
                       <div class="carousel-item">  
                         <img src={{project.image3.url}} class="rounded mx-auto d-block" alt="...">
                       </div>
+					  {% if project.image4.url %}
 					  <div class="carousel-item">  
                         <img src={{project.image4.url}} class="rounded mx-auto d-block" alt="...">
                       </div>
+					  {% endif %}
+
+					  {% if project.image5.url %}
 					  <div class="carousel-item">
                         <img src={{project.image5.url}} class="rounded mx-auto d-block" alt="...">
                       </div>
+					  {% endif %}
+
+					  {% if project.image6.url %}
 					  <div class="carousel-item">
                         <img src={{project.image6.url}} class="rounded mx-auto d-block" alt="...">
                       </div>
+					  {% endif %}
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
                       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
