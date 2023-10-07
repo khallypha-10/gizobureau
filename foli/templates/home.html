@@ -185,23 +185,7 @@
 					<h2>We Are Pleased To Present The<br> Gizo Agency Board</h2>
 				</div>
 
-				<div class="row">
-					<!-- Team block Four -->
-					{% for member in members  %}
-					<div class="team-block-four col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-						<div class="inner-box">
-							<div class="image-box">
-								<figure class="image"><img src={{member.image.url}} alt="member image"></a></figure>
-							</div>
-							<div class="info-box">
-								<h4 class="name"><font color ="white"> {{member.name|title}}</a></h4></font>
-								<span class="designation">{{member.position|title}}</span>
-							</div>
-						</div>
-					</div>
-					{% endfor %}
-					
-				</div>
+			
 			</div>
 		</section>
 		<!-- End Team Section Two -->
@@ -307,7 +291,7 @@
 							<div class="inner">
 								<div class="content">
 									<i class="icon flaticon-workers"></i>
-									<div class="count-box"><span class="count-text" data-speed="1000" data-stop="3"></span>+</div>
+									<div class="count-box"><span class="count-text" data-speed="1000" data-stop="10"></span>+</div>
 									<h6 class="counter-title">Team members</h6>
 								</div>
 							</div>
@@ -378,7 +362,20 @@
 												<span class="icon fa fa-paper-plane"></span>
 											</div>
 										</div>
-										
+										<div class="form-group col-lg-12">
+											<div class="input-outer">
+												<input type="text" name="budget" placeholder="Your Budget" required>
+												<select name ="currency" class="form-select form-select-sm" aria-label="Small select example">
+													<option selected>Currency</option>
+													<option name ="dollar" value="1"><i class="fa-solid fa-dollar-sign">dollar</i></option>
+													<option name ="pound" value="2"><i class="fa-solid fa-sterling-sign">pound</i></option>
+													<option name ="euro" value="3"><i class="fa-solid fa-euro-sign"></i>euro</option>
+													<option name ="lira" value="4"><i class="fa-duotone fa-turkish-lira-sign">lira</i></option>
+													<option name ="naira" value="5"><i class="fa-solid fa-naira-sign">naira</i></i></option>
+												  </select>
+												<span> <i class="fa-solid fa-sack-dollar"></i></span>
+											</div>
+										</div>
 										<div class="form-group col-lg-12">
 											<div class="input-outer">
 												<textarea name="message" placeholder="Your Message" required></textarea>

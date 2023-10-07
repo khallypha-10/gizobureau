@@ -4,19 +4,18 @@ from django_resized import ResizedImageField
 # Create your models here.
 
 
-class Member(models.Model):
-    name = models.CharField(max_length=100)
-    position = models.CharField(max_length=70)
-    image = ResizedImageField(size=[385, 300],quality=100, crop=['middle', 'center'], upload_to='profile')
-    
+
 class Project(models.Model):
     name = models.CharField(max_length=100)
-    date = models.DateField(auto_now=True)
+    date = models.DateField()
     client = models.CharField(max_length=150)
     description = models.TextField()
-    image = ResizedImageField(size=[1600, 2000], quality=100, crop=['middle', 'center'], upload_to='project')
-    image2 = ResizedImageField(size=[1600, 2000], quality=100, crop=['middle', 'center'], upload_to='project')
-    image3 = ResizedImageField(size=[1600, 2000],quality=100, crop=['middle', 'center'], upload_to='project')
+    image = ResizedImageField(size=[2000, 1600],quality=100, upload_to='project')
+    image2 = ResizedImageField(size=[2000, 1600],quality=100, upload_to='project')
+    image3 = ResizedImageField(size=[2000, 1600],quality=100, upload_to='project')
+    image4 = ResizedImageField(size=[2000, 1600],quality=100, upload_to='project', blank = True, null = True, default='media/c.jpg')
+    image5 = ResizedImageField(size=[2000, 1600],quality=100, upload_to='project', blank = True, null = True, default='media/c.jpg')
+    image6 = ResizedImageField(size=[2000, 1600],quality=100, upload_to='project', blank = True, null = True, default='media/c.jpg')
     slug = models.SlugField(null=True, blank=True)
     def save(self, *args, **kwargs):
         self.slug = slugify(self.name)
@@ -30,6 +29,8 @@ class Contact(models.Model):
     last_name = models.CharField(max_length=70)
     email = models.EmailField(max_length=254)
     phone = models.BigIntegerField()
+    currency = models.CharField(max_length=70)
+    budget = models.PositiveIntegerField()
     message = models.TextField()
 
 class Service(models.Model):

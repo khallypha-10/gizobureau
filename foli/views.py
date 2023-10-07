@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from . models import Contact, Member, Project, Service
+from . models import Contact, Project, Service
 from django.contrib import messages
 from django.core.paginator import Paginator
 from django.core.mail import send_mail, BadHeaderError
@@ -10,9 +10,8 @@ from django.core.mail import send_mail, BadHeaderError
 def home(request):
     projects = Project.objects.all()[:10]
     services = Service.objects.all()
-    members = Member.objects.all()
     project = Project.objects.all().count()
-    context = {"projects":projects, "services": services, "members": members, "project": project}
+    context = {"projects":projects, "services": services, "project": project}
     return render(request, "home.html", context)
 
 
@@ -25,8 +24,10 @@ def contact(request):
         last_name = request.POST['lastname']
         phone = request.POST['phone']
         email = request.POST['email']
+        budget = request.POST['budget']
+        currency = request.POST['currency']
         message = request.POST['message']
-        contact = Contact(first_name=first_name, last_name=last_name, phone=phone, email=email, message=message)
+        contact = Contact(first_name=first_name, last_name=last_name, phone=phone, email=email, message=message, budget=budget, currency=currency)
         contact.save()
         
         subject = "Inquiry" 
@@ -36,6 +37,8 @@ def contact(request):
             'phone': phone,
 			'email': email, 
 			'message':message, 
+            'currency': currency, 
+            'budget': budget,
 			}
         message = "\n".join(body.values()) 
 

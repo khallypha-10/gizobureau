@@ -1,5 +1,5 @@
 from django.contrib import admin
-from . models import Contact, Project, Member, Service
+from . models import Contact, Project, Service
 # Register your models here.
 
 @admin.register(Project)
@@ -10,12 +10,8 @@ class ProjectAdmin(admin.ModelAdmin):
 
 @admin.register(Contact)
 class ContactAdmin(admin.ModelAdmin):
-    list_display = ['first_name', 'last_name', 'email', 'phone','message']
+    list_display = ['first_name', 'last_name', 'email', 'phone', 'currency', 'budget','message',]
 
-
-@admin.register(Member)
-class MemberAdmin(admin.ModelAdmin):
-    list_display = ['name', 'position']
 
 @admin.register(Service)
 class ServiceAdmin(admin.ModelAdmin):
