@@ -353,19 +353,25 @@
 										</div>
 										<div class="form-group col-lg-12">
 											<div class="input-outer">
-												<input type="text" name="budget" placeholder="Your Budget" required>
-												<span class="icon fa-solid fa-sack-dollar"></i></span>
-												<select name ="currency" class="form-group col-lg-12" aria-label="Small select example">
-													<option selected>Currency</option>
-													<option name ="dollar" value="dollar"><i class="fa-solid fa-dollar-sign">dollar</i></option>
-													<option name ="pound" value="pound"><i class="fa-solid fa-sterling-sign">pound</i></option>
-													<option name ="euro" value="euro"><i class="fa-solid fa-euro-sign"></i>euro</option>
-													<option name ="lira" value="lira"><i class="fa-duotone fa-turkish-lira-sign">lira</i></option>
-													<option name ="naira" value="naira"><i class="fa-solid fa-naira-sign">naira</i></i></option>
-												  </select>
+												<div class="input-group mb-3">
+													<button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Currency</button>
+													<ul class="dropdown-menu">
+													  <li name ="dollar" value="dollar"><a class="dropdown-item" href="#"><i class="fa-solid fa-dollar-sign"></i></a></li>
+													  <li name ="pound" value= "pound"><a class="dropdown-item" href="#"><i class="fa-solid fa-sterling-sign"></i></a></li>
+													  <li name ="euro" value="euro"><a class="dropdown-item" href="#"><i class="fa-solid fa-euro-sign"></i></a></li>
+													  <li name ="lira" value="lira"><a class="dropdown-item" href="#"><i class="fa-duotone fa-turkish-lira-sign"></i></a></li>
+													  <li name ="naira" value="naira"><a class="dropdown-item" href="#"><i class="fa-solid fa-naira-sign"></i></a></li>
+													  
+													</ul>
+													<input type="text" name="budget" placeholder="Your Budget" required>
+													<span class="icon fa-solid fa-sack-dollar"></i></span>
+												  </div>
 												
 											</div>
+											
 										</div>
+										
+										
 										<div class="form-group col-lg-12">
 											<div class="input-outer">
 												<textarea name="message" placeholder="Your Message" required></textarea>
