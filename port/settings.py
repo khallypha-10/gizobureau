@@ -20,14 +20,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = ''
+SECRET_KEY = 'django-insecure-&gy2nvu0+*@t^y_x$ihxkt4&74$hds%^z@qqt$#au33bdy%p1k'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 CSRF_TRUSTED_ORIGINS = [
     'https://www.gizobureau.com','https://gizobureau.com', 'http://www.gizobureau.com', 'http://gizobureau.com'
 ]
-ALLOWED_HOSTS = ['testserver', '127.0.0.1', '3.86.220.116', 'www.gizobureau.com', 'gizobureau.com', 'https://www.gizobureau.com','https://gizobureau.com', 'http://www.gizobureau.com', 'http://gizobureau.com']
+ALLOWED_HOSTS = ['testserver', '127.0.0.1', '54.210.175.222', 'www.gizobureau.com', 'gizobureau.com', 'https://www.gizobureau.com','https://gizobureau.com', 'http://www.gizobureau.com', 'http://gizobureau.com']
 
 
 # Application definition
@@ -89,7 +89,11 @@ WSGI_APPLICATION = 'port.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-       
+        'NAME': 'gizo',
+        'USER': 'gizobureau',
+        'PASSWORD': 'gizobureau$',
+        'HOST': 'gizobureau.cejkau6udcjf.us-east-1.rds.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
@@ -138,3 +142,16 @@ MEDIA_ROOT= 'media/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+AWS_ACCESS_KEY_ID = 'AKIAS3TDBSZGEBC344VI'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME ='gizobureaubucket'
+AWS_S3_SIGNATURE_NAME = 's3v4'
+AWS_S3_REGION_NAME = 'us-east-1'
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL =  None
+AWS_S3_VERITY = True
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+EMAIL_BACKEND = 'django_ses.SESBackend'
+AWS_SES_REGION_NAME = 'us-east-1' #(ex: us-east-2)
+AWS_SES_REGION_ENDPOINT ='email.us-east-1.amazonaws.com' #(ex: email.us-east-2.amazonaws.com)
