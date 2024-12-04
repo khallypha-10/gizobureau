@@ -8,7 +8,7 @@ from django.core.mail import send_mail, BadHeaderError
 
 
 def home(request):
-    projects = Project.objects.all()[:10]
+    projects = Project.objects.all()[:15]
     services = Service.objects.all()
     project = Project.objects.all().count()
     context = {"projects":projects, "services": services, "project": project}
