@@ -105,7 +105,7 @@
 							<div class="icon icon-dots-5 bounce-y"></div>
 							<figure class="image overlay-anim wow fadeInUp"><img src="{% static 'images/brain.png' %}" alt="light bulb shaped like brain"></figure>
 							<div class="exp-box bg-dark-2">
-								<h2 class="title">3</h2>
+								<h2 class="title">4</h2>
 								<p class="text">years experience</p>
 							</div>
 						</div>
@@ -154,6 +154,7 @@
 			<div class="carousel-outer">
 				<div class="project-carousel owl-carousel owl-theme default-navs-two">
 					<!-- Project Block Four -->
+					{% if projects %}
 					{% for project in projects  %}
 					<div class="project-block-four">
 						<div class="inner-box">
@@ -165,6 +166,7 @@
 						</div>
 					</div>
 					{% endfor %}
+					{% endif %}
 				</div>
 			</div>
 		</div>

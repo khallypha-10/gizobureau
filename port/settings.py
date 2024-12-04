@@ -11,25 +11,28 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import environ
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+env = environ.Env(
+    DEBUG=(bool, False)
+)
+environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = ''
+SECRET_KEY = 'django-insecure-&gy2nvu0+*@t^y_x$ihxkt4&74$hds%^z@qqt$#au33bdy%p1k'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-CSRF_TRUSTED_ORIGINS = [
-    'https://www.gizobureau.com','https://gizobureau.com', 'http://www.gizobureau.com', 'http://gizobureau.com'
-]
-ALLOWED_HOSTS = ['testserver', '127.0.0.1', '54.210.175.222', 'www.gizobureau.com', 'gizobureau.com', 'https://www.gizobureau.com','https://gizobureau.com', 'http://www.gizobureau.com', 'http://gizobureau.com']
-
-
+DEBUG = True
+CSRF_TRUSTED_ORIGINS = env.list('CSRF_TRUSTED_ORIGINS')
+ALLOWED_HOSTS = env.list('ALLOWED_HOSTS')
 # Application definition
 
 INSTALLED_APPS = [
@@ -46,6 +49,7 @@ INSTALLED_APPS = [
     'menus',
     'treebeard',
     'foli',
+    'storages'
     
 ]
 
@@ -88,7 +92,12 @@ WSGI_APPLICATION = 'port.wsgi.application'
 
 DATABASES = {
     'default': {
-       
+        'ENGINE': env('ENGINE'),
+        'NAME': env('NAME'),
+        'USER': env('USER'),
+        'PASSWORD': env('PASSWORD'),
+        'HOST': env('HOST'),
+        'PORT': env('PORT'),
     }
 }
 
@@ -137,3 +146,25 @@ MEDIA_ROOT= 'media/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+AWS_ACCESS_KEY_ID = env('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = env('AWS_SECRET_ACCESS_KEY')
+AWS_STORAGE_BUCKET_NAME =env('AWS_STORAGE_BUCKET_NAME')
+AWS_S3_SIGNATURE_NAME = env('AWS_S3_SIGNATURE_NAME')
+AWS_S3_REGION_NAME = env('AWS_S3_REGION_NAME')
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL =  None
+AWS_S3_VERITY = True
+EMAIL_BACKEND = env('EMAIL_BACKEND')
+AWS_SES_REGION_NAME = env('AWS_SES_REGION_NAME') 
+AWS_SES_REGION_ENDPOINT = env('AWS_SES_REGION_ENDPOINT') 
+DEFAULT_FROM_EMAIL = env('DEFAULT_FROM_EMAIL')
+
+STORAGES = {
+    "default": {
+        "BACKEND": "storages.backends.s3boto3.S3StaticStorage",
+    },
+
+    "staticfiles": {
+        "BACKEND": "storages.backends.s3boto3.S3StaticStorage",
+    },
+}
